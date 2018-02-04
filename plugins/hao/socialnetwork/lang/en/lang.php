@@ -11,6 +11,19 @@ return [
     'backend' => [
         'meetic' => [
            'id' => 'ID',
+            'nationality' => '国籍',
+            'name_column' => '名字',
+            'city' => '城市',
+            'age' => '年纪',
+            'url' => '主页',
+            'height' => '身高',
+            'weight' => '体重',
+            'images' => '照片',
+            'imperfection' => '缺点',
+            'region' => '省份',
+            'description' => '自我介绍',
+            'favorites' => '是否收藏',
+            'flashs' => '是否有图片',
             'personnality' => [
                 'relation_type' => 'Prêt à m\'engager dans une relation ? :',
                 'romantic' => 'Romantique :',
@@ -21,6 +34,7 @@ return [
             ],
             'tabs' => [
                 'personnality' => 'Ma personnalité',
+                'user' => '个人信息'
             ]
         ],
     ],

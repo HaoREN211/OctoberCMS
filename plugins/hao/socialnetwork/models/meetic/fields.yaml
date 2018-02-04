@@ -3,42 +3,159 @@
 # ===================================
 
 fields:
-    id:
-        label: 'hao.socialnetwork::lang.backend.meetic.id'
+    name:
+        label: 'hao.socialnetwork::lang.backend.meetic.name_column'
         span: left
-        size: small
-    photo:
-        type: 'text'
+        type: text
+        readOnly: true
+
+    age:
+        label: 'hao.socialnetwork::lang.backend.meetic.age'
+        span: right
+        type: number
+        readOnly: true
+
+    favorites:
+        label: 'hao.socialnetwork::lang.backend.meetic.favorites'
+        span: left
+        type: switch
+        readOnly: false
+        disabled: false
+
+    flashs:
+        label: 'hao.socialnetwork::lang.backend.meetic.flashs'
+        span: right
+        type: switch
+        readOnly: false
+        disabled: false
+
+    images@update:
+        label: 'hao.socialnetwork::lang.backend.meetic.images'
+#        tab: 'hao.socialnetwork::lang.backend.meetic.images'
+        type: fileupload
         mode: image
+        span: full
+        useCaption: false
+        fileTypes: jpg, png, gif
+        imageHeight: 260
+        imageWidth: 260
+        thumbOptions:
+            mode: crop
+            offset:
+                - 0
+                - 0
+            quality: 90
+            sharpen: 0
+            interlace: false
+            extension: auto
+
+
+
+
+
+
 tabs:
     fields:
+
+        city:
+            label: 'hao.socialnetwork::lang.backend.meetic.city'
+            type: text
+            span: left
+            readOnly: true
+            tab: 'hao.socialnetwork::lang.backend.meetic.tabs.user'
+
+        region:
+            label: 'hao.socialnetwork::lang.backend.meetic.region'
+            type: text
+            span: right
+            readOnly: true
+            tab: 'hao.socialnetwork::lang.backend.meetic.tabs.user'
+
+        height:
+            label: 'hao.socialnetwork::lang.backend.meetic.height'
+            span: left
+            type: number
+            readOnly: true
+            tab: 'hao.socialnetwork::lang.backend.meetic.tabs.user'
+
+        weight:
+            label: 'hao.socialnetwork::lang.backend.meetic.weight'
+            span: right
+            type: number
+            readOnly: true
+            tab: 'hao.socialnetwork::lang.backend.meetic.tabs.user'
+
+        nationality:
+            label: 'hao.socialnetwork::lang.backend.meetic.nationality'
+            type: text
+            span: left
+            readOnly: true
+            tab: 'hao.socialnetwork::lang.backend.meetic.tabs.user'
+
+        imperfection:
+            label: 'hao.socialnetwork::lang.backend.meetic.imperfection'
+            type: text
+            span: right
+            readOnly: true
+            tab: 'hao.socialnetwork::lang.backend.meetic.tabs.user'
+
+        description:
+            label: 'hao.socialnetwork::lang.backend.meetic.description'
+            type: textarea
+            span: full
+            readOnly: true
+            tab: 'hao.socialnetwork::lang.backend.meetic.tabs.user'
+
+        id:
+            label: 'hao.socialnetwork::lang.backend.meetic.id'
+            span: left
+            size: small
+            readOnly: true
+            tab: 'hao.socialnetwork::lang.backend.meetic.tabs.user'
+
+        url:
+            label: 'hao.socialnetwork::lang.backend.meetic.url'
+            span: right
+            readOnly: true
+            tab: 'hao.socialnetwork::lang.backend.meetic.tabs.user'
+
+
+
         relation_type:
             label: 'hao.socialnetwork::lang.backend.meetic.personnality.relation_type'
             type: 'text'
             tab: 'hao.socialnetwork::lang.backend.meetic.tabs.personnality'
             span: left
+            readOnly: true
+
         temper:
             label: 'hao.socialnetwork::lang.backend.meetic.personnality.temper'
             type: 'text'
             tab: 'hao.socialnetwork::lang.backend.meetic.tabs.personnality'
             span: right
+            readOnly: true
+
         romantic:
             label: 'hao.socialnetwork::lang.backend.meetic.personnality.romantic'
             type: 'text'
             tab: 'hao.socialnetwork::lang.backend.meetic.tabs.personnality'
             span: left
+            readOnly: true
+
         marriage:
             label: 'hao.socialnetwork::lang.backend.meetic.personnality.marriage'
             type: 'text'
             tab: 'hao.socialnetwork::lang.backend.meetic.tabs.personnality'
             span: right
+            readOnly: true
+
         children_wish:
             label: 'hao.socialnetwork::lang.backend.meetic.personnality.children_wish'
             type: 'text'
             tab: 'hao.socialnetwork::lang.backend.meetic.tabs.personnality'
             span: left
-        nationality:
-            label: 'hao.socialnetwork::lang.backend.meetic.personnality.nationality'
-            type: 'text'
-            tab: 'hao.socialnetwork::lang.backend.meetic.tabs.personnality'
-            span: right
+            readOnly: true
+
+
+
+

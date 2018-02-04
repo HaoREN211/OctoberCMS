@@ -6,6 +6,8 @@ composer.phar
 .env
 .env.*.php
 .env.php
+.jpg
+.png
 php_errors.log
 nginx-error.log
 nginx-access.log

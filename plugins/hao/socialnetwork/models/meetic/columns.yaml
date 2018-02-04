@@ -8,18 +8,34 @@ columns:
         searchable: false
         invisible: true
     name:
-        lable: 名字
+        label: 'hao.socialnetwork::lang.backend.meetic.name_column'
         searchable: true
         type: text
+    nationality:
+        label: 'hao.socialnetwork::lang.backend.meetic.nationality'
+        type: text
+        searchable: true
     city:
-        lable: 城市
+        label: 'hao.socialnetwork::lang.backend.meetic.city'
         searchable: true
         type: text
     region:
-        lable: 省份
+        label: 省份
         searchable: true
         type: text
     age:
-        label: 年纪
+        label: 'hao.socialnetwork::lang.backend.meetic.age'
         sortable: true
         type: number
+
+    favorites:
+        label: 'hao.socialnetwork::lang.backend.meetic.favorites'
+        type: switch
+        sortable: true
+        searchable: false
+
+    flashs:
+        label: 'hao.socialnetwork::lang.backend.meetic.flashs'
+        type: switch
+        sortable: true
+        searchable: false
