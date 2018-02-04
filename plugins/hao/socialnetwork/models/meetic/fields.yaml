@@ -1,0 +1,44 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: 'hao.socialnetwork::lang.backend.meetic.id'
+        span: left
+        size: small
+    photo:
+        type: 'text'
+        mode: image
+tabs:
+    fields:
+        relation_type:
+            label: 'hao.socialnetwork::lang.backend.meetic.personnality.relation_type'
+            type: 'text'
+            tab: 'hao.socialnetwork::lang.backend.meetic.tabs.personnality'
+            span: left
+        temper:
+            label: 'hao.socialnetwork::lang.backend.meetic.personnality.temper'
+            type: 'text'
+            tab: 'hao.socialnetwork::lang.backend.meetic.tabs.personnality'
+            span: right
+        romantic:
+            label: 'hao.socialnetwork::lang.backend.meetic.personnality.romantic'
+            type: 'text'
+            tab: 'hao.socialnetwork::lang.backend.meetic.tabs.personnality'
+            span: left
+        marriage:
+            label: 'hao.socialnetwork::lang.backend.meetic.personnality.marriage'
+            type: 'text'
+            tab: 'hao.socialnetwork::lang.backend.meetic.tabs.personnality'
+            span: right
+        children_wish:
+            label: 'hao.socialnetwork::lang.backend.meetic.personnality.children_wish'
+            type: 'text'
+            tab: 'hao.socialnetwork::lang.backend.meetic.tabs.personnality'
+            span: left
+        nationality:
+            label: 'hao.socialnetwork::lang.backend.meetic.personnality.nationality'
+            type: 'text'
+            tab: 'hao.socialnetwork::lang.backend.meetic.tabs.personnality'
+            span: right

@@ -1,0 +1,25 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: 'hao.socialnetwork::lang.backend.meetic.id'
+        searchable: false
+        invisible: true
+    name:
+        lable: 名字
+        searchable: true
+        type: text
+    city:
+        lable: 城市
+        searchable: true
+        type: text
+    region:
+        lable: 省份
+        searchable: true
+        type: text
+    age:
+        label: 年纪
+        sortable: true
+        type: number
