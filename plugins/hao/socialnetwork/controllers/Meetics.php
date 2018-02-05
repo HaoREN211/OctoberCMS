@@ -16,6 +16,14 @@ class Meetics extends Controller
     public $formConfig = 'config_form.yaml';
     public $listConfig = 'config_list.yaml';
 
+    /**
+     * @var string Body class (sidebar menu)
+     */
+    public $bodyClass = 'compact-container';
+
+    /**
+     * Meetics constructor.
+     */
     public function __construct()
     {
         parent::__construct();

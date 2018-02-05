@@ -1,10 +1,15 @@
 <?php
 
 return [
+    'form' =>[
+      'save' => '保存',
+    ],
+
     'plugin' => [
       'name' => '社交网络',
       'menus' => [
           'meetics' => 'Meetic',
+//          'meetics' => 'Facebook',
       ]
     ],
 
@@ -22,8 +27,8 @@ return [
             'imperfection' => '缺点',
             'region' => '省份',
             'description' => '自我介绍',
-            'favorites' => '是否收藏',
-            'flashs' => '是否有图片',
+            'favorites' => '收藏',
+            'flashs' => '照片',
             'personnality' => [
                 'relation_type' => 'Prêt à m\'engager dans une relation ? :',
                 'romantic' => 'Romantique :',

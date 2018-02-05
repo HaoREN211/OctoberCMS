@@ -7,12 +7,22 @@
 
 <?php if (!$this->fatalError): ?>
 
-    <?= Form::open(['class' => 'layout']) ?>
+<!-- Sidebar (secondary tabs fields) -->
+<?php Block::put('form-sidebar') ?>
+    <div class="hide-tabs"><?= $this->formRenderSecondaryUpdateTabs() ?></div>
+<?php Block::endPut() ?>
 
-        <div class="layout-row">
-            <?= $this->formRender() ?>
+<?php Block::put('form-contents') ?>
+    <div class="layout">
+        <!-- Outside fields -->
+        <div class="layout-row min-size">
+            <?= $this->formRenderOutsidePreviewFields() ?>
         </div>
-
+        <!-- Primary tabs fields -->
+        <div class="layout-row">
+            <?= $this->formRenderPrimaryPreviewTabs() ?>
+        </div>
+        <!-- Bottom toolbar -->
         <div class="form-buttons">
             <div class="loading-indicator-container">
                 <button
@@ -20,33 +30,43 @@
                     data-request="onSave"
                     data-request-data="redirect:0"
                     data-hotkey="ctrl+s, cmd+s"
-                    data-load-indicator="Saving Meetic..."
+                    data-load-indicator="<?= e(trans('backend::lang.form.saving')) ?>"
                     class="btn btn-primary">
-                    <u>S</u>保存
+                    <?= e(trans('backend::lang.form.save')) ?>
                 </button>
                 <button
                     type="button"
                     data-request="onSave"
                     data-request-data="close:1"
                     data-hotkey="ctrl+enter, cmd+enter"
-                    data-load-indicator="Saving Meetic..."
+                    data-load-indicator="<?= e(trans('backend::lang.form.saving')) ?>"
                     class="btn btn-default">
-                    保存并离开
+                    <?= e(trans('backend::lang.form.save_and_close')) ?>
                 </button>
-                <!--<button-->
-                    <!--type="button"-->
-                    <!--class="oc-icon-trash-o btn-icon danger pull-right"-->
-                    <!--data-request="onDelete"-->
-                    <!--data-load-indicator="Deleting Meetic..."-->
-                    <!--data-request-confirm="Delete this meetic?">-->
-                <!--</button>-->
                 <span class="btn-text">
-                    <a href="<?= Backend::url('hao/socialnetwork/meetics') ?>">Cancel</a>
-                </span>
+                    <a href="<?= Backend::url('elipce/bipage/pages') ?>">
+                                <?= e(trans('backend::lang.form.cancel')) ?>
+                            </a>
+                        </span>
+                <!--<button class="oc-icon-trash-o btn-icon danger pull-right"-->
+                        <!--data-request="onDelete"-->
+                        <!--data-request-confirm="<?= e(trans('backend::lang.form.action_confirm')) ?>"-->
+                        <!--data-load-indicator="<?= e(trans('backend::lang.form.deleting')) ?>">-->
+                <!--</button>-->
             </div>
         </div>
+    </div>
+<?php Block::endPut() ?>
 
+
+
+<!-- Sidebar body -->
+<?php Block::put('body') ?>
+    <?= Form::open(['class'=>'layout stretch']) ?>
+        <?= $this->makeLayout('form-with-sidebar') ?>
     <?= Form::close() ?>
+<?php Block::endPut() ?>
+
 
 <?php else: ?>
 

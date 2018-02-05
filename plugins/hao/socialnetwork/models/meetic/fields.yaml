@@ -9,49 +9,12 @@ fields:
         type: text
         readOnly: true
 
+
     age:
         label: 'hao.socialnetwork::lang.backend.meetic.age'
         span: right
-        type: number
+        type: text
         readOnly: true
-
-    favorites:
-        label: 'hao.socialnetwork::lang.backend.meetic.favorites'
-        span: left
-        type: switch
-        readOnly: false
-        disabled: false
-
-    flashs:
-        label: 'hao.socialnetwork::lang.backend.meetic.flashs'
-        span: right
-        type: switch
-        readOnly: false
-        disabled: false
-
-    images@update:
-        label: 'hao.socialnetwork::lang.backend.meetic.images'
-#        tab: 'hao.socialnetwork::lang.backend.meetic.images'
-        type: fileupload
-        mode: image
-        span: full
-        useCaption: false
-        fileTypes: jpg, png, gif
-        imageHeight: 260
-        imageWidth: 260
-        thumbOptions:
-            mode: crop
-            offset:
-                - 0
-                - 0
-            quality: 90
-            sharpen: 0
-            interlace: false
-            extension: auto
-
-
-
-
 
 
 tabs:
@@ -74,14 +37,14 @@ tabs:
         height:
             label: 'hao.socialnetwork::lang.backend.meetic.height'
             span: left
-            type: number
+            type: text
             readOnly: true
             tab: 'hao.socialnetwork::lang.backend.meetic.tabs.user'
 
         weight:
             label: 'hao.socialnetwork::lang.backend.meetic.weight'
             span: right
-            type: number
+            type: text
             readOnly: true
             tab: 'hao.socialnetwork::lang.backend.meetic.tabs.user'
 
@@ -157,5 +120,39 @@ tabs:
             readOnly: true
 
 
+secondaryTabs:
+    fields:
+        favorites:
+            label: 'hao.socialnetwork::lang.backend.meetic.favorites'
+            span: left
+            type: switch
+            readOnly: false
+            disabled: false
 
+        flashs:
+            label: 'hao.socialnetwork::lang.backend.meetic.flashs'
+            span: right
+            type: switch
+            readOnly: false
+            disabled: false
 
+        images@update:
+            label: 'hao.socialnetwork::lang.backend.meetic.images'
+            type: fileupload
+            mode: image
+            span: full
+            useCaption: false
+            fileTypes: jpg, png, gif
+            imageHeight: 150
+            imageWidth: 260
+            readOnly: false
+            disabled: false
+            thumbOptions:
+                mode: crop
+                offset:
+                    - 0
+                    - 0
+                quality: 90
+                sharpen: 0
+                interlace: false
+                extension: auto

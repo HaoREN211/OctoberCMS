@@ -571,6 +571,11 @@ class FormController extends ControllerBehavior
         return $this->formRender(['section' => 'outside']);
     }
 
+    public function formRenderOutsidePreviewFields()
+    {
+        return $this->formRender(['preview' => true, 'section' => 'outside']);
+    }
+
     /**
      * View helper to check if a form tab has fields in the
      * primary tab section.
@@ -599,6 +604,11 @@ class FormController extends ControllerBehavior
         return $this->formRender(['section' => 'primary']);
     }
 
+    public function formRenderPrimaryPreviewTabs()
+    {
+        return $this->formRender(['preview' => true, 'section' => 'primary']);
+    }
+
     /**
      * View helper to check if a form tab has fields in the
      * secondary tab section.
@@ -614,6 +624,8 @@ class FormController extends ControllerBehavior
         return $this->formWidget->getTab('secondary')->hasFields();
     }
 
+
+
     /**
      * View helper to render the form fields belonging to the
      * secondary tabs section.
@@ -626,6 +638,14 @@ class FormController extends ControllerBehavior
     {
         return $this->formRender(['section' => 'secondary']);
     }
+
+
+
+    public function formRenderSecondaryUpdateTabs()
+    {
+        return $this->formRender(['preview' => false, 'section' => 'secondary']);
+    }
+
 
     /**
      * Returns the form widget used by this behavior.

@@ -90,6 +90,7 @@ class Plugin extends PluginBase
                     'meetics' => [
                         'label' => Lang::get('hao.socialnetwork::lang.plugin.menus.meetics'),
                         'icon' => 'icon-maxcdn',
+//                        'icon' => 'icon-facebook-official',
                         'url' => Backend::url('hao/socialnetwork/meetics'),
                         'permissions' => ['hao.socialnetwork.access_meetics'],
                     ],
