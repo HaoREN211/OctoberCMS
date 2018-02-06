@@ -6,7 +6,7 @@ scopes:
     favorites:
         label: 'hao.socialnetwork::lang.backend.meetic.favorites'
         type: switch
-        default: 1
+        default: 0
         conditions:
             - favorites <> true
             - favorites = true
@@ -14,7 +14,15 @@ scopes:
     flashs:
         label: 'hao.socialnetwork::lang.backend.meetic.flashs'
         type: switch
-        default: 1
+        default: 0
         conditions:
             - flashs <> true
             - flashs = true
+
+    age:
+        label: 'hao.socialnetwork::lang.backend.meetic.age'
+        type: numberrange
+        default:
+            20:30
+            20:30
+        conditions: age >= ':min' and age <= ':max'
