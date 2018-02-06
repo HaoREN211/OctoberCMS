@@ -10,7 +10,11 @@ return [
       'menus' => [
           'meetics' => 'Meetic',
 //          'meetics' => 'Facebook',
-      ]
+      ],
+        'meetics'=>[
+            'update'    => '编辑Meetic会员',
+            'create'    => '创建Meetic会员',
+        ],
     ],
 
     'backend' => [
@@ -37,9 +41,47 @@ return [
                 'children_wish' => 'Je veux des enfants :',
                 'nationality' => 'Ma nationalité :',
             ],
+
+            'physique' => [
+                'body_shape'        => 'silhouette :',
+                'attraction'        => 'Le plus attrayant chez moi :',
+                'living_style'      => 'Mon style :',
+                'look'              => 'Physiquement, je suis :',
+                'ethnicity'         => 'Mon origine :',
+                'eyes'              => 'Mes yeux :',
+                'hair_color'        => 'Mes cheveux :',
+                'hair_style'        => 'Longueur de mes cheveux :',
+            ],
+
+            'lifeway' => [
+                'marital_status'        => 'Mon statut marital :',
+                'smoker'                => 'Je fume :',
+                'has_children'          => 'J\'ai des enfants :',
+                'live_with'             => 'Je vis :',
+                'job'                   => 'Ma profession :',
+                'religion'              => 'Ma religion :',
+                'religion_behaviour'    => 'Mon niveau de pratique de la religion :',
+                'food_habit'            => 'Je mange :',
+                'pet'                   => 'Mes animaux de compagnie :',
+                'language'              => 'Je parle :',
+                'studies'               => 'Mon niveau d\'études :',
+                'income'                => 'Mes revenus :'
+            ],
+
+            'interest' => [
+                'music'                 => '音乐',
+                'leisure'               => '闲暇爱好',
+                'hobbies'               => '兴趣',
+                'movie'                 => '电影',
+                'sports'                => '运动',
+            ],
+
             'tabs' => [
-                'personnality' => 'Ma personnalité',
-                'user' => '个人信息'
+                'personnality'  => 'Ma personnalité',
+                'user'          => '个人信息',
+                'physique'      => 'Mon physique',
+                'lifeway'       => 'Mon mode de vie',
+                'interest'      => '爱好',
             ]
         ],
     ],

@@ -4,6 +4,8 @@
 
 # Record name
 name: Meetic
+#name: Facebook
+
 
 # Model Form Field configuration
 form: $/hao/socialnetwork/models/meetic/fields.yaml
@@ -16,13 +18,15 @@ defaultRedirect: hao/socialnetwork/meetics
 
 # Create page
 create:
-    title: Create Meetic
+#    title: Create Meetic
+    title: 'hao.socialnetwork::lang.plugin.meetics.create'
     redirect: hao/socialnetwork/meetics/update/:id
     redirectClose: hao/socialnetwork/meetics
 
 # Update page
 update:
-    title: Edit Meetic
+#    title: Edit Meetic
+    title: 'hao.socialnetwork::lang.plugin.meetics.update'
     redirect: hao/socialnetwork/meetics
     redirectClose: hao/socialnetwork/meetics
 

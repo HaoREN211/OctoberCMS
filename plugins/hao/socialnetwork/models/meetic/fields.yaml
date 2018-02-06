@@ -119,6 +119,181 @@ tabs:
             span: left
             readOnly: true
 
+        body_shape:
+            label: 'hao.socialnetwork::lang.backend.meetic.physique.body_shape'
+            type: 'text'
+            tab: 'hao.socialnetwork::lang.backend.meetic.tabs.physique'
+            span: left
+            readOnly: true
+
+        attraction:
+            label: 'hao.socialnetwork::lang.backend.meetic.physique.attraction'
+            type: 'text'
+            tab: 'hao.socialnetwork::lang.backend.meetic.tabs.physique'
+            span: right
+            readOnly: true
+
+        living_style:
+            label: 'hao.socialnetwork::lang.backend.meetic.physique.living_style'
+            type: 'text'
+            tab: 'hao.socialnetwork::lang.backend.meetic.tabs.physique'
+            span: left
+            readOnly: true
+
+        look:
+            label: 'hao.socialnetwork::lang.backend.meetic.physique.look'
+            type: 'text'
+            tab: 'hao.socialnetwork::lang.backend.meetic.tabs.physique'
+            span: right
+            readOnly: true
+
+        ethnicity:
+            label: 'hao.socialnetwork::lang.backend.meetic.physique.ethnicity'
+            type: 'text'
+            tab: 'hao.socialnetwork::lang.backend.meetic.tabs.physique'
+            span: left
+            readOnly: true
+
+        eyes:
+            label: 'hao.socialnetwork::lang.backend.meetic.physique.eyes'
+            type: 'text'
+            tab: 'hao.socialnetwork::lang.backend.meetic.tabs.physique'
+            span: right
+            readOnly: true
+
+        hair_color:
+            label: 'hao.socialnetwork::lang.backend.meetic.physique.hair_color'
+            type: 'text'
+            tab: 'hao.socialnetwork::lang.backend.meetic.tabs.physique'
+            span: left
+            readOnly: true
+
+        hair_style:
+            label: 'hao.socialnetwork::lang.backend.meetic.physique.hair_style'
+            type: 'text'
+            tab: 'hao.socialnetwork::lang.backend.meetic.tabs.physique'
+            span: right
+            readOnly: true
+
+        marital_status:
+            label: 'hao.socialnetwork::lang.backend.meetic.lifeway.marital_status'
+            type: 'text'
+            tab: 'hao.socialnetwork::lang.backend.meetic.tabs.lifeway'
+            span: left
+            readOnly: true
+
+        smoker:
+            label: 'hao.socialnetwork::lang.backend.meetic.lifeway.smoker'
+            type: 'text'
+            tab: 'hao.socialnetwork::lang.backend.meetic.tabs.lifeway'
+            span: right
+            readOnly: true
+
+        has_children:
+            label: 'hao.socialnetwork::lang.backend.meetic.lifeway.has_children'
+            type: 'text'
+            tab: 'hao.socialnetwork::lang.backend.meetic.tabs.lifeway'
+            span: left
+            readOnly: true
+
+        live_with:
+            label: 'hao.socialnetwork::lang.backend.meetic.lifeway.live_with'
+            type: 'text'
+            tab: 'hao.socialnetwork::lang.backend.meetic.tabs.lifeway'
+            span: right
+            readOnly: true
+
+        job:
+            label: 'hao.socialnetwork::lang.backend.meetic.lifeway.job'
+            type: 'text'
+            tab: 'hao.socialnetwork::lang.backend.meetic.tabs.lifeway'
+            span: left
+            readOnly: true
+
+        food_habit:
+            label: 'hao.socialnetwork::lang.backend.meetic.lifeway.food_habit'
+            type: 'text'
+            tab: 'hao.socialnetwork::lang.backend.meetic.tabs.lifeway'
+            span: right
+            readOnly: true
+
+        religion:
+            label: 'hao.socialnetwork::lang.backend.meetic.lifeway.religion'
+            type: 'text'
+            tab: 'hao.socialnetwork::lang.backend.meetic.tabs.lifeway'
+            span: left
+            readOnly: true
+
+        religion_behaviour:
+            label: 'hao.socialnetwork::lang.backend.meetic.lifeway.religion_behaviour'
+            type: 'text'
+            tab: 'hao.socialnetwork::lang.backend.meetic.tabs.lifeway'
+            span: right
+            readOnly: true
+
+        pet:
+            label: 'hao.socialnetwork::lang.backend.meetic.lifeway.pet'
+            type: 'text'
+            tab: 'hao.socialnetwork::lang.backend.meetic.tabs.lifeway'
+            span: left
+            readOnly: true
+
+        language:
+            label: 'hao.socialnetwork::lang.backend.meetic.lifeway.language'
+            type: 'text'
+            tab: 'hao.socialnetwork::lang.backend.meetic.tabs.lifeway'
+            span: right
+            readOnly: true
+
+        studies:
+            label: 'hao.socialnetwork::lang.backend.meetic.lifeway.studies'
+            type: 'text'
+            tab: 'hao.socialnetwork::lang.backend.meetic.tabs.lifeway'
+            span: left
+            readOnly: true
+
+        income:
+            label: 'hao.socialnetwork::lang.backend.meetic.lifeway.income'
+            type: 'text'
+            tab: 'hao.socialnetwork::lang.backend.meetic.tabs.lifeway'
+            span: right
+            readOnly: true
+
+        music:
+            label: 'hao.socialnetwork::lang.backend.meetic.interest.music'
+            type: textarea
+            tab: 'hao.socialnetwork::lang.backend.meetic.tabs.interest'
+            span: full
+            readOnly: true
+
+        leisure:
+            label: 'hao.socialnetwork::lang.backend.meetic.interest.leisure'
+            type: textarea
+            tab: 'hao.socialnetwork::lang.backend.meetic.tabs.interest'
+            span: full
+            readOnly: true
+
+        hobbies:
+            label: 'hao.socialnetwork::lang.backend.meetic.interest.hobbies'
+            type: textarea
+            tab: 'hao.socialnetwork::lang.backend.meetic.tabs.interest'
+            span: full
+            readOnly: true
+
+        movie:
+            label: 'hao.socialnetwork::lang.backend.meetic.interest.movie'
+            type: textarea
+            tab: 'hao.socialnetwork::lang.backend.meetic.tabs.interest'
+            span: full
+            readOnly: true
+
+        sports:
+            label: 'hao.socialnetwork::lang.backend.meetic.interest.sports'
+            type: textarea
+            tab: 'hao.socialnetwork::lang.backend.meetic.tabs.interest'
+            span: full
+            readOnly: true
+
 
 secondaryTabs:
     fields:
