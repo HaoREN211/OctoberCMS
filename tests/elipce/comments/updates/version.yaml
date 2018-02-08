@@ -1,0 +1,10 @@
+1.0.0:
+    - First version
+    - create_comments_table.php
+1.0.1:
+    - Fixes XSS Danger issue
+1.1.1:
+    - BiPage integration
+1.1.2:
+    - Add option to pages
+    - pages_add_commented.php

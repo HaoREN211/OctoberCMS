@@ -1,0 +1,21 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+  name:
+    label: elipce.limesurvey::lang.backend.roles.name_column
+    searchable: true
+    type: text
+    width: 30%
+
+  description:
+    label: elipce.limesurvey::lang.backend.roles.description_column
+    searchable: true
+    type: text
+    width: 50%
+
+  updated_at:
+    label: elipce.limesurvey::lang.backend.roles.date_column
+    type: date
+    width: 20%

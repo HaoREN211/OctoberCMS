@@ -1,0 +1,74 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+  general_section:
+    label: elipce.limesurvey::lang.backend.surveys.general_section
+    type: section
+    span: full
+
+  name:
+    label: elipce.limesurvey::lang.backend.surveys.name_label
+    commentAbove: elipce.limesurvey::lang.backend.surveys.name_comment
+    type: text
+    disabled: true
+    span: left
+
+  role[name]:
+    label: elipce.limesurvey::lang.backend.surveys.role_label
+    commentAbove: elipce.limesurvey::lang.backend.surveys.role_comment
+    type: text
+    disabled: true
+    span: right
+
+tabs:
+  fields:
+    participants_section:
+      tab: elipce.limesurvey::lang.backend.surveys.tracking_tab
+      label: elipce.limesurvey::lang.backend.surveys.participants_section
+      type: section
+      span: full
+
+    participants:
+      tab: elipce.limesurvey::lang.backend.surveys.tracking_tab
+      path: participants_field
+      type: partial
+      span: full
+
+secondaryTabs:
+  fields:
+    planning_section:
+      label: elipce.limesurvey::lang.backend.surveys.planning_section
+      tab: elipce.limesurvey::lang.backend.surveys.planning_tab
+      type: section
+
+    start_date:
+      label: elipce.limesurvey::lang.backend.surveys.start_date_label
+      commentAbove: elipce.limesurvey::lang.backend.surveys.start_date_comment
+      tab: elipce.limesurvey::lang.backend.surveys.planning_tab
+      type: datepicker
+      mode: datetime
+      span: full
+      attributes:
+        disabled: disabled
+
+    end_date:
+      label: elipce.limesurvey::lang.backend.surveys.end_date_label
+      commentAbove: elipce.limesurvey::lang.backend.surveys.end_date_comment
+      tab: elipce.limesurvey::lang.backend.surveys.planning_tab
+      type: datepicker
+      mode: datetime
+      minDate: now
+      dependsOn: duration
+      span: full
+      attributes:
+        disabled: disabled
+
+    duration:
+      label: elipce.limesurvey::lang.backend.surveys.duration_label
+      commentAbove: elipce.limesurvey::lang.backend.surveys.duration_comment
+      tab: elipce.limesurvey::lang.backend.surveys.planning_tab
+      type: number
+      default: 1
+      span: full

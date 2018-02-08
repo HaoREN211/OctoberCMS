@@ -1,0 +1,5 @@
+1.0.1:
+    - First version of SSO
+1.0.2:
+    - Add request logs
+    - create_logs_table.php

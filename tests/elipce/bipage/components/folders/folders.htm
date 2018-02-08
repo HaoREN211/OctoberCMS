@@ -1,0 +1,23 @@
+<div class="panel-group" id="folders">
+    {% for folder in folders %}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <a data-toggle="collapse" data-parent="#folders" href="#folder-{{ folder.id }}">
+                <i class="icon-folder-open"></i>{{ folder.title }}
+            </a>
+            <span class="badge pull-right">{{ folder.pages|length }}</span>
+        </div>
+        <div id="folder-{{ folder.id }}" class="panel-collapse collapse {% if loop.first %} in {% endif %}">
+            <ul class="list-group filter-list-group">
+                {% for page in folder.pages %}
+                <li class="list-group-item">
+                    <a href="{{ __SELF__.redirectPage }}/{{ page.id }}">
+                        {{page.name}}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    {% endfor %}
+</div>

@@ -1,0 +1,21 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: elipce.multisite::lang.backend.portals.record_name
+
+# Model Form Field configuration
+form: $/elipce/bipage/controllers/focus/portal_fields.yaml
+
+# Model Class name
+modelClass: Elipce\Multisite\Models\Portal
+
+# Default redirect location
+defaultRedirect: elipce/bipage/focus
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: elipce/bipage/focus
+    redirectClose: elipce/bipage/focus

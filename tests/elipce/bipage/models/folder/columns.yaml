@@ -1,0 +1,28 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    name:
+      label: elipce.bipage::lang.backend.folders.name_column
+      type: text
+      searchable: true
+      width: 30%
+
+    description:
+      label: elipce.bipage::lang.backend.folders.description_column
+      type: text
+      width: 35%
+
+    pages_count:
+      label: elipce.bipage::lang.backend.folders.pages_column
+      relation: pages_count
+      valueFrom: count
+      default: 0
+      sortable: false
+      width: 12%
+
+    updated_at:
+      label: elipce.bipage::lang.backend.folders.date_column
+      type: date
+      width: 23%

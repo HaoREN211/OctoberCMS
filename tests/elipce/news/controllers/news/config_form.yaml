@@ -1,0 +1,27 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: elipce.news::lang.backend.news.record_name
+
+# Model Form Field configuration
+form: $/elipce/news/models/news/fields.yaml
+
+# Model Class name
+modelClass: Elipce\News\Models\News
+
+# Default redirect location
+defaultRedirect: elipce/news/news
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: elipce/news/news/update/:id
+    redirectClose: elipce/news/news
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: elipce/news/news
+    redirectClose: elipce/news/news

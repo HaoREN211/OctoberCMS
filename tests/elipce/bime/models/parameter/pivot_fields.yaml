@@ -1,0 +1,18 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+  name:
+    label: elipce.bime::lang.backend.parameters.name_label
+    commentAbove: elipce.bime::lang.backend.parameters.name_comment
+    disabled: true
+    type: text
+    span: left
+
+  pivot[parameter_name]:
+    label: elipce.bime::lang.backend.parameters.pivot_label
+    commentAbove: elipce.bime::lang.backend.parameters.pivot_comment
+    type: text
+    required: true
+    span: right

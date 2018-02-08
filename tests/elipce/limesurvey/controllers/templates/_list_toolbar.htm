@@ -1,0 +1,17 @@
+<div data-control="toolbar">
+    <a href="<?= Backend::url('elipce/limesurvey/templates/create') ?>"
+       class="btn btn-primary oc-icon-plus">
+        <?= e(trans('backend::lang.form.create')) ?>
+    </a>
+    <button
+            class="btn btn-danger oc-icon-trash-o disabled-toolbar-button"
+            disabled="disabled" data-request="onDelete"
+            onclick="$(this).data('request-data', {
+            checked: $('.control-list').listWidget('getChecked')})"
+            data-request-confirm="<?= e(trans('backend::lang.list.delete_selected_confirm')) ?>"
+            data-trigger-action="enable" data-stripe-load-indicator data-trigger-condition="checked"
+            data-trigger=".control-list input[type=checkbox]"
+            data-request-success="$('.disabled-toolbar-button').prop('disabled', true);">
+        <?= e(trans('backend::lang.list.delete_selected')) ?>
+    </button>
+</div>

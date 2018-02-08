@@ -1,0 +1,18 @@
+# ===================================
+# Filter Scope Definitions
+# ===================================
+
+scopes:
+  portal:
+    label: elipce.multisite::lang.backend.portals.record_name
+    modelClass: Elipce\Multisite\Models\Portal
+    scope: applyPortal
+    nameFrom: name
+    type: group
+
+  story:
+    label: elipce.limesurvey::lang.backend.stories.record_name
+    modelClass: Elipce\LimeSurvey\Models\Story
+    conditions: applyStory
+    nameFrom: name
+    type: group

@@ -1,0 +1,30 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+  name:
+    label: elipce.tableau::lang.backend.sites.name_label
+    commentAbove: elipce.tableau::lang.backend.sites.name_comment
+    type: text
+    required: true
+    span: left
+
+  url:
+    label: elipce.tableau::lang.backend.sites.url_label
+    commentAbove: elipce.tableau::lang.backend.sites.url_comment
+    type: text
+    required: true
+    span: left
+
+  login:
+    label: elipce.tableau::lang.backend.sites.login_label
+    commentAbove: elipce.tableau::lang.backend.sites.login_comment
+    required: true
+    span: left
+
+  password:
+    label: elipce.tableau::lang.backend.sites.password_label
+    commentAbove: elipce.tableau::lang.backend.sites.password_comment
+    required: true
+    span: left

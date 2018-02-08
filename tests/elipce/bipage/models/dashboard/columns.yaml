@@ -1,0 +1,21 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+  name:
+    label: elipce.bipage::lang.backend.dashboards.name_column
+    type: text
+    searchable: true
+    width: 60%
+
+  type:
+    label: elipce.bipage::lang.backend.dashboards.type_column
+    type: text
+    searchable: true
+    width: 25%
+
+  updated_at:
+    label: elipce.bipage::lang.backend.dashboards.date_column
+    type: date
+    width: 15%

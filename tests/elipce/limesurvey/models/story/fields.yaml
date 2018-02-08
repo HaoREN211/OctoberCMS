@@ -1,0 +1,99 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+  general_section:
+    label: elipce.limesurvey::lang.backend.stories.general_section_label
+    type: section
+    span: full
+
+  name:
+    label: elipce.limesurvey::lang.backend.stories.name_label
+    commentAbove: elipce.limesurvey::lang.backend.stories.name_comment
+    type: text
+    required: true
+    span: left
+
+  collection@create:
+    label: elipce.limesurvey::lang.backend.stories.collection_label
+    commentAbove: elipce.limesurvey::lang.backend.stories.collection_comment
+    type: dropdown
+    required: true
+    span: right
+
+  collection[name]@update:
+    label: elipce.limesurvey::lang.backend.stories.collection_label
+    commentAbove: elipce.limesurvey::lang.backend.stories.collection_comment
+    disabled: true
+    type: text
+    span: right
+
+tabs:
+  fields:
+    roles_section@update:
+      label: elipce.limesurvey::lang.backend.stories.roles_section_label
+      comment: elipce.limesurvey::lang.backend.stories.roles_section_comment
+      tab: elipce.limesurvey::lang.backend.stories.roles_tab
+      type: section
+      span: full
+
+    roles@update:
+      tab: elipce.limesurvey::lang.backend.stories.roles_tab
+      type: partial
+      path: roles_field
+
+    presurveys_section@update:
+      label: elipce.limesurvey::lang.backend.stories.presurveys_section_label
+      comment: elipce.limesurvey::lang.backend.stories.presurveys_section_comment
+      tab: elipce.limesurvey::lang.backend.stories.presurveys_tab
+      type: section
+      span: full
+
+    presurveys@update:
+      tab: elipce.limesurvey::lang.backend.stories.presurveys_tab
+      path: presurveys_field
+      type: partial
+
+    mask_section:
+      label: elipce.limesurvey::lang.backend.stories.mask_section_label
+      comment: elipce.limesurvey::lang.backend.stories.mask_section_comment
+      tab: elipce.limesurvey::lang.backend.stories.mask_tab
+      context: update
+      type: section
+      span: full
+
+    mask:
+      tab: elipce.limesurvey::lang.backend.stories.mask_tab
+      type: partial
+      path: mask_field
+      context: update
+      span: full
+
+    participants_file:
+      label: Fichier des participants (vierge)
+      commentAbove: Le fichier utilisé pour l'import des participants.
+      tab: elipce.limesurvey::lang.backend.stories.mask_tab
+      type: fileupload
+      fileTypes: .xls,xlsx
+      context: update
+      mode: file
+      span: full
+
+secondaryTabs:
+  fields:
+    statistics_section@create:
+      label: elipce.limesurvey::lang.backend.stories.statistics_section_label
+      comment: elipce.limesurvey::lang.backend.stories.statistics_empty
+      type: section
+      span: full
+
+    statistics_section@update:
+      label: elipce.limesurvey::lang.backend.stories.statistics_section_label
+      type: section
+      span: full
+
+    statistics@update:
+      type: partial
+      path: statistics_field
+      span: full

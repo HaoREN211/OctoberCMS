@@ -1,0 +1,39 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+  section:
+    label: elipce.bime::lang.backend.parameters.section_label
+    comment: elipce.bime::lang.backend.parameters.section_comment
+    type: section
+    span: left
+
+  name:
+    label: elipce.bime::lang.backend.parameters.name_label
+    commentAbove: elipce.bime::lang.backend.parameters.name_comment
+    required: true
+    type: text
+    span: left
+
+  type@create:
+    label: elipce.bime::lang.backend.parameters.type_label
+    commentAbove: elipce.bime::lang.backend.parameters.type_comment
+    type: dropdown
+    required: true
+    options:
+      string: elipce.bime::lang.backend.parameters.string_option
+      integer: elipce.bime::lang.backend.parameters.integer_option
+      date: elipce.bime::lang.backend.parameters.date_option
+    span: left
+
+  type@update:
+    label: elipce.bime::lang.backend.parameters.type_label
+    commentAbove: elipce.bime::lang.backend.parameters.type_comment
+    type: dropdown
+    disabled: true
+    options:
+      string: elipce.bime::lang.backend.parameters.string_option
+      integer: elipce.bime::lang.backend.parameters.integer_option
+      date: elipce.bime::lang.backend.parameters.date_option
+    span: left

@@ -1,0 +1,11 @@
+# ===================================
+# Filter Scope Definitions
+# ===================================
+
+scopes:
+    portal:
+        type: group
+        label: elipce.multisite::lang.backend.portals.record_name
+        modelClass: Elipce\Multisite\Models\Portal
+        nameFrom: name
+        conditions: portal_id in (:filtered)

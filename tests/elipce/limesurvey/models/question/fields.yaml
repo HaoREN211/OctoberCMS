@@ -1,0 +1,16 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+  name:
+    label: elipce.limesurvey::lang.backend.questions.name_label
+    commentAbove: elipce.limesurvey::lang.backend.questions.name_comment
+    disabled: true
+    span: left
+
+  answer:
+    label: elipce.limesurvey::lang.backend.questions.question_label
+    commentAbove: elipce.limesurvey::lang.backend.questions.question_comment
+    type: dropdown
+    span: right

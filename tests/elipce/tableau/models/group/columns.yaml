@@ -1,0 +1,31 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    name:
+        label: elipce.tableau::lang.backend.groups.name_column
+        type: text
+        searchable: true
+        width: 50%
+
+    site:
+        label: elipce.tableau::lang.backend.groups.site_column
+        type: relation
+        relation: site
+        select: name
+        searchable: true
+        width: 30%
+
+    viewers_count:
+        label: elipce.tableau::lang.backend.groups.viewers_column
+        relation: viewers_count
+        valueFrom: count
+        default: 0
+        sortable: false
+        width: 20%
+
+    updated_at:
+        label: elipce.tableau::lang.backend.groups.date_column
+        type: date
+        invisible: true

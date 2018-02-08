@@ -1,0 +1,42 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+  required_section:
+    label: elipce.limesurvey::lang.backend.participants.required_section_label
+    comment: elipce.limesurvey::lang.backend.participants.required_section_comment
+    type: section
+    span: left
+
+  custom_section:
+    label: elipce.limesurvey::lang.backend.participants.custom_section_label
+    comment: elipce.limesurvey::lang.backend.participants.custom_section_comment
+    type: section
+    span: right
+
+  email:
+    label: elipce.limesurvey::lang.backend.participants.email_label
+    commentAbove: elipce.limesurvey::lang.backend.participants.email_comment
+    type: text
+    required: true
+    span: left
+
+  custom_attributes:
+    type: partial
+    path: attributes_field
+    span: right
+
+  fn:
+    label: elipce.limesurvey::lang.backend.participants.fn_label
+    commentAbove: elipce.limesurvey::lang.backend.participants.fn_comment
+    type: text
+    required: true
+    span: left
+
+  sn:
+    label: elipce.limesurvey::lang.backend.participants.sn_label
+    commentAbove: elipce.limesurvey::lang.backend.participants.sn_comment
+    type: text
+    required: true
+    span: left

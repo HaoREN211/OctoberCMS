@@ -1,0 +1,9 @@
+{
+    "name": "elipce/analytics",
+    "description": "Google Analytics integration",
+    "homepage": "http://elipce.com",
+    "require": {
+        "google/apiclient": "^2.0"
+    },
+    "minimum-stability": "dev"
+}

@@ -1,0 +1,21 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    name:
+        label: elipce.tableau::lang.backend.sites.name_column
+        type: text
+        searchable: true
+        width: 40%
+
+    url:
+        label: elipce.tableau::lang.backend.sites.url_column
+        type: text
+        searchable: true
+        width: 30%
+
+    updated_at:
+        label: elipce.tableau::lang.backend.sites.date_column
+        type: date
+        width: 30%

@@ -1,0 +1,38 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+  name:
+    label: elipce.bipage::lang.backend.images.name_label
+    commentAbove: elipce.bipage::lang.backend.images.name_comment
+    required: true
+    type: text
+    span: left
+
+  collection:
+    label: elipce.bipage::lang.backend.images.collection_label
+    commentAbove: elipce.bipage::lang.backend.images.collection_comment
+    type: relation
+    nameFrom: name
+    emptyOption: ...
+    required: true
+    span: right
+
+tabs:
+  fields:
+    source:
+      label: elipce.bipage::lang.backend.images.source_label
+      commentAbove: elipce.bipage::lang.backend.images.source_comment
+      type: fileupload
+      mode: image
+      fileTypes: jpg,png,gif
+      required: true
+      useCaption: false
+      span: full
+
+    public:
+      label: Image publique ?
+      commentAbove: Indique si cette image est accessible aux visiteurs.
+      type: switch
+      span: full

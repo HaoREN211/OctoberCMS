@@ -1,0 +1,11 @@
+# ===================================
+# Filter Scope Definitions
+# ===================================
+
+scopes:
+    account:
+        type: group
+        label: elipce.tableau::lang.backend.groups.site_column
+        modelClass: Elipce\Tableau\Models\Site
+        nameFrom: name
+        conditions: site_id in (:filtered)

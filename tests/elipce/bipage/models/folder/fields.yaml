@@ -1,0 +1,66 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+
+  name:
+    label: elipce.bipage::lang.backend.folders.name_label
+    commentAbove: elipce.bipage::lang.backend.folders.name_comment
+    required: true
+    span: left
+
+  description:
+    label: elipce.bipage::lang.backend.folders.description_label
+    commentAbove: elipce.bipage::lang.backend.folders.description_comment
+    span: right
+
+tabs:
+  fields:
+    pages_section:
+      tab: elipce.bipage::lang.backend.folders.pages_tab
+      label: elipce.bipage::lang.backend.folders.pages_section_label
+      comment: elipce.bipage::lang.backend.folders.pages_section_comment
+      type: section
+      span: full
+
+    pages:
+      tab: elipce.bipage::lang.backend.folders.pages_tab
+      path: pages_field
+      type: partial
+
+secondaryTabs:
+  fields:
+    statistics_section@create:
+      label: elipce.bipage::lang.backend.folders.statistics_section
+      comment: elipce.bipage::lang.backend.folders.statistics_empty
+      type: section
+      span: full
+
+    statistics_section@update:
+      label: elipce.bipage::lang.backend.folders.statistics_section
+      type: section
+      span: full
+
+    statistics:
+      path: statistics_field
+      type: partial
+      context: update
+      span: full
+
+    portal:
+      label: elipce.bipage::lang.backend.folders.portal_label
+      commentAbove: elipce.bipage::lang.backend.folders.portal_comment
+      type: relation
+      nameFrom: name
+      required: true
+      context: create
+      span: full
+
+    portal[name]:
+      label: elipce.bipage::lang.backend.folders.portal_label
+      commentAbove: elipce.bipage::lang.backend.folders.portal_comment
+      type: text
+      disabled: true
+      context: update
+      span: full

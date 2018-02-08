@@ -1,0 +1,33 @@
+<section id="layout-title">
+    <div class="container text-center">
+        <h3>
+            Résultats de votre recherche
+            &nbsp;&nbsp;<i class="icon-search"></i>
+        </h3>
+    </div>
+</section>
+
+<div class="container page-list">
+    {% for chunk in __SELF__.results %}
+    <div class="row">
+        {% for page in chunk %}
+        <div class="col-sm-6 col-lg-4">
+            <div class="bookmark page-list-item">
+                <a href="{{ __SELF__.redirectPage }}/{{ page.id }}">
+                    <img src="{{ page.thumbnail.getThumb(720, 420, { mode: 'crop' }) }}"
+                         class="img-responsive" alt="thumb">
+                    <span class="folder-title">
+                       <i class="icon-folder-open"></i>
+                        {{ page.folders.first.name }}
+                    </span>
+                </a>
+                <a href="{{__SELF__.redirectPage}}/{{ page.id }}">
+                    <h6>{{ page.name }}</h6>
+                </a>
+                <p>{{ page.excerpt }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endfor %}
+</div>

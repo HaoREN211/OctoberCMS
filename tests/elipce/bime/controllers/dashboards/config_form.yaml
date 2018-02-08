@@ -1,0 +1,21 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: elipce.bime::lang.backend.dashboards.record_name
+
+# Model Form Field configuration
+form: $/elipce/bime/models/dashboard/fields.yaml
+
+# Model Class name
+modelClass: Elipce\Bime\Models\Dashboard
+
+# Default redirect location
+defaultRedirect: elipce/bime/dashboard
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: elipce/bime/dashboards
+    redirectClose: elipce/bime/dashboards

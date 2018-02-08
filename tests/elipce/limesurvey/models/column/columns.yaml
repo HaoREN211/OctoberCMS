@@ -1,0 +1,22 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+  name:
+    label: elipce.limesurvey::lang.backend.columns.name_column
+    type: text
+    width: 40%
+
+  translated_field:
+    label: elipce.limesurvey::lang.backend.columns.field_column
+    sortable: false
+    empty: <>
+    type: text
+    width: 40%
+
+  translated_type:
+    label: elipce.limesurvey::lang.backend.columns.type_column
+    sortable: false
+    type: text
+    width: 20%

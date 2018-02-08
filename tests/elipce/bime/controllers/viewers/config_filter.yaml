@@ -1,0 +1,23 @@
+# ===================================
+# Filter Scope Definitions
+# ===================================
+
+scopes:
+    account:
+        type: group
+        label: elipce.bime::lang.backend.viewers.account_column
+        modelClass: Elipce\Bime\Models\Account
+        nameFrom: name
+        conditions: account_id in (:filtered)
+
+    group:
+        type: group
+        label: elipce.bime::lang.backend.viewers.group_column
+        modelClass: Elipce\Bime\Models\Group
+        nameFrom: name
+        conditions: group_id in (:filtered)
+
+    activated:
+        type: checkbox
+        label: elipce.bime::lang.backend.viewers.activated_filter
+        conditions: id in (select `viewers`.`id` from `elipce_bime_viewers` as viewers inner join `users` on `users`.`email`=`viewers`.`login`)

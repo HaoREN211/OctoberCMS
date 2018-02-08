@@ -1,0 +1,19 @@
+<div data-control="toolbar" data-disposable="">
+    <button data-request="onRefreshStatuses" data-stripe-load-indicator
+       class="btn btn-sm btn-secondary oc-icon-refresh"
+       data-request-data="surveyId: <?= $formModel->id ?>">
+        <?= e(trans('system::lang.plugins.refresh')) ?>
+    </button>
+    <?php if ($formModel->active && $formModel->end_date->isFuture()): ?>
+        <button class="btn btn-sm btn-secondary oc-icon-send-o"
+                data-stripe-load-indicator
+                data-request="onRemind"
+                data-request-data="surveyId: <?= $formModel->id ?>">
+            <?= e(trans('elipce.limesurvey::lang.backend.surveys.remind_button')) ?>
+        </button>
+    <?php else: ?>
+        <button class="btn btn-sm btn-secondary oc-icon-send-o" disabled>
+            <?= e(trans('elipce.limesurvey::lang.backend.surveys.remind_button')) ?>
+        </button>
+    <?php endif; ?>
+</div>

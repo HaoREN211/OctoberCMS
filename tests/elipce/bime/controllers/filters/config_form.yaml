@@ -1,0 +1,27 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: elipce.bime::lang.backend.filters.record_name
+
+# Model Form Field configuration
+form: $/elipce/bime/models/filter/fields.yaml
+
+# Model Class name
+modelClass: Elipce\Bime\Models\Filter
+
+# Default redirect location
+defaultRedirect: elipce/bime/filters
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: elipce/bime/filters/update/:id
+    redirectClose: elipce/bime/filters
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: elipce/bime/filters
+    redirectClose: elipce/bime/filters

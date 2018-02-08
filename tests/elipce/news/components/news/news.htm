@@ -1,0 +1,23 @@
+<div id="newslist">
+    {% for post in news %}
+    <div class="row news">
+        <div class="col-sm-5 news-card">
+            {% if post.page %}
+            <a href="{{__SELF__.redirectPage}}/{{post.page.id}}">
+                <img src="{{ post.thumbnail.getThumb(720, 420, { mode: 'crop' }) }}" alt="preview"
+                     class="img img-responsive">
+            </a>
+            {% else %}
+            <img src="{{ post.thumbnail.getThumb(720, 420, { mode: 'crop' }) }}" alt="preview"
+                 class="img img-responsive">
+            {% endif %}
+        </div>
+        <div class="col-sm-7 news-text">
+            <p>{{post.text}}</p>
+            <p>
+                <small>{{ post.updated_at|date("d/m/Y") }}</small>
+            </p>
+        </div>
+    </div>
+    {% endfor %}
+</div>

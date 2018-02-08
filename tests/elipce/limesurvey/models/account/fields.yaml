@@ -1,0 +1,51 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+  authentication_section:
+    label: elipce.limesurvey::lang.backend.accounts.authentication_section_label
+    comment: elipce.limesurvey::lang.backend.accounts.authentication_section_comment
+    type: section
+    span: full
+
+  name:
+    label: elipce.limesurvey::lang.backend.accounts.name_label
+    commentAbove: elipce.limesurvey::lang.backend.accounts.name_comment
+    type: text
+    required: true
+    span: left
+
+  url:
+    label: elipce.limesurvey::lang.backend.accounts.url_label
+    commentAbove: elipce.limesurvey::lang.backend.accounts.url_comment
+    type: text
+    required: true
+    span: right
+
+  login:
+    label: elipce.limesurvey::lang.backend.accounts.login_label
+    commentAbove: elipce.limesurvey::lang.backend.accounts.login_comment
+    type: text
+    required: true
+    span: left
+
+  password:
+    label: elipce.limesurvey::lang.backend.accounts.password_label
+    commentAbove: elipce.limesurvey::lang.backend.accounts.password_comment
+    type: password
+    required: true
+    span: right
+
+secondaryTabs:
+  fields:
+    portals_section:
+      label: elipce.limesurvey::lang.backend.accounts.portals_section_label
+      comment: elipce.limesurvey::lang.backend.accounts.portals_section_comment
+      type: section
+      span: full
+
+    portals:
+      emptyOption: elipce.limesurvey::lang.backend.accounts.portals_empty
+      type: checkboxlist
+      span: full

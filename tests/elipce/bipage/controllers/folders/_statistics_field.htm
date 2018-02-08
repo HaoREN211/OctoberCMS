@@ -1,0 +1,16 @@
+<div class="scoreboard">
+    <div data-control="toolbar">
+        <div class="scoreboard-item control-chart" data-control="chart-pie">
+            <ul>
+                <li data-color="#95b753">
+                    <?= e(trans('elipce.bipage::lang.backend.folders.published_pages')) ?>
+                    <span><?= $formModel->pages()->published()->count() ?></span>
+                </li>
+                <li data-color="#e5a91a">
+                    <?= e(trans('elipce.bipage::lang.backend.folders.unpublished_pages')) ?>
+                    <span><?= $formModel->pages()->unpublished()->count() ?></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

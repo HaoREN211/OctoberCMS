@@ -1,0 +1,18 @@
+# ===================================
+# Filter Scope Definitions
+# ===================================
+
+scopes:
+  portal:
+    type: group
+    label: elipce.multisite::lang.backend.portals.record_name
+    modelClass: Elipce\Multisite\Models\Portal
+    nameFrom: name
+    scope: applyPortal
+
+  collection:
+    type: group
+    label: elipce.bipage::lang.backend.collections.record_name
+    modelClass: Elipce\BiPage\Models\Collection
+    nameFrom: name
+    conditions: collection_id in (:filtered)

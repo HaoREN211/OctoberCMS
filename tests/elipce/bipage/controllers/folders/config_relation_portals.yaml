@@ -1,0 +1,16 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+folders:
+  label: elipce.bipage::lang.backend.folders.record_name
+  emptyMessage: backend::lang.list.no_records
+  readOnly: true
+
+  view:
+    list: $/elipce/bipage/models/folder/columns.yaml
+    recordUrl: elipce/bipage/folders/update/:id
+    showSorting: false
+
+  manage:
+    form: $/elipce/bipage/models/folder/fields.yaml

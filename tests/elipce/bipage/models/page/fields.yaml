@@ -1,0 +1,79 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+  name:
+    label: elipce.bipage::lang.backend.pages.name_label
+    commentAbove: elipce.bipage::lang.backend.pages.name_comment
+    span: left
+    required: true
+
+  collection:
+    label: elipce.bipage::lang.backend.pages.collection_label
+    commentAbove: elipce.bipage::lang.backend.pages.collection_comment
+    type: relation
+    context: create
+    emptyOption: ...
+    required: true
+    span: right
+
+  collection[name]:
+    label: elipce.bipage::lang.backend.pages.collection_label
+    commentAbove: elipce.bipage::lang.backend.pages.collection_comment
+    context: update
+    disabled: true
+    type: text
+    span: right
+
+  excerpt:
+    label: elipce.bipage::lang.backend.pages.excerpt_label
+    commentAbove: elipce.bipage::lang.backend.pages.excerpt_comment
+    type: textarea
+    size: small
+
+tabs:
+  fields:
+    visualizations_section:
+      label: elipce.bipage::lang.backend.pages.visualizations_section_label
+      comment: elipce.bipage::lang.backend.pages.visualizations_section_comment
+      tab: elipce.bipage::lang.backend.pages.visualizations_tab
+      context: update
+      type: section
+      span: full
+
+    visualizations:
+      type: partial
+      path: visualizations_field
+      tab: elipce.bipage::lang.backend.pages.visualizations_tab
+      context: update
+
+secondaryTabs:
+  fields:
+    thumbnail:
+      label: elipce.bipage::lang.backend.pages.thumbnail_label
+      commentAbove: elipce.bipage::lang.backend.pages.thumbnail_comment
+      type: fileupload
+      mode: image
+      useCaption: false
+      fileTypes: jpg, png, gif
+      imageHeight: 150
+      imageWidth: 260
+
+    url:
+      type: partial
+      path: url_field
+      context: update
+
+    published:
+      label: elipce.bipage::lang.backend.pages.published_label
+      commentAbove: elipce.bipage::lang.backend.pages.published_comment
+      context: update
+      default: false
+      type: switch
+
+    shared:
+      label: elipce.bipage::lang.backend.pages.shared_label
+      commentAbove: elipce.bipage::lang.backend.pages.shared_comment
+      context: update
+      type: switch

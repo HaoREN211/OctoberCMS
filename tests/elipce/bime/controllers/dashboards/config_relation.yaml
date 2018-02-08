@@ -1,0 +1,20 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+parameters:
+  label: elipce.bipage::lang.backend.parameters.record_name
+  emptyMessage: backend::lang.list.no_records
+
+  view:
+    list: $/elipce/bime/models/parameter/columns.yaml
+    toolbarButtons: add|remove
+
+  manage:
+    list: $/elipce/bime/models/parameter/columns.yaml
+    showSearch: true
+    showSorting: true
+    recordsPerPage: 20
+
+  pivot:
+    form: $/elipce/bime/models/parameter/pivot_fields.yaml

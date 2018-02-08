@@ -1,0 +1,35 @@
+.page-list .page-list-item > p:last-child
+{
+    text-align: justify;
+    padding-bottom: 12px;
+}
+
+.page-list .page-list-item > a > h6
+{
+    text-align: center;
+    letter-spacing: -1.5px;
+}
+
+.page-list .page-list-item > a > img
+{
+    outline: none;
+}
+
+.page-list .page-list-item > a > img:hover
+{
+    outline: 2px solid;
+    outline-offset: -1px;
+}
+
+.page-list .page-list-item > a > span.folder-title
+{
+    background: rgba(0,0,0,0.6);
+    letter-spacing: -0.5px;
+    margin: 0 15px 0 15px;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    padding: 5px;
+    top: 0;
+    left: 0;
+}

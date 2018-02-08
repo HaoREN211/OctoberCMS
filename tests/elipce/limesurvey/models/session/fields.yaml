@@ -1,0 +1,243 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+  general_section:
+    label: elipce.limesurvey::lang.backend.sessions.general_section_label
+    type: section
+    span: full
+
+  name:
+    label: elipce.limesurvey::lang.backend.sessions.name_label
+    commentAbove: elipce.limesurvey::lang.backend.sessions.name_comment
+    required: true
+    span: left
+
+  story:
+    label: elipce.limesurvey::lang.backend.sessions.story_label
+    commentAbove: elipce.limesurvey::lang.backend.sessions.story_comment
+    type: dropdown
+    emptyOption: ...
+    required: true
+    context: create
+    span: right
+
+  story[name]:
+    label: elipce.limesurvey::lang.backend.sessions.story_label
+    commentAbove: elipce.limesurvey::lang.backend.sessions.story_comment
+    disabled: true
+    type: text
+    context: update
+    span: right
+
+  import_section_one:
+    label: elipce.limesurvey::lang.backend.sessions.import_section_one_label
+    comment: elipce.limesurvey::lang.backend.sessions.import_section_one_comment
+    type: section
+    context: create
+    span: full
+
+  import_hint:
+    type: partial
+    path: import_hint_field
+    context: update
+    span: full
+
+  import_file:
+    fileTypes: xlsx, xls
+    type: fileupload
+    mode: file
+    span: full
+
+  participants_file:
+    type: partial
+    path: participants_file_field
+    dependsOn: story
+    context: create
+    span: full
+
+  import_section_two:
+    label: elipce.limesurvey::lang.backend.sessions.import_section_two_label
+    comment: elipce.limesurvey::lang.backend.sessions.import_section_two_comment
+    type: section
+    context: create
+    span: full
+
+  required_columns_section:
+    label: elipce.limesurvey::lang.backend.sessions.required_columns_section
+    type: section
+    context: create
+    span: left
+
+  mask_columns_section:
+    label: elipce.limesurvey::lang.backend.sessions.mask_columns_section
+    type: section
+    context: create
+    span: right
+
+  uid_column:
+    label: elipce.limesurvey::lang.backend.sessions.uid_column_label
+    dependsOn: import_file
+    default: id
+    type: dropdown
+    context: create
+    required: true
+    span: left
+
+  mask_columns:
+    tab: elipce.limesurvey::lang.backend.sessions.participants_tab
+    type: partial
+    path: mask_field
+    dependsOn: story
+    context: create
+    span: right
+
+  email_column:
+    label: elipce.limesurvey::lang.backend.sessions.email_column_label
+    dependsOn: [import_file, story]
+    default: email
+    type: dropdown
+    context: create
+    required: true
+    span: left
+
+  fn_column:
+    label: elipce.limesurvey::lang.backend.sessions.fn_column_label
+    dependsOn: [import_file, story]
+    default: prenom
+    type: dropdown
+    context: create
+    required: true
+    span: left
+
+  sn_column:
+    label: elipce.limesurvey::lang.backend.sessions.sn_column_label
+    dependsOn: [import_file, story]
+    default: nom
+    type: dropdown
+    context: create
+    required: true
+    span: left
+
+  role_column:
+    label: elipce.limesurvey::lang.backend.sessions.role_column_label
+    dependsOn: [import_file, story]
+    default: role
+    type: dropdown
+    context: create
+    required: true
+    span: left
+
+  custom_columns_section:
+    label: elipce.limesurvey::lang.backend.sessions.custom_columns_section
+    type: section
+    context: create
+    span: left
+
+  custom_columns:
+    tab: elipce.limesurvey::lang.backend.sessions.participants_tab
+    prompt: elipce.limesurvey::lang.backend.sessions.columns_prompt
+    dependsOn: [story, import_file, uid_column, email_column, fn_column, sn_column, role_column]
+    type: repeater
+    context: create
+    sortable: false
+    span: left
+    form:
+      fields:
+        column:
+          label: elipce.limesurvey::lang.backend.sessions.columns_column
+          type: dropdown
+          dependsOn: story
+          required: true
+          span: left
+
+        type:
+          label: elipce.limesurvey::lang.backend.sessions.columns_type
+          type: dropdown
+          options:
+            text: elipce.limesurvey::lang.backend.columns.text_option
+            numeric: elipce.limesurvey::lang.backend.columns.numeric_option
+            date: elipce.limesurvey::lang.backend.columns.date_option
+          required: true
+          span: right
+
+tabs:
+  fields:
+    surveys_section:
+      label: elipce.limesurvey::lang.backend.sessions.surveys_section_label
+      comment: elipce.limesurvey::lang.backend.sessions.surveys_section_comment
+      tab: elipce.limesurvey::lang.backend.sessions.surveys_tab
+      type: section
+      context: update
+      span: full
+
+    surveys:
+      tab: elipce.limesurvey::lang.backend.sessions.surveys_tab
+      type: partial
+      path: surveys_field
+      context: update
+      span: full
+
+    participants_section:
+      label: elipce.limesurvey::lang.backend.sessions.participants_section_label
+      comment: elipce.limesurvey::lang.backend.sessions.participants_section_comment
+      tab: elipce.limesurvey::lang.backend.sessions.participants_tab
+      type: section
+      context: update
+      span: full
+
+    participants:
+      tab: elipce.limesurvey::lang.backend.sessions.participants_tab
+      type: partial
+      path: participants_field
+      context: update
+      span: full
+
+secondaryTabs:
+  fields:
+    statistics_section@update:
+      label: elipce.limesurvey::lang.backend.sessions.statistics_section_label
+      type: section
+      span: full
+
+    statistics:
+      type: partial
+      path: statistics_field
+      context: update
+      span: full
+
+    date_section:
+      label: elipce.limesurvey::lang.backend.sessions.dates_section_label
+      type: section
+      span: full
+
+    start_date:
+      label: elipce.limesurvey::lang.backend.sessions.start_date_label
+      commentAbove: elipce.limesurvey::lang.backend.sessions.start_date_comment
+      type: datepicker
+      mode: datetime
+      minDate: now
+      required: true
+      span: full
+
+    end_date:
+      label: elipce.limesurvey::lang.backend.sessions.end_date_label
+      commentAbove: elipce.limesurvey::lang.backend.sessions.end_date_comment
+      type: datepicker
+      mode: datetime
+      minDate: now
+      required: true
+      span: full
+
+    portal_section:
+      label: elipce.limesurvey::lang.backend.sessions.portal_section_label
+      comment: elipce.limesurvey::lang.backend.sessions.portal_section_comment
+      context: create
+      type: section
+
+    portal:
+      type: dropdown
+      required: true
+      context: create
+      span: full

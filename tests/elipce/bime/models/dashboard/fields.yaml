@@ -1,0 +1,34 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+  name:
+    label: elipce.bime::lang.backend.dashboards.name_label
+    commentAbove: elipce.bime::lang.backend.dashboards.name_comment
+    type: text
+    disabled: true
+    span: left
+
+  dashboard_folder:
+    label: elipce.bime::lang.backend.dashboards.folder_label
+    commentAbove: elipce.bime::lang.backend.dashboards.folder_comment
+    type: text
+    disabled: true
+    span: right
+
+tabs:
+  fields:
+    parameters_section:
+      label: elipce.bime::lang.backend.dashboards.section_label
+      comment: elipce.bime::lang.backend.dashboards.section_comment
+      tab: elipce.bime::lang.backend.dashboards.parameters_tab
+      context: update
+      type: section
+      span: full
+
+    parameters:
+      type: partial
+      path: parameters_field
+      tab: elipce.bime::lang.backend.dashboards.parameters_tab
+      context: update

@@ -1,0 +1,78 @@
+#bipage > .dashboard > .dashboard-display > *
+{
+    text-align: center;
+    margin: 0 auto;
+}
+
+#bipage > .dashboard > .dashboard-display
+{
+    padding: 0;
+}
+
+#bipage > .dashboard > .dashboard-display iframe
+{
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    display: block;
+    overflow: hidden;
+}
+
+#bipage > .dashboard > .dashboard-display img
+{
+    max-width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: auto;
+    height: auto;
+    display: block;
+}
+
+#bipage > .dashboard > .dashboard-data
+{
+    margin-bottom: 20px;
+}
+
+#bipage > .dashboard ul.dashboard-info
+{
+    list-style-type: none;
+    margin: 10px 0 21px;
+    padding: 0;
+}
+
+#bipage > .dashboard ul.dashboard-info li
+{
+    border-top: 1px solid;
+    padding: 10px 0;
+}
+#bipage > .dashboard ul.dashboard-info li:first-child
+{
+    border-top: none;
+    padding-top: 1px;
+}
+
+#bipage > .dashboard .dashboard-description > p
+{
+    text-align: justify;
+}
+
+#subscriber
+{
+    display: inline-block;
+}
+
+#bipage .breadcrumb > li
+{
+    text-transform: uppercase;
+    font-size: 0.7em;
+}
+
+#bipage .breadcrumb > li.action
+{
+    margin-top: 5px;
+}
+
+#bipage .breadcrumb > li.action:before
+{
+    content: normal;
+}

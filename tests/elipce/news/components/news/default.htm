@@ -1,0 +1,5 @@
+{% if news|length > 0 %}
+    {% partial __SELF__ ~ '::news' %}
+{% else %}
+    {% partial __SELF__ ~ '::empty' %}
+{% endif %}

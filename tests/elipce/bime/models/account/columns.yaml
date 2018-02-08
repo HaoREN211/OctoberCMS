@@ -1,0 +1,21 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    name:
+        label: elipce.bime::lang.backend.accounts.name_column
+        type: text
+        searchable: true
+        width: 30%
+
+    url:
+        label: elipce.bime::lang.backend.accounts.url_column
+        type: text
+        searchable: true
+        width: 40%
+
+    updated_at:
+        label: elipce.bime::lang.backend.accounts.date_column
+        type: date
+        width: 30%

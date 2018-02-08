@@ -1,0 +1,31 @@
+<?php if ($this->user->hasAccess('elipce.bipage.access_pages')): ?>
+<!-- Relation toolbar -->
+<div class="relation-toolbar">
+    <div class="toolbar-widget list-header">
+        <div class="control-toolbar">
+            <!-- Control Panel -->
+            <div class="toolbar-item toolbar-primary">
+                <div data-control="toolbar" data-disposable="">
+                    <!-- Add button -->
+                    <a data-control="popup" data-size="huge" data-handler="onRelationButtonAdd" href="javascript:;"
+                       class="btn btn-sm btn-secondary oc-icon-plus">
+                        <?= e(trans('backend::lang.relation.add')) ?>
+                    </a>
+                    <!-- Remove button -->
+                    <button class="btn btn-sm btn-secondary oc-icon-minus control-disabled"
+                            onclick="$(this).data('request-data', {
+                                checked: $('.control-list').listWidget('getChecked')})"
+                            data-request-confirm="<?= e(trans('backend::lang.list.delete_selected_confirm')) ?>"
+                            disabled="" data-request="onRelationButtonRemove"
+                            data-trigger-action="enable"
+                            data-trigger=".control-list input[type=checkbox]"
+                            data-trigger-condition="checked"
+                            data-stripe-load-indicator="">
+                        <?= e(trans('backend::lang.relation.remove')) ?>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php endif ?>

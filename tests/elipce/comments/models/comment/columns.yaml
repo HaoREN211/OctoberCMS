@@ -1,0 +1,27 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+  content:
+    label: elipce.comments::lang.backend.content
+    searchable: true
+    select: CONCAT(SUBSTRING_INDEX(content, ' ', 32), '...')
+    width: 65%
+
+  author:
+     label: elipce.comments::lang.backend.author
+     relation: author
+     select: concat(surname, ' ', name)
+     searchable: true
+     width: 15%
+
+  published:
+    label: elipce.comments::lang.backend.published
+    type: switch
+    width: 10%
+
+  created_at:
+    label: elipce.comments::lang.backend.created
+    type: date
+    width: 10%

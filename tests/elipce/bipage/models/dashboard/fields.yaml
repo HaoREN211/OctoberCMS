@@ -1,0 +1,37 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+  name:
+    label: elipce.bipage::lang.backend.dashboards.name_label
+    commentAbove: elipce.bipage::lang.backend.dashboards.name_comment
+    type: text
+    span: full
+    disabled: true
+
+  pivot[subtitle]:
+    label: elipce.bipage::lang.backend.dashboards.subtitle_label
+    commentAbove: elipce.bipage::lang.backend.dashboards.subtitle_comment
+    span: left
+    type: text
+
+  pivot[source]:
+    label: elipce.bipage::lang.backend.dashboards.source_label
+    commentAbove: elipce.bipage::lang.backend.dashboards.source_comment
+    span: right
+    type: text
+
+  pivot[description]:
+    label: elipce.bipage::lang.backend.dashboards.description_label
+    commentAbove: elipce.bipage::lang.backend.dashboards.description_comment
+    type: richeditor
+    toolbarButtons: paragraphFormat|quote|bold|italic|align|formatOL|formatUL|insertTable|insertLink|insertHR|fullscreen
+    size: huge
+
+  pivot[help]:
+    label: elipce.bipage::lang.backend.dashboards.help_label
+    commentAbove: elipce.bipage::lang.backend.dashboards.help_comment
+    type: textarea
+    span: full
+    size: small

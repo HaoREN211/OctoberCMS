@@ -1,0 +1,36 @@
+# ===================================
+#  List Behavior Config
+# ===================================
+
+# Model List Column configuration
+list: $/elipce/sso/models/log/columns.yaml
+
+# Model Class name
+modelClass: Elipce\SSO\Models\Log
+
+# List Title
+title: backend::lang.list.default_title
+
+# Message to display if the list is empty
+noRecordsMessage: backend::lang.list.no_records
+
+# Records to display per page
+recordsPerPage: 30
+
+# Displays the sorting link on each column
+showSorting: true
+
+# Sets a default sorting column and direction
+defaultSort: updated_at
+
+# Display checkboxes next to each record
+showCheckboxes: false
+
+# Toolbar widget configuration
+toolbar:
+    # Partial for toolbar buttons
+    buttons: list_toolbar
+
+    # Search widget configuration
+    search:
+        prompt: backend::lang.list.search_prompt

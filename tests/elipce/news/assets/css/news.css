@@ -1,0 +1,47 @@
+#newslist > .news:not(:last-child)
+{
+    margin-bottom: 20px;
+}
+
+#newslist > .news
+{
+    border-radius: 6px;
+    padding: 12px;
+    position: relative;
+    box-shadow: 0 4px 3px -3px #777;
+}
+
+#newslist > .news > .news-card
+{
+    padding: 0;
+}
+
+#newslist > .news > .news-card img
+{
+    margin-bottom: 12px;
+}
+
+#newslist > .news > .news-card > a > img
+{
+    outline:none;
+}
+
+#newslist > .news > .news-card > a > img:hover
+{
+    outline: 1px solid;
+}
+
+#newslist > .news > .news-text p:first-child
+{
+    font-size: 0.9em;
+    font-weight: 100;
+    text-align: left;
+}
+#newslist > .news > .news-text > p:last-child
+{
+    font-size: 0.8em;
+    text-align: right;
+    padding: 0;
+    margin-bottom: 0;
+    font-style: italic;
+}

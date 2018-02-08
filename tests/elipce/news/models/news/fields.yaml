@@ -1,0 +1,57 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+  name:
+    label: elipce.news::lang.backend.news.name_label
+    placeholder: elipce.news::lang.backend.news.name_placeholder
+    commentAbove: elipce.news::lang.backend.news.name_comment
+    type: text
+    required: true
+    span: left
+
+  page:
+    label: elipce.news::lang.backend.news.page_label
+    commentAbove: elipce.news::lang.backend.news.page_comment
+    type: relation
+    emptyOption: ...
+    context: update
+    span: right
+
+  portal:
+    label: elipce.news::lang.backend.news.portal_label
+    commentAbove: elipce.news::lang.backend.news.portal_comment
+    type: relation
+    context: create
+    required: true
+    span: right
+
+  text:
+    label: elipce.news::lang.backend.news.text_label
+    placeholder: elipce.news::lang.backend.news.text_placeholder
+    commentAbove: elipce.news::lang.backend.news.text_comment
+    type: textarea
+    size: large
+    required: true
+    span: full
+
+tabs:
+    fields:
+      thumbnail:
+        label: elipce.news::lang.backend.news.thumbnail_label
+        commentAbove: elipce.news::lang.backend.news.thumbnail_comment
+        type: fileupload
+        mode: image
+        useCaption: false
+        fileTypes: jpg, png, gif
+        imageHeight: 150
+        imageWidth: 260
+
+      portal[name]:
+        label: elipce.news::lang.backend.news.portal_label
+        commentAbove: elipce.news::lang.backend.news.portal_comment
+        type: text
+        disabled: true
+        context: update
+        span: full

@@ -1,0 +1,31 @@
+#comments .comment
+{
+    margin-bottom: 15px;
+}
+
+#comments .comment > i
+{
+    float: left;
+    margin-right: 15px;
+    font-size: 200%;
+}
+
+#comments .comment > p
+{
+    overflow: hidden;
+}
+
+#comments .comment > .author
+{
+    margin-bottom: 3px;
+    font-weight: 400;
+    font-size: 1.2em;
+    letter-spacing: -1.5px;
+    word-spacing: 3px;
+}
+
+#comments .comment > p > a
+{
+    margin-top: 6px;
+    display: block;
+}

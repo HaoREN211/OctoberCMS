@@ -1,0 +1,5 @@
+{% if results|length > 0 %}
+    {% partial __SELF__ ~ '::results' %}
+{% else %}
+    {% partial __SELF__ ~ '::empty' %}
+{% endif %}

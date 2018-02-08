@@ -1,0 +1,17 @@
+<div id="focus">
+    {% for page in __SELF__.pages %}
+    <div>
+        <div class="image">
+            <a href="{{__SELF__.redirectPage}}/{{page.id}}">
+                <img src="{{ page.thumbnail.getThumb(720, 360, { mode: 'crop' }) }}"
+                     class="img-responsive" alt="{{ page.name }}"/>
+            </a>
+        </div>
+        <div class="folder-title">
+            <i class="icon-folder-open"></i>
+            {{ page.folders.first.name }}
+        </div>
+        <div class="caption">{{ page.name }}</div>
+    </div>
+    {% endfor %}
+</div>

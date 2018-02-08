@@ -1,0 +1,40 @@
+# ===================================
+#  List Behavior Config
+# ===================================
+
+# Model List Column configuration
+list: ~/plugins/elipce/comments/models/comment/columns.yaml
+
+# Model Class name
+modelClass: elipce\Comments\Models\Comment
+
+# List Title
+title: backend::lang.list.default_title
+
+# Message to display if the list is empty
+noRecordsMessage: backend::lang.list.no_records
+
+# Records to display per page
+recordsPerPage: 25
+
+# Displays the sorting link on each column
+showSorting: true
+
+# Default sorting column
+defaultSort:
+    column: created_at
+    direction: desc
+
+# Display checkboxes next to each record
+showCheckboxes: true
+
+# Toolbar widget configuration
+toolbar:
+    # Partial for toolbar buttons
+    buttons: list_toolbar
+    # Search widget configuration
+    search:
+        prompt: backend::lang.list.search_prompt
+
+# Filters
+filter: config_filter.yaml

@@ -1,0 +1,5 @@
+{% if __SELF__.pages|length > 0 %}
+    {% partial __SELF__ ~ '::focus' %}
+{% else %}
+    {% partial __SELF__ ~ '::empty' %}
+{% endif %}

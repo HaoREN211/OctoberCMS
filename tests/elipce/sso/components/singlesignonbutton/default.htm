@@ -1,0 +1,9 @@
+{% if user %}
+<a data-request="onSingleLogout" class="btn btn-danger">
+    Se déconnecter
+</a>
+{% else %}
+<a data-request="onSingleSignOn" class="btn btn-primary">
+    Se connecter
+</a>
+{% endif %}

@@ -1,0 +1,9 @@
+# ===================================
+#  Sorting Relation Behavior Config
+# ===================================
+
+# Model Class name
+modelClass: Elipce\BiPage\Models\Folder
+
+# Model relation name
+modelRelation: folders

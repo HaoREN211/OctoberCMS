@@ -1,0 +1,27 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: elipce.bipage::lang.backend.collections.record_name
+
+# Model Form Field configuration
+form: $/elipce/bipage/models/collection/fields.yaml
+
+# Model Class name
+modelClass: Elipce\BiPage\Models\Collection
+
+# Default redirect location
+defaultRedirect: elipce/bipage/collections
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: elipce/bipage/collections/update/:id
+    redirectClose: elipce/bipage/collections
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: elipce/bipage/collections
+    redirectClose: elipce/bipage/collections

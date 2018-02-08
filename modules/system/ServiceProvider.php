@@ -333,6 +333,8 @@ class ServiceProvider extends ModuleServiceProvider
      */
     protected function registerBackendNavigation()
     {
+        return [];
+
         BackendMenu::registerCallback(function ($manager) {
             $manager->registerMenuItems('October.System', [
                 'system' => [

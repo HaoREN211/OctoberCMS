@@ -1,0 +1,22 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+  name:
+    label: elipce.limesurvey::lang.backend.roles.name_column
+    type: text
+    searchable: true
+    width: 30%
+
+  description:
+    label: elipce.limesurvey::lang.backend.roles.description_column
+    type: text
+    searchable: true
+    width: 40%
+
+  pivot[code]:
+    label: elipce.limesurvey::lang.backend.roles.code_column
+    type: text
+    searchable: true
+    with: 30%

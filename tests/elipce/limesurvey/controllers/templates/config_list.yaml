@@ -1,0 +1,45 @@
+# ===================================
+#  List Behavior Config
+# ===================================
+
+# Model List Column configuration
+list: $/elipce/limesurvey/models/template/columns.yaml
+
+# Model Class name
+modelClass: Elipce\LimeSurvey\Models\Template
+
+# List Title
+title: elipce.limesurvey::lang.plugin.menus.templates
+
+# Link URL for each record
+recordUrl: elipce/limesurvey/templates/update/:id
+
+# Message to display if the list is empty
+noRecordsMessage: backend::lang.list.no_records
+
+# Records to display per page
+recordsPerPage: 20
+
+# Displays the sorting link on each column
+showSorting: true
+
+# Sets a default sorting column and direction
+defaultSort: updated_at
+
+# Displays the list column set up button
+showSetup: false
+
+# Display checkboxes next to each record
+showCheckboxes: true
+
+# Toolbar widget configuration
+toolbar:
+    # Partial for toolbar buttons
+    buttons: list_toolbar
+
+    # Search widget configuration
+    search:
+        prompt: backend::lang.list.search_prompt
+
+# Config filters
+filter: config_filter.yaml

@@ -1,0 +1,56 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+  name:
+    label: elipce.limesurvey::lang.backend.templates.name_label
+    commentAbove: elipce.limesurvey::lang.backend.templates.name_comment
+    type: text
+    required: true
+    span: left
+
+  collection:
+    label: elipce.limesurvey::lang.backend.templates.collection_label
+    commentAbove: elipce.limesurvey::lang.backend.templates.collection_comment
+    type: dropdown
+    required: true
+    context: create
+    span: left
+
+  collection[name]:
+    label: elipce.limesurvey::lang.backend.templates.collection_label
+    commentAbove: elipce.limesurvey::lang.backend.templates.collection_comment
+    type: text
+    disabled: true
+    context: update
+    span: right
+
+  structure:
+    label: elipce.limesurvey::lang.backend.templates.structure_label
+    commentAbove: elipce.limesurvey::lang.backend.templates.structure_comment
+    prompt: elipce.limesurvey::lang.backend.templates.structure_prompt
+    type: fileupload
+    mode: file
+    useCaption: false
+    fileTypes: lss
+    required: true
+    context: create
+    span: left
+
+tabs:
+  fields:
+    questions_section:
+      label: elipce.limesurvey::lang.backend.templates.questions_section_label
+      comment: elipce.limesurvey::lang.backend.templates.questions_section_comment
+      tab: elipce.limesurvey::lang.backend.templates.questions_tab
+      type: section
+      context: update
+      span: full
+
+    questions:
+      tab: elipce.limesurvey::lang.backend.templates.questions_tab
+      type: partial
+      path: questions_field
+      context: update
+      span: full

@@ -1,0 +1,22 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+  name:
+    label: elipce.bipage::lang.backend.images.name_column
+    type: text
+    searchable: true
+    width: 60%
+
+  collection:
+    label: elipce.bipage::lang.backend.images.collection_column
+    relation: collection
+    select: name
+    searchable: true
+    width: 30%
+
+  updated_at:
+    label: elipce.bipage::lang.backend.images.date_column
+    type: date
+    width: 20%

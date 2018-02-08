@@ -1,0 +1,17 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    name:
+        label: elipce.bipage::lang.backend.focus.portal_column
+        searchable: true
+        width: 70%
+
+    focus_count:
+        label: elipce.bipage::lang.backend.focus.focus_column
+        relation: focus_count
+        valueFrom: count
+        default: 0
+        sortable: false
+        width: 30%

@@ -1,0 +1,32 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+surveys:
+  label: elipce.limesurveys::lang.backend.surveys.record_name
+  emptyMessage: backend::lang.list.no_records
+
+  view:
+    list: $/elipce/limesurvey/models/survey/columns.yaml
+    recordUrl: elipce/limesurvey/surveys/update/:id
+    toolbarButtons: false
+    showCheckboxes: false
+    defaultSort:
+      column: start_date
+      direction: asc
+
+  manage:
+    list: $/elipce/limesurvey/models/survey/columns.yaml
+
+participants:
+  label: elipce.limesurveys::lang.backend.participants.record_name
+  emptyMessage: backend::lang.list.no_records
+
+  view:
+    list: $/elipce/limesurvey/models/participant/columns.yaml
+    recordUrl: elipce/limesurvey/participants/update/:id
+    toolbarButtons: false
+    showCheckboxes: false
+
+  manage:
+    list: $/elipce/limesurvey/models/participant/columns.yaml

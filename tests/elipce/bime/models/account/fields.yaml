@@ -1,0 +1,24 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+  name:
+    label: elipce.bime::lang.backend.accounts.name_label
+    commentAbove: elipce.bime::lang.backend.accounts.name_comment
+    type: text
+    required: true
+    span: left
+
+  url:
+    label: elipce.bime::lang.backend.accounts.url_label
+    commentAbove: elipce.bime::lang.backend.accounts.url_comment
+    type: text
+    required: true
+    span: left
+
+  token:
+    label: elipce.bime::lang.backend.accounts.token_label
+    commentAbove: elipce.bime::lang.backend.accounts.token_comment
+    required: true
+    span: left

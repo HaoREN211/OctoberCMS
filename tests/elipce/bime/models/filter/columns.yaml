@@ -1,0 +1,35 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+  parameter:
+    label: elipce.bime::lang.backend.filters.parameter_column
+    relation: parameter
+    select: name
+    type: text
+    width: 25%
+
+  page:
+    label: elipce.bime::lang.backend.filters.page_column
+    relation: page
+    valueFrom: name
+    sortable: false
+    default: <>
+    width: 25%
+
+  group:
+    label: elipce.bime::lang.backend.filters.group_column
+    relation: group
+    valueFrom: name
+    sortable: false
+    default: <>
+    width: 25%
+
+  viewer:
+    label: elipce.bime::lang.backend.filters.viewer_column
+    relation: viewer
+    valueFrom: login
+    sortable: false
+    default: <>
+    width: 25%

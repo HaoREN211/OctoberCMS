@@ -1,0 +1,15 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+  name:
+    label: elipce.limesurvey::lang.backend.accounts.name_column
+    type: text
+    searchable: true
+    width: 80%
+
+  updated_at:
+    label: elipce.limesurvey::lang.backend.accounts.date_column
+    type: date
+    width: 20%

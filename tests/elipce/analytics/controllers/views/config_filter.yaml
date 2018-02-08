@@ -1,0 +1,18 @@
+# ===================================
+# Filter Scope Definitions
+# ===================================
+
+scopes:
+    account:
+        type: group
+        label: elipce.analytics::lang.backend.views.account_column
+        modelClass: Elipce\Analytics\Models\Account
+        nameFrom: name
+        conditions: property_id  in (select `eap`.`id` from `elipce_analytics_properties` eap inner join `elipce_analytics_accounts` on `eap`.`account_id` = `elipce_analytics_accounts`.`id` where `elipce_analytics_accounts`.`id` in (:filtered))
+
+    property:
+        type: group
+        label: elipce.analytics::lang.backend.views.property_column
+        modelClass: Elipce\Analytics\Models\Property
+        nameFrom: name
+        conditions: property_id in (:filtered)

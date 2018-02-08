@@ -1,0 +1,19 @@
+<?php if ($record->pivot->completed): ?>
+    <span class="oc-icon-circle text-success">
+        <?= e(trans('elipce.limesurvey::lang.backend.surveys.status_completed')) ?>
+    </span>
+<?php else: ?>
+    <?php if ($record->pivot->token && ! $record->pivot->reminder_sent): ?>
+        <span class="oc-icon-circle text-info">
+            <?= e(trans('elipce.limesurvey::lang.backend.surveys.status_sent')) ?>
+        </span>
+    <?php elseif ($record->pivot->reminder_sent): ?>
+        <span class="oc-icon-circle text-info">
+            <?= e(trans('elipce.limesurvey::lang.backend.surveys.status_resent')) ?>
+        </span>
+    <?php else: ?>
+        <span class="oc-icon-circle text-muted">
+            <?= e(trans('elipce.limesurvey::lang.backend.surveys.status_pending')) ?>
+        </span>
+    <?php endif; ?>
+<?php endif; ?>

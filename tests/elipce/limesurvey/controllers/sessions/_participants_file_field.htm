@@ -1,0 +1,10 @@
+<?php if ($formModel->story): ?>
+    <?php if ($formModel->story->participants_file): ?>
+        <a class="pull-right" target="_blank"
+           download="<?= $formModel->story->participants_file->file_name ?>"
+           href="<?= $formModel->story->participants_file->getPath() ?>">
+            <i class="icon-cloud-download"></i>
+            <?= e(trans('elipce.limesurvey::lang.backend.sessions.download_participants_file')) ?>
+        </a>
+    <?php endif; ?>
+<?php endif; ?>

@@ -1,0 +1,12 @@
+# ===================================
+#  Sorting Relation Behavior Config
+# ===================================
+
+# Model Class name
+modelClass: Elipce\BiPage\Models\Dashboard
+
+# Model relation name
+modelRelation: dashboards
+
+# Pivot table name
+pivotTable: elipce_bipage_pages_dashboards

@@ -1,0 +1,24 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+  login:
+    label: elipce.bime::lang.backend.viewers.login_label
+    commentAbove: elipce.bime::lang.backend.viewers.login_comment
+    type: text
+    disabled: true
+    span: left
+
+  activated:
+    label: elipce.bime::lang.backend.viewers.activated_label
+    commentAbove: elipce.bime::lang.backend.viewers.activated_comment
+    type: switch
+    disabled: true
+    span: left
+
+  group:
+    label: elipce.bime::lang.backend.viewers.group_label
+    commentAbove: elipce.bime::lang.backend.viewers.group_comment
+    type: relation
+    span: left

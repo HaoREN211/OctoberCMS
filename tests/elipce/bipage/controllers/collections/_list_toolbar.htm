@@ -1,0 +1,13 @@
+<div data-control="toolbar">
+    <?php if ($this->user->hasAccess('elipce.bipage.access_collections')): ?>
+        <a href="<?= Backend::url('elipce/bipage/collections/create') ?>"
+           class="btn btn-primary oc-icon-plus">
+            <?= e(trans('backend::lang.form.create')) ?>
+        </a>
+    <?php else: ?>
+    <h4 class="text-muted">
+        <i class="icon-question-circle"></i>
+        &nbsp;<?= e(trans('elipce.bipage::lang.backend.collections.description')) ?>
+    </h4>
+    <?php endif; ?>
+</div>

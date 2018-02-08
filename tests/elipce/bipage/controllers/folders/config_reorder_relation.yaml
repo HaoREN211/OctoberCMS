@@ -1,0 +1,12 @@
+# ===================================
+#  Sorting Relation Behavior Config
+# ===================================
+
+# Model Class name
+modelClass: Elipce\BiPage\Models\Page
+
+# Model relation name
+modelRelation: pages
+
+# Pivot table name
+pivotTable: elipce_bipage_folders_pages

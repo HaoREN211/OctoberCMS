@@ -1,0 +1,20 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+  name:
+    label: elipce.limesurvey::lang.backend.participants.fullname_column
+    select: concat(fn, ' ', sn)
+    width: 40%
+
+  email:
+    label: elipce.limesurvey::lang.backend.participants.email_column
+    type: text
+    width: 30%
+
+  status:
+    type: partial
+    select: IF(elipce_limesurvey_surveys_participants.completed, 3, IF(elipce_limesurvey_surveys_participants.token is null, 0, IF(elipce_limesurvey_surveys_participants.reminder_sent, 2, 1)))
+    path: status_column
+    width: 30%

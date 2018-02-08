@@ -1,0 +1,55 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+presurveys:
+  label: elipce.limesurveys::lang.backend.presurveys.record_name
+  emptyMessage: backend::lang.list.no_records
+
+  view:
+    list: $/elipce/limesurvey/models/presurvey/columns.yaml
+    toolbarButtons: create|delete
+    defaultSort:
+      column: start_days,end_days
+      direction: asc
+
+  manage:
+    list: $/elipce/limesurvey/models/presurvey/columns.yaml
+    form: $/elipce/limesurvey/models/presurvey/fields.yaml
+    showSearch: true
+    showSorting: true
+    recordsPerPage: 10
+
+roles:
+  label: elipce.limesurveys::lang.backend.surveys.record_name
+  emptyMessage: backend::lang.list.no_records
+
+  view:
+    list: $/elipce/limesurvey/models/role/columns.yaml
+    toolbarPartial: relation_toolbar
+
+  manage:
+    list: $/elipce/limesurvey/models/role/pivot_columns.yaml
+    form: $/elipce/limesurvey/models/role/fields.yaml
+    showSearch: true
+    showSorting: true
+    recordsPerPage: 10
+
+  pivot:
+    form: $/elipce/limesurvey/models/role/pivot_fields.yaml
+
+columns:
+  label: elipce.limesurveys::lang.backend.columns.record_name
+  emptyMessage: backend::lang.list.no_records
+
+  view:
+    list: $/elipce/limesurvey/models/column/columns.yaml
+    toolbarButtons: create|delete
+    showSorting: true
+
+  manage:
+    list: $/elipce/limesurvey/models/column/columns.yaml
+    form: $/elipce/limesurvey/models/column/fields.yaml
+    showSearch: true
+    showSorting: true
+    recordsPerPage: 10

@@ -1,0 +1,39 @@
+# ===================================
+#  List Behavior Config
+# ===================================
+
+# Model List Column configuration
+list: $/elipce/multisite/models/portal/columns.yaml
+
+# Model Class name
+modelClass: Elipce\Multisite\Models\Portal
+
+# List Title
+title: backend::lang.list.default_title
+
+# Link URL for each record
+recordUrl: elipce/multisite/portals/update/:id
+
+# Message to display if the list is empty
+noRecordsMessage: backend::lang.list.no_records
+
+# Records to display per page
+recordsPerPage: 20
+
+# Displays the sorting link on each column
+showSorting: true
+
+# Sets a default sorting column and direction
+defaultSort: updated_at
+
+# Display checkboxes next to each record
+showCheckboxes: true
+
+# Toolbar widget configuration
+toolbar:
+    # Partial for toolbar buttons
+    buttons: list_toolbar
+
+    # Search widget configuration
+    search:
+        prompt: backend::lang.list.search_prompt

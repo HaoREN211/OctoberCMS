@@ -1,0 +1,15 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+  name:
+    label: elipce.bime::lang.backend.dashboards.name_column
+    type: text
+    searchable: true
+    width: 50%
+
+  updated_at:
+    label: elipce.bime::lang.backend.dashboards.date_column
+    type: date
+    width: 20%

@@ -1,0 +1,17 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+  name:
+    label: elipce.limesurvey::lang.backend.roles.name_label
+    commentAbove: elipce.limesurvey::lang.backend.roles.name_comment
+    required: true
+    type: text
+    span: left
+
+  description:
+    label: elipce.limesurvey::lang.backend.roles.description_label
+    commentAbove: elipce.limesurvey::lang.backend.roles.description_comment
+    type: text
+    span: right

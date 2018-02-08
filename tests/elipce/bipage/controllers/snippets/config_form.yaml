@@ -1,0 +1,27 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: elipce.bipage::lang.backend.snippets.record_name
+
+# Model Form Field configuration
+form: $/elipce/bipage/models/snippet/fields.yaml
+
+# Model Class name
+modelClass: Elipce\BiPage\Models\Snippet
+
+# Default redirect location
+defaultRedirect: elipce/bipage/snippets
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: elipce/bipage/snippets/update/:id
+    redirectClose: elipce/bipage/snippets
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: elipce/bipage/snippets/update/:id
+    redirectClose: elipce/bipage/snippets

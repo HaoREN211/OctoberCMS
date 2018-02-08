@@ -1,0 +1,27 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: elipce.bime::lang.backend.viewers.record_name
+
+# Model Form Field configuration
+form: $/elipce/bime/models/viewer/fields.yaml
+
+# Model Class name
+modelClass: Elipce\Bime\Models\Viewer
+
+# Default redirect location
+defaultRedirect: elipce/bime/viewers
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: elipce/bime/viewers/update/:id
+    redirectClose: elipce/bime/viewers
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: elipce/bime/viewers
+    redirectClose: elipce/bime/viewers

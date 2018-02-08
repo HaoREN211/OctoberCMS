@@ -1,0 +1,28 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+  name:
+    label: elipce.limesurvey::lang.backend.presurveys.name_column
+    type: text
+    searchable: true
+    width: 40%
+
+  roles_count:
+    label: elipce.limesurvey::lang.backend.presurveys.roles_column
+    relation: roles
+    valueFrom: name
+    sortable: false
+    default: 0
+    with: 40%
+
+  start_days:
+    label: elipce.limesurvey::lang.backend.presurveys.start_days_column
+    type: number
+    with: 10%
+
+  end_days:
+    label: elipce.limesurvey::lang.backend.presurveys.end_days_column
+    type: number
+    with: 10%

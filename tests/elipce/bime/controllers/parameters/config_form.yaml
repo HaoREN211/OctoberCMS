@@ -1,0 +1,27 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: elipce.bime::lang.backend.parameters.record_name
+
+# Model Form Field configuration
+form: $/elipce/bime/models/parameter/fields.yaml
+
+# Model Class name
+modelClass: Elipce\Bime\Models\Parameter
+
+# Default redirect location
+defaultRedirect: elipce/bime/parameters
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: elipce/bime/parameters/update/:id
+    redirectClose: elipce/bime/parameters
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: elipce/bime/parameters
+    redirectClose: elipce/bime/parameters

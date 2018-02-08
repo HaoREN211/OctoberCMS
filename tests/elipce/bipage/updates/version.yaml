@@ -1,0 +1,37 @@
+1.0.1:
+    - First version of BiPage
+    - create_collections_table.php
+    - create_pages_table.php
+    - create_dashboards_table.php
+    - create_pages_dashboards_table.php
+    - create_collections_dashboards_table.php
+
+1.0.2:
+    - Add folders and focus
+    - create_folders_table.php
+    - create_folders_pages_table.php
+    - create_portals_folders_table.php
+    - create_focus_table.php
+1.0.3:
+    - Add backend rights
+    - add_backend_users_collections_column.php
+1.0.4:
+    - Add bookmarks
+    - create_bookmarks_table.php
+1.0.5:
+    - Add static visualizations
+    - create_images_table.php
+    - create_snippets_table.php
+1.0.6:
+    - Fix SQL error
+    - rename_from_column.php
+1.0.7:
+    - Remove multiple folders
+    - drop_portals_folders_table.php
+1.0.8:
+    - Ordered pages and visualizations
+    - add_folders_pages_position_column.php
+    - add_pages_dashboards_position_column.php
+1.0.9:
+    - Ordered portal folders
+    - add_folders_position_column.php

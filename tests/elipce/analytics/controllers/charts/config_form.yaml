@@ -1,0 +1,27 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: elipce.analytics::lang.backend.charts.record_name
+
+# Model Form Field configuration
+form: $/elipce/analytics/models/chart/fields.yaml
+
+# Model Class name
+modelClass: Elipce\Analytics\Models\Chart
+
+# Default redirect location
+defaultRedirect: elipce/analytics/charts
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: elipce/analytics/charts/update/:id
+    redirectClose: elipce/analytics/charts
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: elipce/analytics/charts
+    redirectClose: elipce/analytics/charts

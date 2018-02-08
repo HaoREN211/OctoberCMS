@@ -1,0 +1,21 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+  name:
+    label: elipce.limesurvey::lang.backend.participants.fullname_column
+    select: concat(fn, ' ', sn)
+    width: 40%
+
+  email:
+    label: elipce.limesurvey::lang.backend.participants.email_column
+    type: text
+    width: 30%
+
+  role:
+    label: elipce.limesurvey::lang.backend.participants.role_column
+    relation: role
+    valueFrom: name
+    sortable: false
+    with: 30%

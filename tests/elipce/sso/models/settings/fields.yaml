@@ -1,0 +1,99 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+tabs:
+  fields:
+    idp_id:
+      tab: elipce.sso::lang.settings.idp_tab
+      label: elipce.sso::lang.settings.idp_id_label
+      commentAbove: elipce.sso::lang.settings.idp_id_comment
+      type: text
+      span: left
+      required: true
+
+    idp_x509cert:
+      tab: elipce.sso::lang.settings.idp_tab
+      label: elipce.sso::lang.settings.idp_cert_label
+      commentAbove: elipce.sso::lang.settings.idp_cert_comment
+      type: textarea
+      size: large
+      span: right
+      required: true
+
+    idp_acs:
+      tab: elipce.sso::lang.settings.idp_tab
+      label: elipce.sso::lang.settings.idp_acs_label
+      commentAbove: elipce.sso::lang.settings.idp_acs_comment
+      type: text
+      span: left
+      required: true
+
+    idp_sls:
+      tab: elipce.sso::lang.settings.idp_tab
+      label: elipce.sso::lang.settings.idp_sls_label
+      commentAbove: elipce.sso::lang.settings.idp_sls_comment
+      type: text
+      span: left
+      required: true
+
+    sp_id:
+      tab: elipce.sso::lang.settings.sp_tab
+      label: elipce.sso::lang.settings.sp_id_label
+      commentAbove:  elipce.sso::lang.settings.sp_id_comment
+      disabled: true
+      span: left
+
+    sp_acs:
+      tab: elipce.sso::lang.settings.sp_tab
+      label: elipce.sso::lang.settings.sp_acs_label
+      commentAbove: elipce.sso::lang.settings.sp_acs_comment
+      disabled: true
+      span: left
+
+    sp_sls:
+      tab: elipce.sso::lang.settings.sp_tab
+      label: elipce.sso::lang.settings.sp_sls_label
+      commentAbove: elipce.sso::lang.settings.sp_sls_comment
+      disabled: true
+      span: left
+
+    emailAttribute:
+      tab: elipce.sso::lang.settings.mapping_tab
+      label: elipce.sso::lang.settings.email_label
+      commentAbove: elipce.sso::lang.settings.email_comment
+      type: text
+      required: true
+      span: left
+
+    firstnameAttribute:
+      tab: elipce.sso::lang.settings.mapping_tab
+      label: elipce.sso::lang.settings.firstname_label
+      commentAbove: elipce.sso::lang.settings.firstname_comment
+      type: text
+      required: true
+      span: left
+
+    lastnameAttribute:
+      tab: elipce.sso::lang.settings.mapping_tab
+      label: elipce.sso::lang.settings.lastname_label
+      commentAbove: elipce.sso::lang.settings.lastname_comment
+      type: text
+      required: true
+      span: left
+
+    debug:
+      tab: elipce.sso::lang.settings.options_tab
+      label: elipce.sso::lang.settings.debug_label
+      commentAbove: elipce.sso::lang.settings.debug_comment
+      type: switch
+      span: left
+      default: false
+
+    selfregister:
+      tab: elipce.sso::lang.settings.options_tab
+      label: elipce.sso::lang.settings.selfregister_label
+      commentAbove: elipce.sso::lang.settings.selfregister_comment
+      type: switch
+      span: left
+      default: false

@@ -1,0 +1,17 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+participants:
+  label: elipce.limesurveys::lang.backend.participants.record_name
+  emptyMessage: backend::lang.list.no_records
+
+  view:
+    list: $/elipce/limesurvey/models/participant/tracking_columns.yaml
+    toolbarPartial: relation_toolbar
+    showCheckboxes: false
+    showSearch: true
+    readOnly: true
+
+  manage:
+    list: $/elipce/limesurvey/models/participant/columns.yaml

@@ -1,0 +1,18 @@
+# ===================================
+# Filter Scope Definitions
+# ===================================
+
+scopes:
+  account:
+    type: group
+    label: elipce.tableau::lang.backend.workbooks.site_column
+    modelClass: Elipce\Tableau\Models\Site
+    nameFrom: projects
+    conditions: site_id in (:filtered)
+
+  groups:
+    type: group
+    label: elipce.tableau::lang.backend.workbooks.groups_column
+    modelClass: Elipce\Tableau\Models\Group
+    nameFrom: name
+    scope: applyGroup

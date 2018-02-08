@@ -1,0 +1,18 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+focus:
+  label: elipce.bipage::lang.backend.pages.record_name
+  emptyMessage: backend::lang.list.no_records
+
+  view:
+    list: $/elipce/bipage/models/page/min_columns.yaml
+    recordUrl: elipce/bipage/pages/update/:id
+    toolbarButtons: add|remove
+
+  manage:
+    list: $/elipce/bipage/models/page/columns.yaml
+    showSearch: true
+    showSorting: true
+    recordsPerPage: 20

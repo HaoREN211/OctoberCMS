@@ -1,0 +1,27 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+  name:
+    label: elipce.limesurvey::lang.backend.columns.name_label
+    commentAbove: elipce.limesurvey::lang.backend.columns.name_comment
+    type: text
+    required: true
+    span: left
+
+  type:
+    label: elipce.limesurvey::lang.backend.columns.type_label
+    commentAbove: elipce.limesurvey::lang.backend.columns.type_comment
+    dependsOn: field
+    type: dropdown
+    required: true
+    span: right
+
+  field:
+    label: elipce.limesurvey::lang.backend.columns.field_label
+    commentAbove: elipce.limesurvey::lang.backend.columns.field_comment
+    emptyOption: <>
+    type: dropdown
+    required: true
+    span: left

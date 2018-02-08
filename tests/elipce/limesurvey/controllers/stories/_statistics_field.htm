@@ -1,0 +1,33 @@
+<div class="scoreboard">
+    <div data-control="toolbar">
+        <div class="scoreboard-item control-chart" data-control="chart-pie">
+            <ul>
+                <li data-color="#95b753">
+                    <?= e(trans('elipce.limesurvey::lang.backend.stories.pending_sessions')) ?>
+                    <span><?= $formModel->pending_sessions->count() ?></span>
+                </li>
+                <li data-color="#e5a91a">
+                    <?= e(trans('elipce.limesurvey::lang.backend.stories.active_sessions')) ?>
+                    <span><?= $formModel->active_sessions->count() ?></span>
+                </li>
+                <li data-color="#cc3300">
+                    <?= e(trans('elipce.limesurvey::lang.backend.stories.expired_sessions')) ?>
+                    <span><?= $formModel->expired_sessions->count() ?></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<br/>
+<div class="scoreboard">
+    <div data-control="toolbar">
+        <div class="scoreboard-item title-value">
+            <h4><?= e(trans('elipce.limesurvey::lang.backend.stories.presurveys_label')) ?></h4>
+            <p><?= $formModel->presurveys->count() ?></p>
+        </div>
+        <div class="scoreboard-item title-value">
+            <h4><?= e(trans('elipce.limesurvey::lang.backend.stories.roles_label')) ?></h4>
+            <p><?= $formModel->roles->count() ?></p>
+        </div>
+    </div>
+</div>

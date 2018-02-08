@@ -1,0 +1,26 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+  login:
+    label: elipce.bime::lang.backend.viewers.login_column
+    type: text
+    searchable: true
+
+  account:
+    label: elipce.bime::lang.backend.viewers.account_column
+    relation: account
+    valueFrom: name
+    sortable: false
+
+  group:
+    label: elipce.bime::lang.backend.viewers.group_column
+    relation: group
+    valueFrom: name
+    sortable: false
+
+  updated_at:
+    label: elipce.bime::lang.backend.viewers.date_column
+    type: date
+    invisible: true

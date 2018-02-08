@@ -1,0 +1,107 @@
+{% set comments = __SELF__.comments %}
+{% set depth = __SELF__.depth %}
+
+{% if bipage.commented %}
+
+    <div id="comments-wrapper">
+        <div id="comments">
+
+            {% if comments|length == 0 %}
+                {% partial __SELF__ ~ '::empty' %}
+            {% else %}
+
+                {{ comment }}
+
+                {% macro comments_tree(pid, level, comments, user, depth) %}
+                    {% import _self as macros %}
+
+                    {% for comment in comments %}
+
+                        {% if pid == comment.pid %}
+
+                            {% set margin = level * 20 %}
+
+                            <div id="comment-{{ comment.id }}" class="media comment">
+                                <div class="pull-left">
+
+                                    {% if comment.author.avatar is empty %}
+                                        <img class="media-object" src="{{ comment.author.getAvatarThumb(64) }}"/>
+                                    {% else %}
+                                        <img class="media-object"
+                                             src="{{ 'plugins/elipce/comments/assets/img/no_avatar.png'|app }}"/>
+                                    {% endif %}
+
+                                </div>
+                                <div class="media-body">
+                                    <div class="media-heading">
+                                        <span class="user-name">
+                                            {{ comment.author.name }} {{ comment.author.surname }}
+                                        </span>
+                                        <span class="comment-published-at">{{ comment.created_at|date('d-m-Y') }}</span>
+                                    </div>
+                                    <div class="comment-content">{{ comment.content_html|raw }}</div>
+                                    <div class="comment-actions">
+
+                                        {% if ( level < depth ) or ( depth == 0 ) %}
+                                            <a href="#" class="action-link reply" data-id="{{ comment.id }}"
+                                               data-level="{{ level }}">répondre</a>
+                                        {% endif %}
+
+                                        {% if (comment.author_id != 0) and (user.id == comment.author_id) %}
+                                            <a href="#" data-id="{{ comment.id }}" class="action-link edit">modifier</a>
+                                            <a href="#" data-id="{{ comment.id }}" class="action-link delete">effacer</a>
+                                        {% endif %}
+
+                                        </div>
+                                    </div>
+                                    {% set level = level + 1 %}
+                                    <div id="reply-{{ comment.id }}" class="level level-{{ level }}">
+                                        {{ macros.comments_tree(comment.id, level, comments, user, depth) }}
+                                    </div>
+                                    {% set level = level - 1 %}
+                                </div>
+                            {% endif %}
+                    {% endfor %}
+                {% endmacro %}
+
+                {% import _self as macros %}
+
+                {{ macros.comments_tree(0, 0, comments, user, depth) }}
+
+        {% endif %}
+        </div>
+
+        <div id="comment-form-wrapper">
+            <form id="comment-form"
+                  class="comment-form"
+                  data-request="onComment"
+                  data-request-update="'{{ __SELF__ }}::new': '@#comments'"
+                  data-request-success="afterSubmit($el, context, data, textStatus, jqXHR)"
+                  role="form">
+
+                <div class="form-group">
+                    <textarea name="content" id="content" placeholder="Saisissez un commentaire..." class="content form-control" rows="3"></textarea>
+                </div>
+
+                <input type="hidden" name="page_id" value="{{ bipage.id }}">
+                <input type="hidden" name="portal_id" value="{{ portal.id }}">
+                <input type="hidden" name="pid" id="to" class="to">
+                <input type="hidden" name="id" id="edit" class="edit">
+                <input type="hidden" name="level" id="level" class="level">
+
+                <div class="form-group form-submit">
+                    <button type="submit" class="btn btn-primary">
+                        <span class="fui-arrow-right"></span> Envoyer
+                    </button>
+                </div>
+
+                <div class="cancel-reply">
+                    <a href="#" class="cancel-reply-link btn btn-default">Annuler</a>
+                </div>
+
+                <div class="clear"></div>
+            </form>
+        </div>
+    </div>
+
+{% endif %}

@@ -1,0 +1,27 @@
+<div class="scoreboard">
+    <div data-control="toolbar">
+        <div class="scoreboard-item control-chart" data-control="chart-bar">
+            <ul>
+                <?php foreach($formModel->dashboards->groupBy('type') as $type => $dashboards): ?>
+                    <li>
+                        <?= $type ?>
+                        <span><?= $dashboards->count() ?></span>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+    </div>
+</div>
+<br/>
+<div class="scoreboard">
+    <div data-control="toolbar">
+        <div class="scoreboard-item title-value">
+            <h4><?= e(trans('elipce.bipage::lang.backend.collections.dashboards_column')) ?></h4>
+            <p><?= $formModel->dashboards->count() ?></p>
+        </div>
+        <div class="scoreboard-item title-value">
+            <h4><?= e(trans('elipce.bipage::lang.backend.collections.pages_column')) ?></h4>
+            <p><?= $formModel->pages->count() ?></p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+<p>
+    <?php if ($formModel->bime_viewer->group != null): ?>
+        <?= $formModel->bime_viewer->group->fullname ?>
+    <?php else: ?>
+        <?= e(trans('elipce.bime::lang.backend.users.nogroup')) ?>
+    <?php endif; ?>
+</p>

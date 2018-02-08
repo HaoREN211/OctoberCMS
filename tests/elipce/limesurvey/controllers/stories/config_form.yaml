@@ -1,0 +1,27 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: elipce.limesurvey::lang.backend.stories.record_name
+
+# Model Form Field configuration
+form: $/elipce/limesurvey/models/story/fields.yaml
+
+# Model Class name
+modelClass: Elipce\LimeSurvey\Models\Story
+
+# Default redirect location
+defaultRedirect: elipce/limesurvey/stories
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: elipce/limesurvey/stories/update/:id
+    redirectClose: elipce/limesurvey/stories
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: elipce/limesurvey/stories
+    redirectClose: elipce/limesurvey/stories

@@ -1,0 +1,9 @@
+{% if __SELF__.pages|length > 0 %}
+    {% if __SELF__.displayMode == 'slide' %}
+        {% partial __SELF__ ~ '::slide' %}
+    {% else %}
+        {% partial __SELF__ ~ '::list' %}
+    {% endif %}
+{% else %}
+    {% partial __SELF__ ~ '::empty' %}
+{% endif %}

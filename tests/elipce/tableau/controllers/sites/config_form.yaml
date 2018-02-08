@@ -1,0 +1,27 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: elipce.tableau::lang.backend.sites.record_name
+
+# Model Form Field configuration
+form: $/elipce/tableau/models/site/fields.yaml
+
+# Model Class name
+modelClass: Elipce\Tableau\Models\Site
+
+# Default redirect location
+defaultRedirect: elipce/tableau/sites
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: elipce/tableau/sites/update/:id
+    redirectClose: elipce/tableau/sites
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: elipce/tableau/sites
+    redirectClose: elipce/tableau/sites

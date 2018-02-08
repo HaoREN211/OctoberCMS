@@ -1,0 +1,15 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+  name:
+    label: elipce.bime::lang.backend.parameters.name_column
+    type: text
+    searchable: true
+    width: 85%
+
+  translated_type:
+    label: elipce.bime::lang.backend.parameters.type_column
+    type: text
+    width: 15%

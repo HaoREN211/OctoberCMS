@@ -78,6 +78,8 @@ class Plugin extends PluginBase
      */
     public function registerNavigation()
     {
+//        return [];
+
         return [
             'socialnetwork' => [
                 'label'       => Lang::get('hao.socialnetwork::lang.plugin.name'),

@@ -1,0 +1,5 @@
+<?php if($used): ?>
+    <?= $this->relationRender('roles', ['readOnly' => true]) ?>
+<?php else: ?>
+    <?= $this->relationRender('roles') ?>
+<?php endif; ?>

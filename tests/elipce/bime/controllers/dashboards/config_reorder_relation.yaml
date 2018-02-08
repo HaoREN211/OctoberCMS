@@ -1,0 +1,12 @@
+# ===================================
+#  Sorting Relation Behavior Config
+# ===================================
+
+# Model Class name
+modelClass: Elipce\Bime\Models\Parameter
+
+# Model relation name
+modelRelation: parameters
+
+# Pivot table name
+pivotTable: elipce_bime_dashboards_parameters

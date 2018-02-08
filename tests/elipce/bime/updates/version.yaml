@@ -1,0 +1,29 @@
+1.0.1:
+    - First version of Bime
+    - create_accounts_table.php
+    - create_dashboards_table.php
+    - create_groups_table.php
+    - create_subscriptions_table.php
+    - create_viewers_table.php
+1.0.2:
+    - Collection integration
+    - add_collections_accounts_column.php
+    - add_collections_groups_column.php
+    - add_collections_filtered_column.php
+1.0.3:
+    - Add backend privileges
+    - backend_users_add_bime_groups.php
+1.0.4:
+    - Improve collection integration
+    - drop_group_filtered_column.php
+1.0.5:
+    - Add preset filters
+    - create_parameters_table.php
+    - create_dashboards_parameters_table.php
+    - create_filters_table.php
+1.0.6:
+    - Keep dashboards' parameters order
+    - add_dashboards_parameters_position_column.php
+1.0.7:
+    - Fix Bime external IDs
+    - fix_external_id_columns.php

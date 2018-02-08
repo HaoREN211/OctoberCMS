@@ -1,0 +1,11 @@
+# ===================================
+# Filter Scope Definitions
+# ===================================
+
+scopes:
+  collection:
+    type: group
+    label: elipce.bipage::lang.plugin.menus.collections
+    modelClass: Elipce\BiPage\Models\Collection
+    conditions: collection_id in (:filtered)
+    nameFrom: name

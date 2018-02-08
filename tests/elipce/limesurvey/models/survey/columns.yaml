@@ -1,0 +1,34 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+  name:
+    label: elipce.limesurvey::lang.backend.surveys.name_column
+    type: text
+    searchable: true
+    width: 40%
+
+  role:
+    label: elipce.limesurvey::lang.backend.surveys.role_column
+    relation: role
+    valueFrom: name
+    width: 20%
+
+  participants_count:
+    label: elipce.limesurvey::lang.backend.surveys.participants_column
+    relation: participants_count
+    valueFrom: count
+    default: 0
+    sortable: false
+    with: 10%
+
+  start_date:
+    label: elipce.limesurvey::lang.backend.surveys.start_date_column
+    type: date
+    with: 15%
+
+  end_date:
+    label: elipce.limesurvey::lang.backend.surveys.end_date_column
+    type: date
+    with: 15%

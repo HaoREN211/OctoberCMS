@@ -1,0 +1,8 @@
+{
+    "name": "elipce/sso",
+    "description": "Connecteur SSO compatible SAML",
+    "homepage": "http://elipce.com",
+    "require": {
+        "onelogin/php-saml": "^2.7.0"
+    }
+}

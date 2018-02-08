@@ -1,0 +1,15 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+  name:
+    label: elipce.news::lang.backend.news.name_column
+    type: text
+    searchable: true
+    width: 75%
+
+  updated_at:
+    label: elipce.news::lang.backend.news.date_column
+    type: date
+    width: 25%

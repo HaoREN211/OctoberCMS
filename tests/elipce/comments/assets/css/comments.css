@@ -1,0 +1,84 @@
+#comments,
+#comment-form-wrapper
+{
+    width: 100%;
+}
+
+#comments
+{
+    margin: 30px 0 15px 0;
+}
+
+#comments-wrapper > h1
+{
+    margin-top: 0;
+}
+
+#comments img
+{
+    border-radius: 50px;
+}
+
+#comments .comment
+{
+    margin-top: 0;
+}
+
+#comments .comment form#comment-form
+{
+    max-width: 320px;
+    min-width: 100%;
+    margin-top: 20px;
+}
+
+#comments textarea, #comment-form-wrapper textarea
+{
+    resize: none;
+}
+
+#comments .comment .media-heading
+{
+    margin: -5px 0 5px;
+}
+
+#comments .comment .media-heading .user-name
+{
+    font-weight: 400;
+    font-size: 1.2em;
+    letter-spacing: -1.5px;
+    word-spacing: 3px;
+}
+
+#comments .comment .media-heading .comment-published-at
+{
+    font-size: 0.7em;
+    opacity: 0.5;
+    font-weight: 400;
+    margin-left: 0.2em;
+}
+
+#comments .comment .action-link
+{
+    margin-right: 10px;
+    font-size: 0.8em;
+}
+
+#comments .comment .comment-content > *
+{
+    text-align: justify;
+}
+
+#comments .comment .level
+{
+    margin: 20px 0 0 20px
+}
+
+.cancel-reply
+{
+    display: none;
+    float: left;
+}
+
+.form-submit {
+    float: right;
+}

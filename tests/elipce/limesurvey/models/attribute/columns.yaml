@@ -1,0 +1,16 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+  name:
+    label: elipce.limesurvey::lang.backend.attributes.name_column
+    type: text
+    sortable: false
+    width: 60%
+
+  value:
+    label: elipce.limesurvey::lang.backend.attributes.value_column
+    type: text
+    sortable: false
+    width: 40%

@@ -45,6 +45,13 @@
                     class="btn btn-default">
                     <?= e(trans('backend::lang.form.save_and_close')) ?>
                 </button>
+
+                <button class="oc-icon-internet-explorer btn-icon pull-right"
+                        onclick="window.open('<?=  $formModel->url ?>')">
+                </button>
+
+
+
                 <span class="btn-text">
                     <a href="<?= Backend::url('elipce/bipage/pages') ?>">
                                 <?= e(trans('backend::lang.form.cancel')) ?>

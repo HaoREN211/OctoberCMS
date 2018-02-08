@@ -1,0 +1,11 @@
+# ===================================
+# Filter Scope Definitions
+# ===================================
+
+scopes:
+    account:
+        type: group
+        label: elipce.bime::lang.backend.groups.account_column
+        modelClass: Elipce\Bime\Models\Account
+        nameFrom: name
+        conditions: account_id in (:filtered)

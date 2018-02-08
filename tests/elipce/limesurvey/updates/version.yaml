@@ -1,0 +1,49 @@
+1.0.1:
+    - First version of LimeSurvey
+    - create_accounts_table.php
+    - add_portals_account_id_column.php
+    - create_stories_table.php
+    - create_templates_table.php
+    - create_roles_table.php
+    - create_presurveys_table.php
+    - create_presurveys_roles_table.php
+    - create_sessions_table.php
+    - create_participants_table.php
+    - create_surveys_table.php
+1.0.2:
+    - Handle dynamic participant attributes
+    - add_sessions_columns.php
+    - create_columns_table.php
+    - create_attributes_table.php
+1.0.3:
+    - Add relation between participants and surveys
+    - create_surveys_participants_table.php
+1.0.4:
+    - Handle linked surveys
+    - create_questions_table.php
+    - create_links_table.php
+    - add_surveys_template_id_column.php
+1.0.5:
+    - Add created_by column on sessions
+    - add_sessions_created_by_column.php
+1.0.6:
+    - Change story roles relations
+    - create_stories_roles_table.php
+    - drop_roles_story_id_column.php
+    - drop_roles_value_column.php
+    - add_roles_description_column.php
+1.0.7:
+    - Make pre-surveys planning more user friendly
+    - add_presurveys_days_columns.php
+    - add_surveys_days_columns.php
+1.0.8:
+    - Handle session archiving
+    - add_sessions_deleted_at_column.php
+    - add_surveys_is_archived_column.php
+1.0.9:
+    - Add surveys tracking
+    - add_surveys_participants_completed_column.php
+    - add_surveys_participants_reminder_sent_column.php
+1.1.0:
+    - Handle required columns in story mask
+    - add_columns_field_column.php

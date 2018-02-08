@@ -1,0 +1,8 @@
+{
+  "name": "elipce/limesurvey",
+  "description": "Gestion d'enquêtes automatisée avec LimeSurvey.",
+  "homepage": "http://elipce.com",
+  "require": {
+    "maatwebsite/excel": "~2.1.0"
+  }
+}

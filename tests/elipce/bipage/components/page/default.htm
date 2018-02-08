@@ -1,0 +1,63 @@
+<!-- Macro -->
+{% macro print(title, subtitle, source, html, description, help, date) %}
+
+<div class="dashboard">
+    <div class="row dashboard-display">
+        {{ html | raw }}
+    </div>
+    <div class="row dashboard-data">
+        <div class="col-sm-9">
+            <!-- Dashboard description -->
+            <div class="dashboard-description">
+                <h4 class="headline"><span>{{ title }}</span></h4>
+                <p class="text-muted">{{ subtitle }}</p>
+                <p>
+                    {% if description %}
+                        {{ description|raw }}
+                    {% else %}
+                        Aucune description disponible.
+                    {% endif %}
+                </p>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <!-- Dashboard informations -->
+            <ul class="dashboard-info">
+                <li><strong>Source</strong>:
+                    {% if source %}
+                        {{ source }}
+                    {% else %}
+                        Aucune information
+                    {% endif %}
+                </li>
+                <li><strong>Date</strong>: {{ date|date('d/m/Y') }}</li>
+            </ul>
+            <a href="javascript:void(0);" class="btn btn-primary btn-block" data-trigger="focus" data-toggle="popover"
+               data-placement="bottom"
+               data-content="{% if help %} {{ help|escape }} {% else %} Aucune donnée disponible pour cette rubrique. {% endif %}">
+                <i class="icon-bullhorn"></i> Aide
+            </a>
+        </div>
+    </div>
+</div>
+{% endmacro %}
+
+<!-- BiPage default -->
+<div id="bipage">
+    <!-- Breadcrumbs -->
+    <!--<div class="row">-->
+        <!--<ol class="breadcrumb">-->
+            <!--<li><i class="icon-folder-open"></i>Réseaux sociaux</li>-->
+            <!--<li>{{ bipage.name }}</li>-->
+            <!--{% if user %}-->
+                <!--&lt;!&ndash; Subscriber &ndash;&gt;-->
+                <!--<li class="pull-right action"></li>-->
+            <!--{% endif %}-->
+        <!--</ol>-->
+    <!--</div>-->
+    <!-- Dynamic content -->
+    {% for d in dashboards %}
+        {% set html = d.renderPartial(bipage, user | default(null) ) %}
+        {{ _self.print(d.name, d.pivot.subtitle, d.pivot.source, html, d.pivot.description, d.pivot.help, d.updated_at) }}
+    {% endfor %}
+</div>

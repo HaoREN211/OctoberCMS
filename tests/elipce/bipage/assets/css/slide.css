@@ -1,0 +1,106 @@
+.slick-slide
+{
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    display: none;
+}
+
+.slick-slide .caption
+{
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-weight: bold;
+    color: #fff;
+    display: none;
+}
+
+.slick-slide .folder-title
+{
+    background: rgba(0, 0, 0, 0.6);
+    padding: 5px;
+    position: absolute;
+    bottom: 70px;
+    left: 20px;
+    color: #fff;
+    border-radius: 20px;
+    letter-spacing: -0.5px;
+}
+
+.slick-slide:first-child
+{
+    display: block;
+}
+
+.slick-initialized > div,
+.slick-initialized .caption
+{
+    display: block;
+}
+
+.slick-initialized .slick-prev,
+.slick-initialized .slick-next
+{
+    z-index: 10;
+    top: 30px;
+    width: 30px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.6);
+    -webkit-transition: 0.25s;
+    -moz-transition: 0.25s;
+    -o-transition: 0.25s;
+    transition: 0.25s;
+}
+
+.slick-initialized .slick-prev:before,
+.slick-initialized .slick-next:before
+{
+    font-size: 26px;
+    color: #fff;
+    position: relative;
+}
+
+.slick-initialized .slick-prev:hover,
+.slick-initialized .slick-next:hover
+{
+    background: #000000;
+}
+
+.slick-initialized .slick-prev
+{
+    right: 55px;
+    left: auto;
+}
+
+.slick-initialized .slick-prev:before
+{
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: inherit;
+    -webkit-font-smoothing: antialiased;
+    *margin-right: .3em;
+    content: "\f104";
+}
+
+.slick-initialized .slick-next
+{
+    right: 20px;
+    left: auto;
+}
+
+.slick-initialized .slick-next:before
+{
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: inherit;
+    -webkit-font-smoothing: antialiased;
+    *margin-right: .3em;
+    content: "\f105";
+}

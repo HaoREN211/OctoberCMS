@@ -1,0 +1,26 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+  created_at:
+    label: elipce.sso::lang.settings.logs_date
+    type: timetense
+    width: 20%
+
+  ip:
+    label: elipce.sso::lang.settings.logs_ip
+    type: text
+    width: 30%
+    searchable: true
+
+  email:
+    label: elipce.sso::lang.settings.logs_email
+    type: text
+    width: 30%
+    searchable: true
+
+  result:
+    label: elipce.sso::lang.settings.logs_result
+    type: text
+    width: 20%

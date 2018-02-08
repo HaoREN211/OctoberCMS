@@ -1,0 +1,41 @@
+{% if message != '' %}
+    <div class="comment comment-error">{{ message }}</div>
+{% endif %}
+
+{% if comment != '' %}
+    <div id="comment-{{ comment.id }}" class="media comment new">
+        <div class="pull-left">
+
+            {% if comment.author.avatar is empty %}
+                <img class="media-object" src="{{ comment.author.getAvatarThumb(64) }}"/>
+            {% else %}
+                <img class="media-object"
+                     src="{{ 'plugins/elipce/comments/assets/img/no_avatar.png'|app }}"/>
+            {% endif %}
+
+        </div>
+        <div class="media-body">
+            <div class="media-heading">
+                <span class="user-name">
+                    {{ comment.author.name }} {{ comment.author.surname }}
+                </span>
+                <span class="comment-published-at">{{ comment.created_at|date('d-m-Y') }}</span>
+            </div>
+            <div class="comment-content">{{ comment.content_html|raw }}</div>
+            <div class="comment-actions">
+
+                {% if ( level < depth ) or ( depth == 0 ) %}
+                    <a href="#" class="action-link reply" data-id="{{ comment.id }}"
+                       data-level="{{ level }}">répondre</a>
+                {% endif %}
+
+                {% if comment.author_id != 0 %}
+                    <a href="#" data-id="{{ comment.id }}" class="action-link edit">modifier</a>
+                    <a href="#" data-id="{{ comment.id }}" class="action-link delete">effacer</a>
+                {% endif %}
+
+            </div>
+        </div>
+        <div id="reply-{{ comment.id }}" class="level"></div>
+    </div>
+{% endif %}

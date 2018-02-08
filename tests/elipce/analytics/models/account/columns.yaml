@@ -1,0 +1,15 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    name:
+        label: elipce.analytics::lang.backend.accounts.name_column
+        type: text
+        searchable: true
+        width: 70%
+
+    updated_at:
+        label: elipce.analytics::lang.backend.accounts.date_column
+        type: date
+        width: 30%

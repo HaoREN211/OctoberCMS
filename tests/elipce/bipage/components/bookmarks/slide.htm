@@ -1,0 +1,13 @@
+<div id="bookmarks">
+    {% for page in __SELF__.pages %}
+    <div class="bookmark">
+        <div class="image">
+            <a href="{{__SELF__.redirectPage}}/{{page.id}}">
+                <img src="{{ page.thumbnail.getThumb(720, 360, { mode: 'crop' }) }}"
+                     class="img-responsive" alt="{{ page.name }}"/>
+            </a>
+        </div>
+        <div class="caption">{{ page.name }}</div>
+    </div>
+    {% endfor %}
+</div>

@@ -1,0 +1,13 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+  folders_section:
+    label: elipce.bipage::lang.backend.focus.focus_section_label
+    comment: elipce.bipage::lang.backend.focus.focus_section_comment
+    type: section
+
+  focus:
+    type: partial
+    path: focus_field

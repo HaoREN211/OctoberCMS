@@ -1,0 +1,19 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+custom_attributes:
+  label: elipce.limesurveys::lang.backend.attributes.record_name
+  emptyMessage: backend::lang.list.no_records
+
+  view:
+    list: $/elipce/limesurvey/models/attribute/columns.yaml
+    toolbarButtons: false
+    showCheckboxes: false
+
+  manage:
+    list: $/elipce/limesurvey/models/attribute/columns.yaml
+    form: $/elipce/limesurvey/models/attribute/fields.yaml
+    showSearch: true
+    showSorting: true
+    recordsPerPage: 20

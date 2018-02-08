@@ -1,0 +1,29 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+  name:
+    label: elipce.tableau::lang.backend.workbooks.name_column
+    type: text
+    searchable: true
+    width: 40%
+
+  project_name:
+    label: elipce.tableau::lang.backend.workbooks.project_column
+    type: text
+    searchable: true
+    width: 40%
+
+  views_count:
+    label: elipce.tableau::lang.backend.workbooks.views_column
+    relation: views_count
+    valueFrom: count
+    default: 0
+    sortable: false
+    width: 20%
+
+  updated_at:
+    label: elipce.tableau::lang.backend.workbooks.date_column
+    type: date
+    invisible: true

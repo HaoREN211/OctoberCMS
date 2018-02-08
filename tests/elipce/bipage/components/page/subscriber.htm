@@ -1,0 +1,27 @@
+{% set bookmark = __SELF__.bookmark %}
+
+<!-- Subscriber component -->
+<div id="subscriber">
+    {% if bookmark.id %}
+    <a href="" class="unsubscribe-link"
+       data-request="{{__SELF__}}::onUnSubscribe"
+       data-request-update="'{{ __SELF__ }}::subscriber': '#subscriber'"
+       data-request-data="bookmark_id: {{page.bookmark.id}},
+                          page_id: {{bookmark.page_id}},
+                          user_id: {{bookmark.user_id}},
+                          portal_id: {{bookmark.portal_id}}">
+        <span class="fui-trash"></span>
+        Ne plus suivre
+    </a>
+    {% else %}
+    <a href="" class="subscribe-link"
+       data-request="{{__SELF__}}::onSubscribe"
+       data-request-update="'{{ __SELF__ }}::subscriber': '#subscriber'"
+       data-request-data="page_id: {{bookmark.page_id}},
+                          user_id: {{bookmark.user_id}},
+                          portal_id: {{bookmark.portal_id}}">
+        <span class="fui-star-2"></span>
+        Suivre
+    </a>
+    {% endif %}
+</div>

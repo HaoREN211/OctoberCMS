@@ -1,0 +1,5 @@
+<?php if ($this->user->hasAccess('elipce.bipage.access_collections')): ?>
+    <?= $this->relationRender('dashboards') ?>
+<?php else: ?>
+    <?= $this->relationRender('dashboards', ['readOnly' => true]) ?>
+<?php endif; ?>

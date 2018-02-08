@@ -1,0 +1,19 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+questions:
+  label: elipce.limesurveys::lang.backend.questions.record_name
+  emptyMessage: backend::lang.list.no_records
+
+  view:
+    list: $/elipce/limesurvey/models/question/columns.yaml
+    toolbarButtons: false
+    showCheckboxes: false
+    showSorting: false
+    defaultSort:
+      column: name
+      direction: asc
+
+  manage:
+    form: $/elipce/limesurvey/models/question/fields.yaml

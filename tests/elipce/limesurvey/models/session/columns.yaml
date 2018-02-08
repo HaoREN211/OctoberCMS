@@ -1,0 +1,30 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+  name:
+    label: elipce.limesurvey::lang.backend.sessions.name_column
+    type: text
+    searchable: true
+    width: 30%
+
+  story:
+    label: elipce.limesurvey::lang.backend.sessions.story_column
+    relation: story
+    valueFrom: name
+    searchable: true
+    with: 30%
+
+  participants_count:
+    label: elipce.limesurvey::lang.backend.sessions.participants_column
+    relation: participants_count
+    valueFrom: count
+    sortable: false
+    default: 0
+    with: 20%
+
+  updated_at:
+    label: elipce.limesurvey::lang.backend.sessions.date_column
+    type: date
+    width: 20%

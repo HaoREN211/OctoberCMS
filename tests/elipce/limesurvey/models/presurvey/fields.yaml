@@ -1,0 +1,75 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+  name:
+    label: elipce.limesurvey::lang.backend.presurveys.name_label
+    commentAbove: elipce.limesurvey::lang.backend.presurveys.name_comment
+    type: text
+    required: true
+    span: left
+
+  template:
+    label: elipce.limesurvey::lang.backend.presurveys.template_label
+    commentAbove: elipce.limesurvey::lang.backend.presurveys.template_comment
+    type: relation
+    nameFrom: name
+    required: true
+    span: right
+
+tabs:
+  fields:
+    planning_section:
+      label: elipce.limesurvey::lang.backend.presurveys.planning_section_label
+      comment: elipce.limesurvey::lang.backend.presurveys.planning_section_comment
+      tab: elipce.limesurvey::lang.backend.presurveys.planning_tab
+      type: section
+      span: full
+
+    days:
+      placeholder: elipce.limesurvey::lang.backend.presurveys.days_placeholder
+      tab: elipce.limesurvey::lang.backend.presurveys.planning_tab
+      required: true
+      type: number
+      span: left
+
+    when:
+      tab: elipce.limesurvey::lang.backend.presurveys.planning_tab
+      type: dropdown
+      options:
+        after_start: elipce.limesurvey::lang.backend.presurveys.after_start_option
+        before_start: elipce.limesurvey::lang.backend.presurveys.before_start_option
+        after_end: elipce.limesurvey::lang.backend.presurveys.after_end_option
+        before_end: elipce.limesurvey::lang.backend.presurveys.before_end_option
+      default: after_start
+      required: true
+      span: right
+
+    start_days:
+      tab: elipce.limesurvey::lang.backend.presurveys.planning_tab
+      dependsOn: [when,days]
+      cssClass: hidden
+      type: number
+
+    end_days:
+      tab: elipce.limesurvey::lang.backend.presurveys.planning_tab
+      dependsOn: [when,days]
+      cssClass: hidden
+      type: number
+
+    duration:
+      label: elipce.limesurvey::lang.backend.presurveys.duration_label
+      commentAbove: elipce.limesurvey::lang.backend.presurveys.duration_comment
+      tab: elipce.limesurvey::lang.backend.presurveys.planning_tab
+      required: true
+      type: number
+      default: 1
+      span: left
+
+    roles:
+      label: elipce.limesurvey::lang.backend.presurveys.roles_label
+      commentAbove: elipce.limesurvey::lang.backend.presurveys.roles_comment
+      tab: elipce.limesurvey::lang.backend.presurveys.roles_tab
+      type: checkboxlist
+      span: full

@@ -1,0 +1,85 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+  name:
+    label: elipce.multisite::lang.backend.portals.name_label
+    commentAbove: elipce.multisite::lang.backend.portals.name_comment
+    type: text
+    span: left
+
+  description:
+    label: elipce.multisite::lang.backend.portals.description_label
+    commentAbove: elipce.multisite::lang.backend.portals.description_comment
+    type: textarea
+    size: medium
+    span: right
+
+tabs:
+  fields:
+    domain:
+      label: elipce.multisite::lang.backend.portals.domain_label
+      commentAbove: elipce.multisite::lang.backend.portals.domain_comment
+      tab: elipce.multisite::lang.backend.portals.backend_tab
+      required: true
+      type: text
+      span: left
+
+    theme:
+      label: elipce.multisite::lang.backend.portals.theme_label
+      commentAbove: elipce.multisite::lang.backend.portals.theme_comment
+      tab: elipce.multisite::lang.backend.portals.backend_tab
+      required: true
+      type: dropdown
+      span: right
+
+    subdomain:
+      label: elipce.multisite::lang.backend.portals.subdomain_label
+      commentAbove: elipce.multisite::lang.backend.portals.subdomain_comment
+      tab: elipce.multisite::lang.backend.portals.backend_tab
+      type: text
+      span: left
+
+    less:
+      type: codeeditor
+      label: elipce.multisite::lang.backend.portals.less_label
+      tab: elipce.multisite::lang.backend.portals.less_tab
+      commentAbove: elipce.multisite::lang.backend.portals.less_comment
+      size: huge
+      language: less
+      dependsOn: theme
+      context: update
+
+secondaryTabs:
+  fields:
+    favicon:
+      label: elipce.multisite::lang.backend.portals.favicon_label
+      commentAbove: elipce.multisite::lang.backend.portals.favicon_comment
+      type: fileupload
+      required: true
+      mode: image
+      fileTypes: ico, png
+      useCaption: false
+      span: auto
+
+    loginlogo:
+      label: elipce.multisite::lang.backend.portals.loginlogo_label
+      commentAbove: elipce.multisite::lang.backend.portals.loginlogo_comment
+      type: fileupload
+      required: true
+      mode: image
+      fileTypes: jpg, png, gif
+      useCaption: false
+      span: auto
+
+    navbarlogo:
+      label: elipce.multisite::lang.backend.portals.navbarlogo_label
+      commentAbove: elipce.multisite::lang.backend.portals.navbarlogo_comment
+      type: fileupload
+      required: true
+      mode: image
+      imageWidth: 260
+      fileTypes: jpg, png, gif
+      useCaption: false
+      span: full

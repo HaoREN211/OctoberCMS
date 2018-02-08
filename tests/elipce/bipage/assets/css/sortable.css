@@ -1,0 +1,9 @@
+.html5sortable tbody tr > td.position
+{
+    display: none;
+}
+
+.html5sortable thead tr th.list-cell-name-id
+{
+    display: none;
+}

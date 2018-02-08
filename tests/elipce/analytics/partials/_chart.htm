@@ -1,0 +1,112 @@
+<style>
+    @keyframes spin {
+        to {
+            transform: rotate(1turn);
+        }
+    }
+
+    .progress {
+        background: transparent;
+        position: relative;
+        display: block;
+        width: 5em;
+        height: 5em;
+        font-size: 12px;
+        text-indent: 999em;
+        overflow: hidden;
+        animation: spin 1s infinite steps(8);
+    }
+
+    .small.progress {
+        font-size: 6px;
+    }
+
+    .large.progress {
+        font-size: 24px;
+    }
+
+    .progress:after,.progress:before,.progress>div:after,.progress>div:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 2.25em;
+        width: .5em;
+        height: 1.5em;
+        border-radius: .2em;
+        box-shadow: 0 3.5em #eee;
+        transform-origin: 50% 2.5em;
+    }
+
+    .progress:before {
+        background: #555;
+    }
+
+    .progress:after {
+        transform: rotate(-45deg);
+        background: #777;
+    }
+
+    .progress>div:before {
+        transform: rotate(-90deg);
+        background: #999;
+    }
+
+    .progress>div:after {
+        transform: rotate(-135deg);
+        background: #bbb;
+    }
+</style>
+
+<section id="ga-loading-spinner-<?= $id ?>" class="progress"></section>
+<section id="ga-timeline-<?= $id ?>"></section>
+
+<script>
+    if (typeof (gapi) == 'undefined') {
+        (function (w, d, s, g, js, fjs) {
+            g = w.gapi || (w.gapi = {});
+            g.analytics = {
+                q: [],
+                ready: function (cb) {
+                    this.q.push(cb)
+                }
+            };
+            js = d.createElement(s);
+            fjs = d.getElementsByTagName(s)[0];
+            js.src = 'https://apis.google.com/js/platform.js';
+            fjs.parentNode.insertBefore(js, fjs);
+            js.onload = function () {
+                g.load('analytics')
+            };
+        }(window, document, 'script'));
+    }
+</script>
+
+<script>
+    gapi.analytics.ready(function () {
+        gapi.analytics.auth.authorize({
+            'serverAuth': {
+                'access_token': '<?= $token ?>'
+            }
+        });
+        new gapi.analytics.googleCharts.DataChart({
+            reportType: 'ga',
+            query: {
+                'ids': 'ga:<?= $viewId ?>',
+                'dimensions': '<?= $dimension ?>',
+                'metrics': '<?= $metric ?>',
+                'start-date': '<?= $startDate ?>',
+                'end-date': '<?= $endDate ?>'
+            },
+            chart: {
+                type: '<?= $type ?>',
+                container: 'ga-timeline-<?= $id ?>',
+                options: {
+                    width: '100%'
+                }
+            }
+        }).on('success', function () {
+            document.getElementById('ga-loading-spinner-<?= $id ?>')
+                    .setAttribute('style', 'display:none;');
+        }).execute();
+    });
+</script>

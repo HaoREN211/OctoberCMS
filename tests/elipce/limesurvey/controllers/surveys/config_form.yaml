@@ -1,0 +1,21 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: elipce.limesurvey::lang.backend.surveys.record_name
+
+# Model Form Field configuration
+form: $/elipce/limesurvey/models/survey/fields.yaml
+
+# Model Class name
+modelClass: Elipce\LimeSurvey\Models\Survey
+
+# Default redirect location
+defaultRedirect: elipce/limesurvey/sessions
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: elipce/limesurvey/sessions
+    redirectClose: elipce/limesurvey/sessions/:id

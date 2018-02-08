@@ -1,0 +1,109 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+  step1_section:
+    label: elipce.bime::lang.backend.filters.step1_section_label
+    comment: elipce.bime::lang.backend.filters.step1_section_comment
+    context: create
+    type: section
+    span: full
+
+  step2_section:
+    label: elipce.bime::lang.backend.filters.step2_section_label
+    comment: elipce.bime::lang.backend.filters.step2_section_comment
+    context: update
+    type: section
+    span: full
+
+  parameter@create:
+    label: elipce.bime::lang.backend.filters.parameter_label
+    commentAbove: elipce.bime::lang.backend.filters.parameter_comment
+    type: relation
+    nameFrom: name
+    required: true
+    span: left
+
+  parameter@update:
+    label: elipce.bime::lang.backend.filters.parameter_label
+    commentAbove: elipce.bime::lang.backend.filters.parameter_comment
+    type: relation
+    disabled: true
+    nameFrom: name
+    span: left
+
+  collection:
+    label: elipce.bime::lang.backend.filters.collection_label
+    commentAbove: elipce.bime::lang.backend.filters.collection_comment
+    type: relation
+    context: create
+    required: true
+    span: right
+
+  value:
+    label: elipce.bime::lang.backend.filters.value_label
+    commentAbove: elipce.bime::lang.backend.filters.value_comment
+    type: text
+    context: update
+    required: true
+    span: right
+
+  step3_section:
+    label: elipce.bime::lang.backend.filters.step3_section_label
+    comment: elipce.bime::lang.backend.filters.step3_section_comment
+    context: update
+    type: section
+    span: full
+
+  page:
+    label: elipce.bime::lang.backend.filters.page_label
+    commentAbove: elipce.bime::lang.backend.filters.page_comment
+    emptyOption: elipce.bime::lang.backend.filters.all_pages
+    context: update
+    type: relation
+    span: left
+
+  group:
+    label: elipce.bime::lang.backend.filters.group_label
+    commentAbove: elipce.bime::lang.backend.filters.group_comment
+    emptyOption: elipce.bime::lang.backend.filters.all_groups
+    dependsOn: viewer_switch
+    type: relation
+    context: update
+    trigger:
+      action: empty|hide
+      field: viewer_switch
+      condition: checked
+    span: right
+
+  viewer:
+    label: elipce.bime::lang.backend.filters.viewer_label
+    commentAbove: elipce.bime::lang.backend.filters.viewer_comment
+    emptyOption: elipce.bime::lang.backend.filters.all_viewers
+    nameFrom: login
+    dependsOn: viewer_switch
+    context: update
+    type: relation
+    trigger:
+      action: empty|hide
+      field: viewer_switch
+      condition: unchecked
+    span: right
+
+secondaryTabs:
+  fields:
+    collection[name]:
+      label: elipce.bime::lang.backend.filters.collection_label
+      commentAbove: elipce.bime::lang.backend.filters.collection_comment
+      type: text
+      context: update
+      disabled: true
+      span: full
+
+    viewer_switch:
+      label: elipce.bime::lang.backend.filters.viewer_switch_label
+      context: update
+      type: switch
+      default: false
+      span: full

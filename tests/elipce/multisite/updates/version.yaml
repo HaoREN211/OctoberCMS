@@ -1,0 +1,11 @@
+1.0.1:
+    - First version of Multisite
+    - create_portals_table.php
+    - backend_users_add_portal.php
+    - users_add_portal.php
+1.0.2:
+    - Add new attributes
+1.0.3:
+    - Handle theme customization
+1.0.4:
+    - Add redirector component

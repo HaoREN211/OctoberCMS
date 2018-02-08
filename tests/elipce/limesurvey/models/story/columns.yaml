@@ -1,0 +1,31 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+  name:
+    label: elipce.limesurvey::lang.backend.stories.name_column
+    type: text
+    searchable: true
+    width: 40%
+
+  roles_count:
+    label: elipce.limesurvey::lang.backend.stories.roles_column
+    relation: roles_count
+    default: 0
+    valueFrom: count
+    sortable: false
+    default: 20%
+
+  presurveys_count:
+    label: elipce.limesurvey::lang.backend.stories.presurveys_column
+    relation: presurveys_count
+    valueFrom: count
+    sortable: false
+    default: 0
+    with: 20%
+
+  updated_at:
+    label: elipce.limesurvey::lang.backend.stories.date_column
+    type: date
+    width: 20%

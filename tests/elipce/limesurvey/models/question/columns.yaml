@@ -1,0 +1,16 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+  name:
+    label: elipce.limesurvey::lang.backend.questions.name_column
+    type: text
+    width: 50%
+
+  answer:
+    label: elipce.limesurvey::lang.backend.questions.link_column
+    relation: answer
+    valueFrom: fullname
+    default: <>
+    width: 50%

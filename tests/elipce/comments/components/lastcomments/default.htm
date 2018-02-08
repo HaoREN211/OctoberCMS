@@ -1,0 +1,5 @@
+{% if comments is not empty %}
+    {% partial __SELF__ ~ '::comments' %}
+{% else %}
+    {% partial __SELF__ ~ '::empty' %}
+{% endif %}

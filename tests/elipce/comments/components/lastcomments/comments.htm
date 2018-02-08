@@ -1,0 +1,23 @@
+<div id="comments">
+    {% for comment in comments %}
+    <div class="comment">
+        <i class="icon-comment"></i>
+        <span class="author">
+            {{ comment.author.name }} {{ comment.author.surname }}
+        </span>
+        <p>
+            {{ comment.content | slice(0, 220) }} ...
+            {% set difference = date(comment.created_at|date('Y/m/d')).diff(date('now'|date('Y/m/d'))) %}
+            <a href="{{__SELF__.redirectPage}}/{{comment.page_id}}#comments">
+                {% if difference.days == 0 %}
+                    Aujourd'hui
+                {% elseif difference.days == 1 %}
+                    Hier
+                {% else %}
+                    Il y a {{ difference.days }} jours
+                {% endif %}
+            </a>
+        </p>
+    </div>
+    {% endfor %}
+</div>

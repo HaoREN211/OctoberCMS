@@ -1,0 +1,27 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+  name:
+    label: elipce.analytics::lang.backend.accounts.name_label
+    commentAbove: elipce.analytics::lang.backend.accounts.name_comment
+    type: text
+    required: true
+    span: left
+
+  email:
+    label: elipce.analytics::lang.backend.accounts.email_label
+    commentAbove: elipce.analytics::lang.backend.accounts.email_comment
+    type: text
+    required: true
+    span: left
+
+  p12key:
+    label: elipce.analytics::lang.backend.accounts.p12key_label
+    commentAbove: elipce.analytics::lang.backend.accounts.p12key_comment
+    type: fileupload
+    mode: file
+    fileTypes: p12
+    required: true
+    span: left

@@ -1,0 +1,9 @@
+1.0.1:
+    - First version of Analytics
+    - create_accounts_table.php
+    - create_properties_table.php
+    - create_views_table.php
+1.0.2:
+    - Add custom charts
+    - create_metadata_table.php
+    - create_charts_table.php

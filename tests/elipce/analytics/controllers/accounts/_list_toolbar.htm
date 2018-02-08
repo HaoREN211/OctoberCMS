@@ -1,0 +1,20 @@
+<div data-control="toolbar">
+    <a
+            href="<?= Backend::url('elipce/analytics/accounts/create') ?>"
+            class="btn btn-primary oc-icon-plus">
+        <?= e(trans('backend::lang.form.create')) ?>
+    </a>
+    <button
+            class="btn btn-success oc-icon-refresh disabled-toolbar-button"
+            disabled="disabled"
+            onclick="$(this).data('request-data', {
+            checked: $('.control-list').listWidget('getChecked')})"
+            data-request="onSynchronize"
+            data-trigger-action="enable"
+            data-trigger=".control-list input[type=checkbox]"
+            data-trigger-condition="checked"
+            data-request-success="$('.disabled-toolbar-button').prop('disabled', true);"
+            data-stripe-load-indicator>
+        <?= e(trans('elipce.analytics::lang.backend.accounts.sync_button')) ?>
+    </button>
+</div>

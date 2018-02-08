@@ -1,0 +1,13 @@
+<form class="navbar-form" action="#" role="search" id="search"
+      data-request="onSearch"
+      data-request-data="mode: 'update'"
+      data-request-update="'{{ __SELF__ }}::default': '@#results'">
+    <div class="form-group col-sm-12">
+        <div class="input-group">
+            <input class="form-control" name="keywords" type="search" placeholder="Recherche">
+            <span class="input-group-btn">
+                <button type="submit" class="btn"><span class="fui-search"></span></button>
+            </span>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,25 @@
+# ===================================
+# Filter Scope Definitions
+# ===================================
+
+scopes:
+  account:
+    label: elipce.bime::lang.backend.dashboards.account_column
+    type: group
+    modelClass: Elipce\Bime\Models\Account
+    nameFrom: name
+    conditions: account_id in (:filtered)
+
+  folder:
+    label: elipce.bime::lang.backend.dashboards.folder_column
+    type: group
+    conditions: dashboard_folder in (:filtered)
+    modelClass: Elipce\Bime\Models\Dashboard
+    options: getFoldersOptions
+
+  groups:
+    label: elipce.bime::lang.backend.dashboards.group_column
+    type: group
+    modelClass: Elipce\Bime\Models\Group
+    nameFrom: name
+    scope: applyGroup

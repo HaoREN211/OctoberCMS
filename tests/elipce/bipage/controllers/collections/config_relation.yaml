@@ -1,0 +1,30 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+dashboards:
+  label: elipce.bipage::lang.backend.dashboards.record_name
+  emptyMessage: backend::lang.list.no_records
+
+  view:
+    list: $/elipce/bipage/models/dashboard/columns.yaml
+    toolbarButtons: add|remove
+
+  manage:
+    list: $/elipce/bipage/models/dashboard/columns.yaml
+    showSearch: true
+    recordsPerPage: 20
+
+pages:
+  label: elipce.bipage::lang.backend.pages.record_name
+  emptyMessage: backend::lang.list.no_records
+  readOnly: true
+
+  view:
+    list: $/elipce/bipage/models/page/min_columns.yaml
+    recordUrl: elipce/bipage/pages/update/:id
+    showCheckboxes: false
+
+  manage:
+    list: $/elipce/bipage/models/page/columns.yaml
+    form: $/elipce/bipage/models/page/fields.yaml

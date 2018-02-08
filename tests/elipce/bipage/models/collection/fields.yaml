@@ -1,0 +1,62 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+  name:
+    label: elipce.bipage::lang.backend.collections.name_label
+    placeholder: elipce.bipage::lang.backend.collections.name_placeholder
+    commentAbove: elipce.bipage::lang.backend.collections.name_comment
+    required: true
+    span: left
+
+  description:
+    label: elipce.bipage::lang.backend.collections.description_label
+    placeholder: elipce.bipage::lang.backend.collections.description_placeholder
+    commentAbove: elipce.bipage::lang.backend.collections.description_comment
+    span: right
+
+tabs:
+  fields:
+    visualizations_section:
+      tab: elipce.bipage::lang.backend.collections.visualizations_tab
+      label: elipce.bipage::lang.backend.collections.visualizations_section_label
+      comment: elipce.bipage::lang.backend.collections.visualizations_section_comment
+      type: section
+      span: full
+
+    visualizations:
+      tab: elipce.bipage::lang.backend.collections.visualizations_tab
+      type: partial
+      path: visualizations_field
+
+    pages_section:
+      tab: elipce.bipage::lang.backend.collections.pages_tab
+      label: elipce.bipage::lang.backend.collections.pages_section_label
+      comment: elipce.bipage::lang.backend.collections.pages_section_comment
+      type: section
+      span: full
+
+    pages:
+      tab: elipce.bipage::lang.backend.collections.pages_tab
+      type: partial
+      path: pages_field
+
+secondaryTabs:
+  fields:
+    statistics_section@create:
+      label: elipce.bipage::lang.backend.collections.statistics_section
+      comment: elipce.bipage::lang.backend.collections.statistics_empty
+      type: section
+      span: full
+
+    statistics_section@update:
+      label: elipce.bipage::lang.backend.collections.statistics_section
+      type: section
+      span: full
+
+    statistics:
+      path: statistics_field
+      type: partial
+      context: update
+      span: full

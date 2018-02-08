@@ -1,0 +1,33 @@
+# ===================================
+#  List Behavior Config
+# ===================================
+
+# Model List Column configuration
+list: $/elipce/bipage/controllers/focus/portal_columns.yaml
+
+# Model Class name
+modelClass: Elipce\Multisite\Models\Portal
+
+# List Title
+title: backend::lang.list.default_title
+
+# Link URL for each record
+recordUrl: elipce/bipage/focus/update/:id
+
+# Message to display if the list is empty
+noRecordsMessage: backend::lang.list.no_records
+
+# Records to display per page
+recordsPerPage: 20
+
+# Displays the sorting link on each column
+showSorting: true
+
+# Toolbar widget configuration
+toolbar:
+    # Partial for toolbar buttons
+    buttons: list_toolbar
+
+    # Search widget configuration
+    search:
+        prompt: backend::lang.list.search_prompt

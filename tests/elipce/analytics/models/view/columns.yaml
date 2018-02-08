@@ -1,0 +1,28 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    name:
+        label: elipce.analytics::lang.backend.views.name_column
+        type: text
+        searchable: true
+        width: 50%
+
+    type:
+        label: elipce.analytics::lang.backend.views.type_column
+        type: text
+        searchable: true
+        width: 20%
+
+    property:
+        label: elipce.analytics::lang.backend.views.property_column
+        type: text
+        relation: property
+        select: name
+        width: 30%
+
+    updated_at:
+        label: elipce.analytics::lang.backend.views.date_column
+        type: date
+        invisible: true

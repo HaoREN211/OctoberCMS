@@ -1,0 +1,46 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+      label: elipce.bipage::lang.backend.snippets.name_label
+      commentAbove: elipce.bipage::lang.backend.snippets.name_comment
+      required: true
+      type: text
+      span: left
+
+    collection:
+      label: elipce.bipage::lang.backend.snippets.collection_label
+      commentAbove: elipce.bipage::lang.backend.snippets.collection_comment
+      type: relation
+      nameFrom: name
+      emptyOption: ...
+      required: true
+      span: right
+
+    code:
+      label: elipce.bipage::lang.backend.snippets.code_label
+      commentAbove: elipce.bipage::lang.backend.snippets.code_comment
+      required: true
+      type: textarea
+      size: large
+      context: [update,create]
+      span: full
+
+    preview:
+      label: elipce.bipage::lang.backend.snippets.preview_label
+      commentAbove: elipce.bipage::lang.backend.snippets.preview_comment
+      type: partial
+      path: preview_field
+      context: preview
+      span: full
+
+tabs:
+  fields:
+    public:
+      label: elipce.bipage::lang.backend.snippets.public_label
+      commentAbove: elipce.bipage::lang.backend.snippets.public_comment
+      type: switch
+      context: [update, create]
+      span: full

@@ -1,0 +1,67 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+      label: elipce.analytics::lang.backend.charts.name_label
+      commentAbove: elipce.analytics::lang.backend.charts.name_comment
+      type: text
+      required: true
+      span: left
+
+    view:
+      label: elipce.analytics::lang.backend.charts.view_label
+      commentAbove: elipce.analytics::lang.backend.charts.view_comment
+      type: dropdown
+      required: true
+      span: right
+
+    type:
+      tab: elipce.analytics::lang.backend.charts.metadata_tab
+      label: elipce.analytics::lang.backend.charts.type_label
+      commentAbove: elipce.analytics::lang.backend.charts.type_comment
+      type: dropdown
+      options:
+        LINE: elipce.analytics::lang.backend.charts.line_option
+        COLUMN: elipce.analytics::lang.backend.charts.column_option
+        BAR: elipce.analytics::lang.backend.charts.bar_option
+        PIE: elipce.analytics::lang.backend.charts.pie_option
+        TABLE: elipce.analytics::lang.backend.charts.table_option
+        GEO: elipce.analytics::lang.backend.charts.geo_option
+      span: full
+      required: true
+
+tabs:
+  fields:
+    metric:
+      tab: elipce.analytics::lang.backend.charts.metadata_tab
+      label: elipce.analytics::lang.backend.charts.metric_label
+      commentAbove: elipce.analytics::lang.backend.charts.metric_comment
+      type: dropdown
+      required: true
+      span: left
+
+    dimension:
+      tab: elipce.analytics::lang.backend.charts.metadata_tab
+      label: elipce.analytics::lang.backend.charts.dimension_label
+      commentAbove: elipce.analytics::lang.backend.charts.dimension_comment
+      type: dropdown
+      required: true
+      span: right
+
+    start_date:
+      tab: elipce.analytics::lang.backend.charts.period_tab
+      label: elipce.analytics::lang.backend.charts.start_date_label
+      commentAbove: elipce.analytics::lang.backend.charts.start_date_comment
+      type: datepicker
+      mode: date
+      span: left
+
+    end_date:
+      tab: elipce.analytics::lang.backend.charts.period_tab
+      label: elipce.analytics::lang.backend.charts.end_date_label
+      commentAbove: elipce.analytics::lang.backend.charts.end_date_comment
+      type: datepicker
+      mode: date
+      span: right
