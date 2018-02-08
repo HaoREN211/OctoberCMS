@@ -1,5 +1,6 @@
 /bootstrap/compiled.php
 /vendor
+composer.phar
 .DS_Store
 .idea
 .env
@@ -15,6 +16,7 @@ nginx-ssl.error.log
 php-errors.log
 sftp-config.json
 selenium.php
+composer.lock
 
 # for netbeans
 nbproject
