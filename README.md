@@ -1,9 +1,11 @@
 # Install composer
 1. Download Composer:
 `curl -sS https://getcomposer.org/installer | /usr/bin/php7.1-cli`
+
 Then, a composer.phar file is available in your webspace. If you call the composer.phar directly, you will get an error because Composer will not automatically find the correct PHP version.
 2. Start Composer for the first time: 
 `/usr/bin/php7.1-cli composer.phar`
+
 3. To always use the latest Composer version, use for example the following command: 
 `/usr/bin/php7.1-cli composer.phar selfupdate`
 
