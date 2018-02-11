@@ -7,22 +7,32 @@ columns:
         label: ID
         invisible: true
 
+    vocabulary[name]:
+        type: text
+        label: hao.dictionary::lang.backend.dictionary.name
+        width: 20%
+        searchable: false
+        sortable: true
 
     name:
         label: hao.dictionary::lang.backend.translation.name
         searchable: true
         sortable: true
         type: text
-        width: 30%
-
-    vocabulary[name]:
-        type: text
-        label: hao.dictionary::lang.backend.dictionary.name
         width: 20%
+
+    description:
+        label: hao.dictionary::lang.backend.translation.description
         searchable: false
+        sortable: false
+        type: text
+        width: 45%
+
+
 
     grammaticalgender[name]:
         type: text
+        sortable: true
         label: hao.dictionary::lang.backend.translation.grammaticalgender
         width: 5%
         searchable: false
@@ -32,9 +42,11 @@ columns:
         type: text
         width: 5%
         searchable: false
+        sortable: true
 
     singularandplural[name]:
         label: hao.dictionary::lang.backend.translation.singularandplural
         type: text
         width: 5%
         searchable: false
+        sortable: true

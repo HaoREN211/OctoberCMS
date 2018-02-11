@@ -21,7 +21,6 @@ fields:
         type: text
         span: left
 
-
     grammaticalgender:
         label: hao.dictionary::lang.backend.translation.grammaticalgender
         type: relation

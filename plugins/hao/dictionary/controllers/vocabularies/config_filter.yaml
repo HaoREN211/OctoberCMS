@@ -1,0 +1,11 @@
+# ===================================
+# Filter Scope Definitions
+# ===================================
+
+scopes:
+  vocabulary:
+    type: group
+    label: hao.dictionary::lang.backend.dictionary.language
+    modelClass: Hao\Dictionary\Models\Language
+    nameFrom: name
+    conditions: language_id in (:filtered)

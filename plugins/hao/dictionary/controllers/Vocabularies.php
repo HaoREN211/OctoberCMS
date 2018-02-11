@@ -24,4 +24,6 @@ class Vocabularies extends Controller
 
         BackendMenu::setContext('Hao.Dictionary', 'dictionary', 'vocabularies');
     }
+
+
 }

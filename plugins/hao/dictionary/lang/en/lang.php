@@ -2,7 +2,20 @@
 
 return [
     'form' =>[
-      'save' => '保存',
+        'save' => '保存',
+        'create' => [
+            'vocabulary' => '创建新单词',
+        ],
+
+        'delete' =>[
+            'vocabulary' => '删除选中单词'
+        ],
+
+        'confirm' => [
+            'delete' =>[
+                'vocabulary' => '确认删除单词？'
+            ],
+        ]
     ],
 
     'plugin' => [
@@ -28,7 +41,7 @@ return [
             'grammaticalgender' => '阴阳性',
             'partofspeech'      => '词性',
             'singularandplural' => '单复数',
-        ]
+        ],
     ],
 
 
@@ -247,63 +260,7 @@ return [
         'remove_confirm' => 'Are you sure?',
         'remove_file' => 'Remove file'
     ],
-    'form' => [
-        'create_title' => 'New :name',
-        'update_title' => 'Edit :name',
-        'preview_title' => 'Preview :name',
-        'create_success' => ':name created',
-        'update_success' => ':name updated',
-        'delete_success' => ':name deleted',
-        'reset_success' => 'Reset complete',
-        'missing_id' => 'Form record ID has not been specified.',
-        'missing_model' => 'Form behavior used in :class does not have a model defined.',
-        'missing_definition' => "Form behavior does not contain a field for ':field'.",
-        'not_found' => 'Form record with an ID of :id could not be found.',
-        'action_confirm' => 'Are you sure?',
-        'create' => 'Create',
-        'create_and_close' => 'Create and close',
-        'creating' => 'Creating...',
-        'creating_name' => 'Creating :name...',
-        'save' => 'Save',
-        'save_and_close' => 'Save and close',
-        'saving' => 'Saving...',
-        'saving_name' => 'Saving :name...',
-        'delete' => 'Delete',
-        'deleting' => 'Deleting...',
-        'confirm_delete' => 'Delete record?',
-        'confirm_delete_multiple' => 'Delete selected records?',
-        'deleting_name' => 'Deleting :name...',
-        'reset_default' => 'Reset to default',
-        'resetting' => 'Resetting',
-        'resetting_name' => 'Resetting :name',
-        'undefined_tab' => 'Misc',
-        'field_off' => 'Off',
-        'field_on' => 'On',
-        'add' => 'Add',
-        'apply' => 'Apply',
-        'cancel' => 'Cancel',
-        'close' => 'Close',
-        'confirm' => 'Confirm',
-        'reload' => 'Reload',
-        'complete' => 'Complete',
-        'ok' => 'OK',
-        'or' => 'or',
-        'confirm_tab_close' => 'Close the tab? Unsaved changes will be lost.',
-        'behavior_not_ready' => 'Form behavior has not been initialized, check that you have called initForm() in your controller.',
-        'preview_no_files_message' => 'There are no files uploaded.',
-        'preview_no_media_message' => 'There is no media selected.',
-        'preview_no_record_message' => 'There is no record selected.',
-        'select' => 'Select',
-        'select_all' => 'all',
-        'select_none' => 'none',
-        'select_placeholder' => 'please select',
-        'insert_row' => 'Insert Row',
-        'insert_row_below' => 'Insert Row Below',
-        'delete_row' => 'Delete Row',
-        'concurrency_file_changed_title' => 'File was changed',
-        'concurrency_file_changed_description' => "The file you're editing has been changed on disk by another user. You can either reload the file and lose your changes or override the file on the disk.",
-        'return_to_list' => 'Return to the list'
-    ],
+
     'recordfinder' => [
         'find_record' => 'Find Record',
         'cancel' => 'Cancel',
