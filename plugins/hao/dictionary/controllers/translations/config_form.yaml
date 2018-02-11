@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Translation
+
+# Model Form Field configuration
+form: $/hao/dictionary/models/translation/fields.yaml
+
+# Model Class name
+modelClass: Hao\Dictionary\Models\Translation
+
+# Default redirect location
+defaultRedirect: hao/dictionary/translations
+
+# Create page
+create:
+    title: Create Translation
+    redirect: hao/dictionary/translations/update/:id
+    redirectClose: hao/dictionary/translations
+
+# Update page
+update:
+    title: Edit Translation
+    redirect: hao/dictionary/translations
+    redirectClose: hao/dictionary/translations
+
+# Preview page
+preview:
+    title: Preview Translation

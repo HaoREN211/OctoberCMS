@@ -1,0 +1,40 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        invisible: true
+
+
+    name:
+        label: hao.dictionary::lang.backend.translation.name
+        searchable: true
+        sortable: true
+        type: text
+        width: 30%
+
+    vocabulary[name]:
+        type: text
+        label: hao.dictionary::lang.backend.dictionary.name
+        width: 20%
+        searchable: false
+
+    grammaticalgender[name]:
+        type: text
+        label: hao.dictionary::lang.backend.translation.grammaticalgender
+        width: 5%
+        searchable: false
+
+    partofspeech[name]:
+        label: hao.dictionary::lang.backend.translation.partofspeech
+        type: text
+        width: 5%
+        searchable: false
+
+    singularandplural[name]:
+        label: hao.dictionary::lang.backend.translation.singularandplural
+        type: text
+        width: 5%
+        searchable: false

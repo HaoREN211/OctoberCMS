@@ -1,0 +1,38 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: ID
+        disabled: true
+        hidden: true
+        readOnly: true
+
+    description:
+        label: hao.dictionary::lang.backend.translation.description
+        disabled: false
+        type: text
+        span: full
+
+    name:
+        label: hao.dictionary::lang.backend.translation.name
+        disabled: false
+        type: text
+        span: left
+
+
+    grammaticalgender:
+        label: hao.dictionary::lang.backend.translation.grammaticalgender
+        type: relation
+        span: right
+
+    partofspeech:
+        label: hao.dictionary::lang.backend.translation.partofspeech
+        type: relation
+        span: left
+
+    singularandplural:
+        label: hao.dictionary::lang.backend.translation.singularandplural
+        type: relation
+        span: right

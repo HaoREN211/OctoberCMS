@@ -1,0 +1,18 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+translation:
+  label: hao.dictionary::lang.backend.dictionary.translation
+  emptyMessage: backend::lang.list.no_records
+
+  view:
+    list: $/hao/dictionary/models/translation/columns.yaml
+    toolbarButtons: create|delete
+
+  manage:
+    list: $/hao/dictionary/models/translation/columns.yaml
+    form: $/hao/dictionary/models/translation/fields.yaml
+    showSearch: true
+    showSorting: true
+    recordsPerPage: 10

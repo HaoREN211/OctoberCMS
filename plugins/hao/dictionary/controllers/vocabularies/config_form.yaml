@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Vocabulary
+
+# Model Form Field configuration
+form: $/hao/dictionary/models/vocabulary/fields.yaml
+
+# Model Class name
+modelClass: Hao\Dictionary\Models\Vocabulary
+
+# Default redirect location
+defaultRedirect: hao/dictionary/vocabularies
+
+# Create page
+create:
+    title: Create Vocabulary
+    redirect: hao/dictionary/vocabularies/update/:id
+    redirectClose: hao/dictionary/vocabularies
+
+# Update page
+update:
+    title: Edit Vocabulary
+    redirect: hao/dictionary/vocabularies
+    redirectClose: hao/dictionary/vocabularies
+
+# Preview page
+preview:
+    title: Preview Vocabulary

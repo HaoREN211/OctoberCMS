@@ -1,0 +1,15 @@
+1.0.1:
+    - First version of Dictionary
+    - create_grammaticalgenders_table.php
+    - create_languages_table.php
+    - create_partofspeeches_table.php
+    - create_singularandplurals_table.php
+
+1.0.2:
+    - Insertion of the data and create vocabulary table
+    - insert_default_value.php
+    - create_vocabularies_table.php
+
+1.0.3:
+    - Create translation table
+    - create_translations_table.php
