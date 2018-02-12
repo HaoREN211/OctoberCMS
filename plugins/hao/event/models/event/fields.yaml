@@ -1,0 +1,68 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: ID
+        disabled: true
+        hidden: true
+
+    name:
+        label: 'hao.event::lang.plugin.name'
+        type: text
+        disablad: true
+
+    description:
+        label: 'hao.event::lang.plugin.description'
+        type: textarea
+        disablad: true
+
+    adresse:
+        label: ' '
+        type: partial
+        path: adresse_field
+
+tabs:
+    fields:
+        users:
+            context: update
+            type: partial
+            label: 'hao.event::lang.backend.events.user'
+            path: user_field
+            tab: 'hao.event::lang.backend.events.user_thing'
+
+        things:
+            type: partial
+            label: 'hao.event::lang.backend.events.thing'
+            tab: 'hao.event::lang.backend.events.user_thing'
+            path: thing_field
+
+secondaryTabs:
+    fields:
+        save:
+            type: partial
+            path: save_field
+            span: full
+
+        images@update:
+            label: 'hao.event::lang.backend.images'
+            type: fileupload
+            mode: image
+            span: full
+            useCaption: false
+            imageHeight: 150
+            imageWidth: 260
+            readOnly: false
+            disabled: false
+            thumbOptions:
+                mode: crop
+                offset:
+                    - 0
+                    - 0
+                quality: 90
+                sharpen: 0
+                interlace: false
+                extension: auto
+
+

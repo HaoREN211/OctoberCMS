@@ -1,0 +1,19 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    user[name]:
+        type: text
+        label: hao.event::lang.user.name
+        width: 40%
+
+    name:
+        type: text
+        label: hao.event::lang.thing.name
+        width: 40%
+
+    amount:
+        type: text
+        label: hao.event::lang.thing.amount
+        width: 20%

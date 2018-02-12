@@ -1,0 +1,34 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+users:
+  label: hao.event::lang.backend.events.user
+  emptyMessage: backend::lang.list.no_records
+
+  view:
+    list: $/hao/event/models/user/columns.yaml
+    toolbarPartial: user_toolbar
+
+  manage:
+    list: $/hao/event/models/user/columns.yaml
+    form: $/hao/event/models/user/fields.yaml
+    showSearch: true
+    showSorting: true
+    recordsPerPage: 20
+
+
+things:
+    label: hao.event::lang.backend.events.thing
+    emptyMessage: backend::lang.list.no_records
+
+    view:
+        list: $/hao/event/models/thing/columns.yaml
+        toolbarPartial: thing_toolbar
+
+    manage:
+        list: $/hao/event/models/thing/columns.yaml
+        form: $/hao/event/models/thing/fields.yaml
+        showSearch: true
+        showSorting: true
+        recordsPerPage: 20

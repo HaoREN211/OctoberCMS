@@ -1,0 +1,18 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    name:
+        type: text
+        label: hao.event::lang.user.name
+        sortable: true
+        searchable: true
+        width: 80%
+
+    phone:
+        type: text
+        label: hao.event::lang.user.phone
+        sortable: false
+        searchable: false
+        width: 20%

@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Event
+
+# Model Form Field configuration
+form: $/hao/event/models/event/fields.yaml
+
+# Model Class name
+modelClass: Hao\Event\Models\Event
+
+# Default redirect location
+defaultRedirect: hao/event/events
+
+# Create page
+create:
+    title: Create Event
+    redirect: hao/event/events/update/:id
+    redirectClose: hao/event/events
+
+# Update page
+update:
+    title: 'hao.event::lang.form.update.event'
+    redirect: hao/event/events
+    redirectClose: hao/event/events
+
+# Preview page
+preview:
+    title: Preview Event
