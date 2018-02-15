@@ -1,6 +1,6 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
-        <li><a href="<?= Backend::url('hao/dictionary/vocabularies') ?>">Vocabularies</a></li>
+        <li><a href="<?= Backend::url('hao/dictionary/vocabularies') ?>"><?= e(trans('hao.dictionary::lang.backend.dictionary.name')) ?></a></li>
         <li><?= e($this->pageTitle) ?></li>
     </ul>
 <?php Block::endPut() ?>
@@ -19,22 +19,29 @@
                     type="submit"
                     data-request="onSave"
                     data-hotkey="ctrl+s, cmd+s"
-                    data-load-indicator="Creating Vocabulary..."
+                    data-load-indicator="<?= e(trans('hao.dictionary::lang.form.vocabulary.create.creating')) ?>"
                     class="btn btn-primary">
-                    Create
+                    <?= e(trans('hao.dictionary::lang.form.create.vocabulary')) ?>
                 </button>
+
                 <button
                     type="button"
                     data-request="onSave"
                     data-request-data="close:1"
                     data-hotkey="ctrl+enter, cmd+enter"
-                    data-load-indicator="Creating Vocabulary..."
+                    data-load-indicator="<?= e(trans('hao.dictionary::lang.form.vocabulary.create.creating')) ?>"
                     class="btn btn-default">
-                    Create and Close
+                    <?= e(trans('hao.dictionary::lang.form.create_close.vocabulary')) ?>
                 </button>
-                <span class="btn-text">
-                    or <a href="<?= Backend::url('hao/dictionary/vocabularies') ?>">Cancel</a>
-                </span>
+
+                <a href="<?= Backend::url('hao/dictionary/vocabularies') ?>">
+                    <button
+                        type="button"
+                        class="btn btn-danger">
+                        <?= e(trans('hao.dictionary::lang.form.close')) ?>
+                    </button>
+                </a>>
+
             </div>
         </div>
 

@@ -9,13 +9,13 @@ list: $/hao/dictionary/models/vocabulary/columns.yaml
 modelClass: Hao\Dictionary\Models\Vocabulary
 
 # List Title
-title: Manage Vocabularies
+title: 'hao.dictionary::lang.permission.label.manage_vocabulary'
 
 # Link URL for each record
 recordUrl: hao/dictionary/vocabularies/update/:id
 
 # Message to display if the list is empty
-noRecordsMessage: backend::lang.list.no_records
+noRecordsMessage: hao.dictionary::lang.list.no_records.vocabulary
 
 # Records to display per page
 recordsPerPage: 20

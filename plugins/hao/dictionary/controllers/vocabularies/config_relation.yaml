@@ -4,11 +4,11 @@
 
 translation:
   label: hao.dictionary::lang.backend.dictionary.translation
-  emptyMessage: backend::lang.list.no_records
+  emptyMessage: 'hao.dictionary::lang.list.no_records.translation'
 
   view:
     list: $/hao/dictionary/models/translation/columns.yaml
-    toolbarButtons: create|delete
+    toolbarPartial: translation_toolbar
 
   manage:
     list: $/hao/dictionary/models/translation/columns.yaml

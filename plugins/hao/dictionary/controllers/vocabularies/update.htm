@@ -1,7 +1,8 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
-        <li><a href="<?= Backend::url('hao/dictionary/vocabularies') ?>">Vocabularies</a></li>
+        <li><a href="<?= Backend::url('hao/dictionary/vocabularies') ?>"><?= e(trans('hao.dictionary::lang.backend.dictionary.name')) ?></a></li>
         <li><?= e($this->pageTitle) ?></li>
+        <li><?= e($formModel->name) ?></li>
     </ul>
 <?php Block::endPut() ?>
 
@@ -9,40 +10,59 @@
 
     <?= Form::open(['class' => 'layout']) ?>
 
+    <?php if ($this->user->hasAccess('hao.dictionary.manage_vocabulary')): ?>
         <div class="layout-row">
             <?= $this->formRender() ?>
         </div>
+    <?php else: ?>
+        <div class="layout-row">
+            <?= $this->formRender(['preview' => true]) ?>
+        </div>
+    <?php endif ?>
 
         <div class="form-buttons">
             <div class="loading-indicator-container">
-                <button
-                    type="submit"
-                    data-request="onSave"
-                    data-request-data="redirect:0"
-                    data-hotkey="ctrl+s, cmd+s"
-                    data-load-indicator="Saving Vocabulary..."
-                    class="btn btn-primary">
-                    <u>S</u>ave
-                </button>
-                <button
-                    type="button"
-                    data-request="onSave"
-                    data-request-data="close:1"
-                    data-hotkey="ctrl+enter, cmd+enter"
-                    data-load-indicator="Saving Vocabulary..."
-                    class="btn btn-default">
-                    Save and Close
-                </button>
-                <button
-                    type="button"
-                    class="oc-icon-trash-o btn-icon danger pull-right"
-                    data-request="onDelete"
-                    data-load-indicator="Deleting Vocabulary..."
-                    data-request-confirm="Delete this vocabulary?">
-                </button>
-                <span class="btn-text">
-                    or <a href="<?= Backend::url('hao/dictionary/vocabularies') ?>">Cancel</a>
-                </span>
+                <?php if ($this->user->hasAccess('hao.dictionary.manage_vocabulary')): ?>
+
+                    <button
+                        type="submit"
+                        data-request="onSave"
+                        data-request-data="redirect:0"
+                        data-hotkey="ctrl+s, cmd+s"
+                        data-load-indicator="Saving Vocabulary..."
+                        class="btn btn-primary">
+                        <?= e(trans('hao.dictionary::lang.form.save')) ?>
+                    </button>
+
+                    <button
+                        type="button"
+                        data-request="onSave"
+                        data-request-data="close:1"
+                        data-hotkey="ctrl+enter, cmd+enter"
+                        data-load-indicator="Saving Vocabulary..."
+                        class="btn btn-default">
+                        <?= e(trans('hao.dictionary::lang.form.save_close')) ?>
+                    </button>
+                <?php endif ?>
+
+                <a href="<?= Backend::url('hao/dictionary/vocabularies') ?>">
+                    <button
+                        type="button"
+                        class="btn btn-danger">
+                        <?= e(trans('hao.dictionary::lang.form.close')) ?>
+                    </button>
+                </a>>
+
+                <?php if ($this->user->hasAccess('hao.dictionary.delete_vocabulary')): ?>
+                    <button
+                        type="button"
+                        class="oc-icon-trash-o btn-icon danger pull-right"
+                        data-request="onDelete"
+                        data-load-indicator="Deleting Vocabulary..."
+                        data-request-confirm="Delete this vocabulary?">
+                    </button>
+                <?php endif ?>
+
             </div>
         </div>
 

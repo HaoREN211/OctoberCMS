@@ -3,6 +3,11 @@
 # ===================================
 
 fields:
+    socialnetwork:
+        type: partial
+        path: socialnetwork_field
+        span: full
+
     id:
         label: ID
         disabled: true

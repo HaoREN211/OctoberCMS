@@ -64,9 +64,40 @@ class Plugin extends PluginBase
     public function registerPermissions()
     {
         return [
-            'hao.dictionary.some_permission' => [
-                'tab' => 'Dictionary',
-                'label' => 'Some permission'
+
+            'hao.dictionary.guest_vocabulary' => [
+                'tab'   => 'hao.dictionary::lang.permission.label.all_vocabulary',
+                'label' => 'hao.dictionary::lang.permission.label.guest_vocabulary',
+            ],
+
+            'hao.dictionary.create_vocabulary' => [
+                'tab'   => 'hao.dictionary::lang.permission.label.all_vocabulary',
+                'label' => 'hao.dictionary::lang.permission.label.create_vocabulary',
+            ],
+
+            'hao.dictionary.manage_vocabulary' => [
+                'tab'   => 'hao.dictionary::lang.permission.label.all_vocabulary',
+                'label' => 'hao.dictionary::lang.permission.label.manage_vocabulary',
+            ],
+
+            'hao.dictionary.delete_vocabulary' => [
+                'tab'   => 'hao.dictionary::lang.permission.label.all_vocabulary',
+                'label' => 'hao.dictionary::lang.permission.label.delete_vocabulary',
+            ],
+
+            'hao.dictionary.create_translation' => [
+                'tab'   => 'hao.dictionary::lang.permission.label.all_vocabulary',
+                'label' => 'hao.dictionary::lang.permission.label.create_translation',
+            ],
+
+            'hao.dictionary.manage_translation' => [
+                'tab'   => 'hao.dictionary::lang.permission.label.all_vocabulary',
+                'label' => 'hao.dictionary::lang.permission.label.manage_translation',
+            ],
+
+            'hao.dictionary.delete_translation' => [
+                'tab'   => 'hao.dictionary::lang.permission.label.all_vocabulary',
+                'label' => 'hao.dictionary::lang.permission.label.delete_translation',
             ],
         ];
     }

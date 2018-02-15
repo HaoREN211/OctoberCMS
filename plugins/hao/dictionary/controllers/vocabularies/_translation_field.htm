@@ -1,1 +1,5 @@
-<?= $this->relationRender('translation') ?>
+<?php if ($this->user->hasAccess('hao.dictionary.manage_translation')): ?>
+    <?= $this->relationRender('translation') ?>
+<?php else: ?>
+    <?= $this->relationRender('translation', ['readOnly' => true]) ?>
+<?php endif ?>

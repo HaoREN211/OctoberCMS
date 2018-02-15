@@ -10,7 +10,7 @@ columns:
     vocabulary[name]:
         type: text
         label: hao.dictionary::lang.backend.dictionary.name
-        width: 20%
+        width: 15%
         searchable: false
         sortable: true
 
@@ -19,14 +19,14 @@ columns:
         searchable: true
         sortable: true
         type: text
-        width: 20%
+        width: 26%
 
     description:
         label: hao.dictionary::lang.backend.translation.description
         searchable: false
         sortable: false
         type: text
-        width: 45%
+        width: 35%
 
 
 
@@ -34,19 +34,19 @@ columns:
         type: text
         sortable: true
         label: hao.dictionary::lang.backend.translation.grammaticalgender
-        width: 5%
+        width: 8%
         searchable: false
 
     partofspeech[name]:
         label: hao.dictionary::lang.backend.translation.partofspeech
         type: text
-        width: 5%
+        width: 8%
         searchable: false
         sortable: true
 
     singularandplural[name]:
         label: hao.dictionary::lang.backend.translation.singularandplural
         type: text
-        width: 5%
+        width: 8%
         searchable: false
         sortable: true

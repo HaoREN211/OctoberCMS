@@ -3,7 +3,7 @@
 # ===================================
 
 # Record name
-name: Vocabulary
+name: 'hao.dictionary::lang.plugin.menus.vocabulary'
 
 # Model Form Field configuration
 form: $/hao/dictionary/models/vocabulary/fields.yaml
@@ -16,16 +16,16 @@ defaultRedirect: hao/dictionary/vocabularies
 
 # Create page
 create:
-    title: Create Vocabulary
+    title: 'hao.dictionary::lang.form.create.vocabulary'
     redirect: hao/dictionary/vocabularies/update/:id
     redirectClose: hao/dictionary/vocabularies
 
 # Update page
 update:
-    title: Edit Vocabulary
+    title: 'hao.dictionary::lang.form.update.vocabulary'
     redirect: hao/dictionary/vocabularies
     redirectClose: hao/dictionary/vocabularies
 
 # Preview page
 preview:
-    title: Preview Vocabulary
+    title: 'hao.dictionary::lang.form.preview.vocabulary'

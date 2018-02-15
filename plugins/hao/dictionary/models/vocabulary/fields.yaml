@@ -3,6 +3,11 @@
 # ===================================
 
 fields:
+    socialnetwork:
+        type: partial
+        path: socialnetwork_field
+        span: full
+
     id:
         label: ID
         disabled: true
@@ -13,11 +18,13 @@ fields:
         label: hao.dictionary::lang.backend.dictionary.name
         type: text
         span: left
+        required: true
 
     language:
         label: hao.dictionary::lang.backend.dictionary.language
         type: relation
         span: right
+        required: true
 
     translation@update:
         label: hao.dictionary::lang.backend.dictionary.translation

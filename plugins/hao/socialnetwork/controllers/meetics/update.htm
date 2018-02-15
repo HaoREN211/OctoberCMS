@@ -11,18 +11,18 @@
 
 <!-- Sidebar (secondary tabs fields) -->
 <?php Block::put('form-sidebar') ?>
-    <div class="hide-tabs"><?= $this->formRenderSecondaryUpdateTabs() ?></div>
+    <div class="hide-tabs"><?= $this->formRender(['preview' => false, 'section' => 'secondary']) ?></div>
 <?php Block::endPut() ?>
 
 <?php Block::put('form-contents') ?>
     <div class="layout">
         <!-- Outside fields -->
         <div class="layout-row min-size">
-            <?= $this->formRenderOutsidePreviewFields() ?>
+            <?= $this->formRender(['preview' => true, 'section' => 'outside']) ?>
         </div>
         <!-- Primary tabs fields -->
         <div class="layout-row">
-            <?= $this->formRenderPrimaryPreviewTabs() ?>
+            <?= $this->formRender(['preview' => true, 'section' => 'primary']) ?>
         </div>
         <!-- Bottom toolbar -->
         <div class="form-buttons">

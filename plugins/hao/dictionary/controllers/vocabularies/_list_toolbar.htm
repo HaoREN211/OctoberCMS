@@ -1,21 +1,27 @@
 <div data-control="toolbar">
-    <a
-        href="<?= Backend::url('hao/dictionary/vocabularies/create') ?>"
-        class="btn btn-primary oc-icon-plus">
-        <?= e(trans('hao.dictionary::lang.form.create.vocabulary')) ?>
-    </a>
 
-    <button
-        class="btn btn-danger oc-icon-trash-o"
-        disabled="disabled"
-        onclick="$(this).data('request-data', { checked: $('.control-list').listWidget('getChecked') })"
-        data-request="onDelete"
-        data-request-confirm="<?= e(trans('hao.dictionary::lang.form.confirm.delete.vocabulary')) ?>"
-        data-trigger-action="enable"
-        data-trigger=".control-list input[type=checkbox]"
-        data-trigger-condition="checked"
-        data-request-success="$(this).prop('disabled', 'disabled')"
-        data-stripe-load-indicator>
-        <?= e(trans('hao.dictionary::lang.form.delete.vocabulary')) ?>
-    </button>
+    <?php if ($this->user->hasAccess('hao.dictionary.create_vocabulary')): ?>
+        <a
+            href="<?= Backend::url('hao/dictionary/vocabularies/create') ?>"
+            class="btn btn-primary oc-icon-plus">
+            <?= e(trans('hao.dictionary::lang.form.create.vocabulary')) ?>
+        </a>
+    <?php endif ?>
+
+    <?php if ($this->user->hasAccess('hao.dictionary.delete_vocabulary')): ?>
+        <button
+            class="btn btn-danger oc-icon-trash-o"
+            disabled="disabled"
+            onclick="$(this).data('request-data', { checked: $('.control-list').listWidget('getChecked') })"
+            data-request="onDelete"
+            data-request-confirm="<?= e(trans('hao.dictionary::lang.form.confirm.delete.vocabulary')) ?>"
+            data-trigger-action="enable"
+            data-trigger=".control-list input[type=checkbox]"
+            data-trigger-condition="checked"
+            data-request-success="$(this).prop('disabled', 'disabled')"
+            data-stripe-load-indicator>
+            <?= e(trans('hao.dictionary::lang.form.delete.vocabulary')) ?>
+        </button>
+    <?php endif ?>
+
 </div>
