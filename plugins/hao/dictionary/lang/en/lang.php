@@ -29,6 +29,14 @@ return [
             ],
         ],
 
+        'translation' => [
+            'create'    => '新建释义',
+            'update'    => '更新释义',
+        ],
+        'saving' => [
+            'translation' => '保存释义中',
+        ],
+
         'save' => '保存',
         'create' => [
             'vocabulary'  => '新建单词',
@@ -58,7 +66,8 @@ return [
 
         'confirm' => [
             'delete' =>[
-                'vocabulary' => '确认删除单词？'
+                'vocabulary'    => '确认删除单词？',
+                'translation'   => '确认删除释义？',
             ],
         ]
     ],
@@ -66,8 +75,9 @@ return [
     'plugin' => [
       'name' => '字典',
       'menus' => [
-          'vocabulary' => '单词',
-          'translation' => '释义',
+          'vocabulary'      => '单词',
+          'translation'     => '释义',
+          'learnvocabulary' => '学习单词',
       ],
 
     ],
@@ -90,4 +100,10 @@ return [
             'singularandplural' => '单复数',
         ],
     ],
+
+
+    'translation' => [
+        'name'      => '释义',
+        'update'    => '更新释义',
+    ]
 ];

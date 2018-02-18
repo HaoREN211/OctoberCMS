@@ -1,0 +1,79 @@
+<div class="layout-cell layout-container" id="layout-body">
+    <div class="layout-relative">
+        <div class="layout">
+            <!-- Content -->
+            <div class="layout-row">
+                <div class="layout">
+                        <button class="oc-icon-facebook-official btn-icon pull-left"
+                                type="button"
+                                onclick="window.open('https://www.facebook.com/hao.ren.79656')"></button>
+
+                        <button class="oc-icon-twitter-square btn-icon pull-left"
+                                type="button"
+                                onclick="window.open('https://twitter.com/Hao_Jules')"></button>
+
+                        <button class="oc-icon-linkedin-square btn-icon pull-left"
+                                type="button"
+                                onclick="window.open('https://www.linkedin.com/in/hao-ren-19910211/')"></button>
+
+                        <button class="oc-icon-instagram btn-icon pull-left"
+                                type="button"
+                                onclick="window.open('https://www.instagram.com/jules_hao/')"></button>
+
+                        <button class="oc-icon-github btn-icon pull-left"
+                                type="button"
+                                onclick="window.open('https://github.com/HaoREN211/')"></button>
+
+                        <button class="oc-icon-gitlab btn-icon pull-left"
+                                type="button"
+                                onclick="window.open('https://gitlab.com/HaoREN/')"></button>
+
+                        <button class="oc-icon-qq btn-icon pull-left"
+                                type="button"
+                                onclick="window.open('https://user.qzone.qq.com/309785743/')"></button>
+
+                        <button class="oc-icon-weixin btn-icon pull-left"
+                                type="button"
+                                onclick="alert('微信账号: Jules_Hao')")></button>
+
+                        <button class="oc-icon-whatsapp btn-icon pull-left"
+                                type="button"
+                                onclick="alert('Whatsapp 电话: +330634296124')")></button>
+
+                        <button class="oc-icon-skype btn-icon pull-left"
+                                type="button"
+                                onclick="alert('Skype 账号: q309785743')")></button>
+
+                        <button class="oc-icon-slack btn-icon pull-left"
+                                type="button"
+                                onclick="alert('Slack 账号: q309785743')")></button>
+
+                        <button class="oc-icon-steam-square btn-icon pull-left"
+                                type="button"
+                                onclick="alert('Steam 账号: renhaojules@163.com')")></button>
+
+                        <br />
+                        <br />
+                        <br />
+
+                        <?php if(isset($languages)): ?>
+                            <table align="left">
+
+                            <?php foreach($languages as $language
+                            ){  ?>
+                                <tr><td>
+                            <button class="oc-icon-hand-lizard-o btn-icon pull-left"
+                                type="button"
+                                data-request="onLearn"
+                                data-request-data="language:<?= $language->id ?>"
+                                style="align:center">
+                                <?php print($language->name) ?>
+                            </button></td></tr>
+                        <?php } ?>
+                            </table>
+                        <?php endif ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -16,13 +16,13 @@ defaultRedirect: hao/dictionary/translations
 
 # Create page
 create:
-    title: Create Translation
+    title: 'hao.dictionary::lang.form.translation.create'
     redirect: hao/dictionary/translations/update/:id
     redirectClose: hao/dictionary/translations
 
 # Update page
 update:
-    title: Edit Translation
+    title: 'hao.dictionary::lang.form.translation.update'
     redirect: hao/dictionary/translations
     redirectClose: hao/dictionary/translations
 

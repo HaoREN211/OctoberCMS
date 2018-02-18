@@ -8,36 +8,42 @@ fields:
         path: socialnetwork_field
         span: full
 
-
     id:
         label: ID
         disabled: true
         hidden: true
         readOnly: true
 
+
     description:
         label: hao.dictionary::lang.backend.translation.description
         disabled: false
         type: text
         span: full
+        required: true
 
     name:
         label: hao.dictionary::lang.backend.translation.name
         disabled: false
         type: text
         span: left
+        required: true
+
 
     grammaticalgender:
         label: hao.dictionary::lang.backend.translation.grammaticalgender
         type: relation
         span: right
+        required: true
 
     partofspeech:
         label: hao.dictionary::lang.backend.translation.partofspeech
         type: relation
         span: left
+        required: true
 
     singularandplural:
         label: hao.dictionary::lang.backend.translation.singularandplural
         type: relation
         span: right
+        required: true

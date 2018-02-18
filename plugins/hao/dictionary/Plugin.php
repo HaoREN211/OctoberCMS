@@ -118,6 +118,13 @@ class Plugin extends PluginBase
                 'order'       => 500,
 
                 'sideMenu' => [
+                    'learnvocabulary' => [
+                        'label' => Lang::get('hao.dictionary::lang.plugin.menus.learnvocabulary'),
+                        'icon' => 'icon-hand-lizard-o',
+                        'url' => Backend::url('hao/dictionary/learnvocabulary/index'),
+                        'permissions' => ['hao.dictionary.*'],
+                    ],
+
                     'vocabulary' => [
                         'label' => Lang::get('hao.dictionary::lang.plugin.menus.vocabulary'),
                         'icon' => 'icon-hand-lizard-o',

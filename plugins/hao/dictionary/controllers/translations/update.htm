@@ -1,7 +1,10 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
-        <li><a href="<?= Backend::url('hao/dictionary/translations') ?>">Translations</a></li>
-        <li><?= e($this->pageTitle) ?></li>
+        <li>
+            <a href="<?= Backend::url('hao/dictionary/translations') ?>"><?= e(trans('hao.dictionary::lang.translation.name')) ?></a>
+        </li>
+        <li><?= e(trans('hao.dictionary::lang.translation.update')) ?></li>
+        <li><?= e($formModel->name) ?></li>
     </ul>
 <?php Block::endPut() ?>
 
@@ -20,29 +23,34 @@
                     data-request="onSave"
                     data-request-data="redirect:0"
                     data-hotkey="ctrl+s, cmd+s"
-                    data-load-indicator="Saving Translation..."
+                    data-load-indicator="<?= e(trans('hao.dictionary::lang.form.saving.translation')) ?>"
                     class="btn btn-primary">
-                    <u>S</u>ave
+                    <?= e(trans('hao.dictionary::lang.form.save')) ?>
                 </button>
                 <button
                     type="button"
                     data-request="onSave"
                     data-request-data="close:1"
                     data-hotkey="ctrl+enter, cmd+enter"
-                    data-load-indicator="Saving Translation..."
+                    data-load-indicator="<?= e(trans('hao.dictionary::lang.form.saving.translation')) ?>"
                     class="btn btn-default">
-                    Save and Close
+                    <?= e(trans('hao.dictionary::lang.form.save_close')) ?>
                 </button>
                 <button
                     type="button"
                     class="oc-icon-trash-o btn-icon danger pull-right"
                     data-request="onDelete"
                     data-load-indicator="Deleting Translation..."
-                    data-request-confirm="Delete this translation?">
+                    data-request-confirm="<?= e(trans('hao.dictionary::lang.form.confirm.delete.translation')) ?>">
                 </button>
-                <span class="btn-text">
-                    or <a href="<?= Backend::url('hao/dictionary/translations') ?>">Cancel</a>
-                </span>
+
+                <a href="<?= Backend::url('hao/dictionary/vocabularies') ?>">
+                    <button
+                        type="button"
+                        class="btn btn-danger">
+                        <?= e(trans('hao.dictionary::lang.form.close')) ?>
+                    </button>
+                </a>>
             </div>
         </div>
 

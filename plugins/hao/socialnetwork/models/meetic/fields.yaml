@@ -3,6 +3,11 @@
 # ===================================
 
 fields:
+    socialnetwork:
+        type: partial
+        path: socialnetwork_field
+        span: full
+
     name:
         label: 'hao.socialnetwork::lang.backend.meetic.name_column'
         span: left
@@ -296,7 +301,14 @@ tabs:
 
 
 secondaryTabs:
+
     fields:
+        photos:
+            spqn: full
+            type: partial
+            path: photo_field
+
+
         favorites:
             label: 'hao.socialnetwork::lang.backend.meetic.favorites'
             span: left

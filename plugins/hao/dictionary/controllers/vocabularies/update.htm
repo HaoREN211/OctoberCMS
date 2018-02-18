@@ -1,6 +1,8 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
-        <li><a href="<?= Backend::url('hao/dictionary/vocabularies') ?>"><?= e(trans('hao.dictionary::lang.backend.dictionary.name')) ?></a></li>
+        <li>
+            <a href="<?= Backend::url('hao/dictionary/vocabularies') ?>"><?= e(trans('hao.dictionary::lang.backend.dictionary.name')) ?></a>
+        </li>
         <li><?= e($this->pageTitle) ?></li>
         <li><?= e($formModel->name) ?></li>
     </ul>
@@ -59,7 +61,7 @@
                         class="oc-icon-trash-o btn-icon danger pull-right"
                         data-request="onDelete"
                         data-load-indicator="Deleting Vocabulary..."
-                        data-request-confirm="Delete this vocabulary?">
+                        data-request-confirm="<?= e(trans('hao.dictionary::lang.form.confirm.delete.vocabulary')) ?>">
                     </button>
                 <?php endif ?>
 

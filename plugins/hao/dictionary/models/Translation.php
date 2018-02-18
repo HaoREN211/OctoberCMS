@@ -7,6 +7,40 @@ use Model;
  */
 class Translation extends Model
 {
+    use \October\Rain\Database\Traits\Validation;
+
+
+    /**
+     * @var array Validation rules
+     */
+    public $rules = [
+        'name'                  => 'required',
+        'language'              => 'required',
+        'description'           => 'required',
+        'grammaticalgender'     => 'required',
+        'partofspeech'          => 'required',
+        'singularandplural'     => 'required',
+    ];
+
+    /**
+     * @var array Attribute names for validation errors
+     */
+    public $attributeNames = [
+        'name'                  => 'hao.dictionary::lang.backend.translation.name',
+        'language'              => 'hao.dictionary::lang.backend.translation.language',
+        'description'           => 'hao.dictionary::lang.backend.translation.description',
+        'grammaticalgender'     => 'hao.dictionary::lang.backend.translation.grammaticalgender',
+        'partofspeech'          => 'hao.dictionary::lang.backend.translation.partofspeech',
+        'singularandplural'     => 'hao.dictionary::lang.backend.translation.singularandplural',
+    ];
+
+    /**
+     * @var new version of message error
+     */
+    public $customMessages = [
+        'required' => '\':attribute\'是必需的'
+    ];
+
     /**
      * @var string The database table used by the model.
      */
