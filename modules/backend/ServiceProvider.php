@@ -89,7 +89,6 @@ class ServiceProvider extends ModuleServiceProvider
      */
     protected function registerBackendNavigation()
     {
-
         BackendMenu::registerCallback(function ($manager) {
             $manager->registerMenuItems('October.Backend', [
                 'dashboard' => [
