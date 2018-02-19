@@ -73,13 +73,16 @@ return [
     ],
 
     'plugin' => [
-      'name' => '字典',
-      'menus' => [
-          'vocabulary'      => '单词',
-          'translation'     => '释义',
-          'learnvocabulary' => '学习单词',
-      ],
+        'name' => '字典',
+        'menus' => [
+              'vocabulary'      => '单词',
+              'translation'     => '释义',
+              'learnvocabulary' => '学习单词',
+        ],
 
+        'learning'  => [
+            'page'  => '学习单词',
+        ],
     ],
 
     'backend' => [

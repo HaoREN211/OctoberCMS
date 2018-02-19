@@ -127,14 +127,14 @@ class Plugin extends PluginBase
 
                     'vocabulary' => [
                         'label' => Lang::get('hao.dictionary::lang.plugin.menus.vocabulary'),
-                        'icon' => 'icon-hand-lizard-o',
+                        'icon' => 'icon-bookmark',
                         'url' => Backend::url('hao/dictionary/vocabularies'),
                         'permissions' => ['hao.dictionary.*'],
                     ],
 
                     'translation' => [
                         'label' => Lang::get('hao.dictionary::lang.plugin.menus.translation'),
-                        'icon' => 'icon-file-text-o',
+                        'icon' => 'icon-bookmark-o',
                         'url' => Backend::url('hao/dictionary/translations'),
                         'permissions' => ['hao.dictionary.*'],
                     ],

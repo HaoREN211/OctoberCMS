@@ -1,0 +1,149 @@
+<div class="layout-cell layout-container" id="layout-body">
+    <div class="layout-relative">
+        <div class="layout">
+            <!-- Content -->
+            <div class="layout-row">
+                <div class="layout">
+                    <button class="oc-icon-facebook-official btn-icon pull-left"
+                            type="button"
+                            onclick="window.open('https://www.facebook.com/hao.ren.79656')"></button>
+
+                    <button class="oc-icon-twitter-square btn-icon pull-left"
+                            type="button"
+                            onclick="window.open('https://twitter.com/Hao_Jules')"></button>
+
+                    <button class="oc-icon-linkedin-square btn-icon pull-left"
+                            type="button"
+                            onclick="window.open('https://www.linkedin.com/in/hao-ren-19910211/')"></button>
+
+                    <button class="oc-icon-instagram btn-icon pull-left"
+                            type="button"
+                            onclick="window.open('https://www.instagram.com/jules_hao/')"></button>
+
+                    <button class="oc-icon-github btn-icon pull-left"
+                            type="button"
+                            onclick="window.open('https://github.com/HaoREN211/')"></button>
+
+                    <button class="oc-icon-gitlab btn-icon pull-left"
+                            type="button"
+                            onclick="window.open('https://gitlab.com/HaoREN/')"></button>
+
+                    <button class="oc-icon-qq btn-icon pull-left"
+                            type="button"
+                            onclick="window.open('https://user.qzone.qq.com/309785743/')"></button>
+
+                    <button class="oc-icon-weixin btn-icon pull-left"
+                            type="button"
+                            onclick="alert('微信账号: Jules_Hao')")></button>
+
+                    <button class="oc-icon-whatsapp btn-icon pull-left"
+                            type="button"
+                            onclick="alert('Whatsapp 电话: +330634296124')")></button>
+
+                    <button class="oc-icon-skype btn-icon pull-left"
+                            type="button"
+                            onclick="alert('Skype 账号: q309785743')")></button>
+
+                    <button class="oc-icon-slack btn-icon pull-left"
+                            type="button"
+                            onclick="alert('Slack 账号: q309785743')")></button>
+
+                    <button class="oc-icon-steam-square btn-icon pull-left"
+                            type="button"
+                            onclick="alert('Steam 账号: renhaojules@163.com')")></button>
+
+                    <br />
+                    <br />
+                    <br />
+
+                    <font size="5" color="#008b8b"><?= $name ?></font>
+                    <br />
+                    <br />
+                    <br />
+                    <div id="part_translation" name="part_translation" hidden="true">
+                        <table width="100%">
+                            <tr>
+                                <th>
+                                    <font size="3" color="black">
+                                        <?= e(trans("hao.dictionary::lang.backend.translation.grammaticalgender")) ?>
+                                    </font>
+                                </th>
+                                <th>
+                                    <font size="3" color="black">
+                                        <?= e(trans("hao.dictionary::lang.backend.translation.partofspeech")) ?>
+                                    </font>
+                                </th>
+                                <th>
+                                    <font size="3" color="black">
+                                        <?= e(trans("hao.dictionary::lang.backend.translation.singularandplural")) ?>
+                                    </font>
+                                </th>
+                                <th>
+                                    <font size="3" color="black">
+                                        <?= e(trans("hao.dictionary::lang.backend.translation.name")) ?>
+                                    </font>
+                                </th>
+                                <th>
+                                    <font size="3" color="black">
+                                        <?= e(trans("hao.dictionary::lang.backend.translation.description")) ?>
+                                    </font>
+                                </th>
+                            </tr>
+                            <?php foreach($translations as $translation){ ?>
+                                <tr>
+                                    <td>
+                                        <font size="3" color="008b8b"><?= $translation->grammaticalgender ?></font>
+                                    </td>
+                                    <td>
+                                        <font size="3" color="#008b8b"><?= $translation->partofspeech ?></font>
+                                    </td>
+                                    <td>
+                                        <font size="3" color="#008b8b"><?= $translation->singularandplural ?></font>
+                                    </td>
+                                    <td>
+                                        <font size="3" color="#008b8b"><?= $translation->name ?></font>
+                                    </td>
+                                    <td>
+                                        <font size="3" color="#008b8b"><?= $translation->description ?></font>
+                                    </td>
+                                </tr>
+                            <?php } ?>
+                        </table>
+                    </div>
+
+                    <div>
+                        <button
+                            type="button"
+                            class="oc-icon-play-circle btn-icon danger pull-left"
+                            onclick="location.reload()">
+                        </button>
+                        <button
+                            type="button"
+                            class="oc-icon-book btn-icon danger pull-left"
+                            onclick="window.open('http://www.frdic.com/dicts/fr/<?= $name ?>')">
+                        </button>
+                        <div id="tips_open">
+                            <button
+                                type="button"
+                                class="oc-icon-chain-broken btn-icon danger pull-left"
+                                onclick="document.getElementById('part_translation').hidden=false;
+                                           document.getElementById('tips_open').hidden=true;
+                                            document.getElementById('tips_close').hidden=false">
+                            </button>
+                        </div>
+                        <div id="tips_close" hidden="hidden">
+                            <button
+                                type="button"
+                                hidden="true"
+                                class="oc-icon-paperclip btn-icon danger pull-left"
+                                onclick="document.getElementById('part_translation').hidden=true;
+                                           document.getElementById('tips_open').hidden=false;
+                                             document.getElementById('tips_close').hidden=true">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
