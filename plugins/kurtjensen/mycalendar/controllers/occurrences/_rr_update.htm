@@ -1,0 +1,22 @@
+	<div class="callout callout-<?= $count?'danger':'success' ?>" id="#feedBack">
+        <div class="header">
+<?php if($count){ ?>
+            <i class="icon-exclamation-triangle"></i>
+        	<h3>(<?= $count ?>) Existing Events Do Not Have A Recurrence Record</h3>
+			<p>Events will not appear in calendars and lists unless they have a recurring event rule and record.  Events that only appear 1 time also need this record.</p>
+		    <button
+			    data-request="onOpenSave"
+			    data-request-loading="#feedBack"
+			    class="btn btn-danger  icon-wrench">
+			    Create Single Instance Recurrence Rule For (<?= $count>20?20:$count ?>) Existing Events
+			</button>
+			<p>Only 20 events  per button click will be updated to prevent timeouts.</p>
+
+<?php } else { ?>
+
+            <i class="icon-smile-o"></i>
+        	<h3>All Existing Events Now Have A Recurrence Record</h3>
+			<p>Events will now appear in calendars and lists.</p>
+<?php } ?>
+		</div>
+	</div>

@@ -1,0 +1,29 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: ID
+        disabled: true
+    event_id:
+        label: kurtjensen.mycalendar::lang.occurrence.event_id
+    relation:
+        label: kurtjensen.mycalendar::lang.occurrence.relation
+    relation_id:
+        label: kurtjensen.mycalendar::lang.occurrence.relation_id
+    start_at:
+        label: kurtjensen.mycalendar::lang.occurrence.start_at
+        type: datepicker
+    end_at:
+        label: kurtjensen.mycalendar::lang.occurrence.end_at
+        type: datepicker
+    is_modified:
+        label: kurtjensen.mycalendar::lang.occurrence.is_modified
+        type: checkbox
+    is_allday:
+        label: kurtjensen.mycalendar::lang.occurrence.is_allday
+        type: checkbox
+    is_canceled:
+        label: kurtjensen.mycalendar::lang.occurrence.is_canceled
+        type: checkbox

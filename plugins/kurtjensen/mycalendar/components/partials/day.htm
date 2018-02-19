@@ -1,0 +1,17 @@
+            <td{% if data_request %} data-request-data="day:'{{ dayPointer }}'"{% endif %}>
+{% if dayProp.link %}
+                <a {{ dayProp.link|raw }}>
+{% endif %}
+                <div class="{% if dayProp.class %}{{ dayProp.class|raw }}{% else %}dayLabel {{ Container.color }}{% endif %}">{{ dayPointer }}</div>
+{% if dayProp.link %}
+                </a>
+{% endif %}
+{% if events %}
+                <ul class="eventList">
+{#    ** Walk through events of the day ** #}
+{% for ev in events %}
+                    {% partial '@event' ev = ev %}
+{% endfor %}
+                </ul>
+{% endif %}
+            </td>

@@ -1,0 +1,22 @@
+<!-- clockpicker partial start -->
+
+        <div class="right-align input-group">
+            <input
+                type="text"
+                id="ClockPicker-form-input-{{ name }}"
+                name="{{ name }}"
+                value="{{ value |date("H:i") }}"
+                class="form-control align-right {{ class }}"
+                autocomplete="off"
+                 />
+            <label for="ClockPicker-form-input-{{ name }}" class="input-group-addon">
+                {{ label }} <i class="icon icon-clock-o"></i>
+            </label>
+        </div>
+<script>
+    var input = $('#ClockPicker-form-input-{{ name }}');
+        input.clockpicker({
+            autoclose: true
+    });
+</script>
+<!-- clockpicker partial end -->

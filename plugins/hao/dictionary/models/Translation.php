@@ -15,7 +15,6 @@ class Translation extends Model
      */
     public $rules = [
         'name'                  => 'required',
-        'language'              => 'required',
         'description'           => 'required',
         'grammaticalgender'     => 'required',
         'partofspeech'          => 'required',
@@ -27,7 +26,6 @@ class Translation extends Model
      */
     public $attributeNames = [
         'name'                  => 'hao.dictionary::lang.backend.translation.name',
-        'language'              => 'hao.dictionary::lang.backend.translation.language',
         'description'           => 'hao.dictionary::lang.backend.translation.description',
         'grammaticalgender'     => 'hao.dictionary::lang.backend.translation.grammaticalgender',
         'partofspeech'          => 'hao.dictionary::lang.backend.translation.partofspeech',

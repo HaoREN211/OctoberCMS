@@ -1,0 +1,88 @@
+1.0.1: 'First version of MyCalendar'
+1.0.2:
+    - 'Built Tables'
+    - create_events_table.php
+    - create_categories_table.php
+1.0.3:
+    - 'Added frontend form. Fixed Backend context'
+1.0.4:
+    - 'Add link and time Field to Events'
+    - add_event_link_time.php
+1.0.5:
+    - 'Add option to use CKEditor to write event description in form'
+1.0.6:
+    - 'Fixed ungracefull errors when rainlab.user not installed'
+1.0.7:
+    - 'Fixes error when there are no events in DB'
+1.0.8:
+    - 'Adds permissions to calendar categories'
+    - categories_add_permissions.php
+    - seed_all_tables.php
+    - rename_categorys_events_table.php
+1.0.9:
+    - 'Fixes bug for no logged in user'
+    - rename_event_c_e_table.php
+1.0.10:
+    - 'Added "Next" and "Previous" links to month'
+1.0.11:
+    - 'Added "owner" and "id" to Events data array'
+1.0.12:
+    - 'Check for ''Roles'' plugin before trying to seed tables.'
+1.0.13:
+    - 'Fixes incorrect namespace for UserPermission.'
+1.0.14: 'Added Localization only (en) included.'
+1.0.15: 'Added Localization for pt_BR Portuguese (Brazil).'
+1.0.16: 'Fixes overlooked items from Localization update.'
+1.0.17: 'Fixes future date issue and allows choice to include past dates.'
+1.0.18:
+    - 'Abandone seperate month,day,year in favor of date field.'
+    - add_date.php
+1.0.19:
+    - 'Finished Localization of backend.'
+1.1.0: 'Fixed No date == Error by requiring a date in model. Adds a copy feature to frontend form.'
+1.1.1: 'Added "Event List w/ Event Data" and "Month View w/ Event Data" components.'
+1.1.2: 'Refactored to reduce query count, remove trait and reformat single event component.'
+1.1.3: 'Fixed Setting issue when Roles not installed.'
+1.1.4: 'Fixed issue caused by wrong roles/groups table query.'
+1.1.5: '!!! This is an important update that contains breaking changes. MyCalendar will now be using Passage Permission Keys for permissions and you will need to install the plugin using code "kurtjensen.passage" if you use permissions for your events. If you do not install Passage Permission Keys plugin then your protected events may not show or may be visible to anyone who visits your site until you do add PassagePermission Keys plugin. This update also added raw data element to event array and applied config date/time to all components.'
+1.1.6: 'Added messageURL() to enable Author Notices'
+1.1.7: 'Added Backend Settings Permissions'
+1.1.8:
+    - '!!! This is an important update that contains breaking changes. Adding occurance table for recuring events.'
+    - create_occurrences_table.php
+    - add_event_length.php
+1.1.9: 'Fixed Settings model mutators causing errors'
+1.1.10: 'Fixed JS errors and frontend form save redirection'
+1.1.11: 'Fixed "NOT NULL column with value of NULL" error for SQLite users'
+1.1.12: 'Added Series recurrence type and added several phrases to lang files including validation.'
+1.1.13: 'Fixes error caused by removal of test component. Adds sorting.'
+1.1.14: 'Add recuurence generation for backend controller.'
+1.1.15: 'Fixed missing use DB in add_date.php.'
+1.1.16: 'Fixed concat() error for SQLITE users in add_date.php.'
+1.1.17: 'Fixed form not showing interval field when editing a series type event.'
+1.1.18: 'Located and eliminated bastard div end tag that screwed up backend form.'
+1.1.19: 'Added DE lang files. Fixed a few minor issues.'
+1.1.20: 'Fixes backend form broken by changes to October timepicker.'
+1.1.21: 'Updated to changes made in Passage Permission Plugin'
+1.2.0: 'Added configurable week start day to month and fixed category filter for showing events'
+1.2.1: 'Fixes datepicker in _rrule widget partial by adding JS'
+1.2.2:
+    - 'Database maintenance. Updated all timestamp columns to be nullable.'
+    - update_timestamp_nullable.php
+1.2.3: 'Fixes Language problem monthHead in MonthEvents. no language switch'
+1.2.4: 'Fixes FIRST-SUNDAY-of-JANUARY is not valid for ON DATE ABOVE'
+1.2.5: 'Fixes settings model default times.'
+1.2.6: 'Consolidated component properties and functions into new trait. Added working week component.'
+1.2.7: 'Finished Week component. Months now shows prev and past month events in leading and trailing days.'
+1.2.8: 'Add Next and Previous links to Week component.'
+1.2.9:
+    - 'Fixes inoperable linkpage property.'
+    - 'Updated occurences relation column value to match Event Relation name.'
+    - update_events_relation.php
+1.2.10:
+    - 'Made Builder compatible.  Updated a few translation strings.'
+1.2.11: 'Fixes line 85 in Event model.  Adds sorting to events. Seperates out time from name in event partial.'
+1.2.12: 'Fixes dumb typo that prevented sorting from working.'
+1.2.13: 'Adds new setting for max_count for ENDS NEVER rule and others.'
+1.2.14: 'Updated to changes made in Passage Permission Plugin up to version 1.0.12'
+1.2.15: 'Dutch translation added'

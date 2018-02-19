@@ -1,0 +1,55 @@
+plugin:
+    name: 'kurtjensen.mycalendar::lang.plugin.name'
+    description: 'kurtjensen.mycalendar::lang.plugin.description'
+    author: KurtJensen
+    icon: icon-birthday-cake
+    homepage: ''
+navigation:
+    mycalendar:
+        label: 'kurtjensen.mycalendar::lang.plugin.name'
+        url: kurtjensen/mycalendar/events
+        icon: icon-birthday-cake
+        permissions:
+            - 'kurtjensen.mycalendar.*'
+        order: '100'
+        sideMenu:
+            events:
+                label: 'kurtjensen.mycalendar::lang.events.menu_label'
+                url: kurtjensen/mycalendar/events
+                icon: icon-birthday-cake
+                permissions:
+                    - kurtjensen.mycalendar.events
+            categories:
+                label: 'kurtjensen.mycalendar::lang.categories.menu_label'
+                url: kurtjensen/mycalendar/categories
+                icon: icon-folder
+                permissions:
+                    - kurtjensen.mycalendar.categories
+            occurrences:
+                label: 'kurtjensen.mycalendar::lang.occurrences.menu_label'
+                url: kurtjensen/mycalendar/occurrences
+                icon: icon-flask
+                permissions:
+                    - kurtjensen.mycalendar.occurrences
+            settings:
+                label: 'kurtjensen.mycalendar::lang.settings.menu_label'
+                url: system/settings/update/kurtjensen/mycalendar/settings
+                icon: icon-gear
+                permissions:
+                    - kurtjensen.mycalendar.settings
+permissions:
+    'kurtjensen.mycalendar.*':
+        tab: 'kurtjensen.mycalendar::lang.plugin.tab'
+        label: 'kurtjensen.mycalendar::lang.plugin.name'
+    kurtjensen.mycalendar.events:
+        tab: 'kurtjensen.mycalendar::lang.plugin.tab'
+        label: 'kurtjensen.mycalendar::lang.plugin.access_events'
+    kurtjensen.mycalendar.categories:
+        tab: 'kurtjensen.mycalendar::lang.plugin.tab'
+        label: 'kurtjensen.mycalendar::lang.plugin.access_categories'
+    kurtjensen.mycalendar.occurrences:
+        tab: 'kurtjensen.mycalendar::lang.plugin.tab'
+        label: 'kurtjensen.mycalendar::lang.plugin.access_occurrences'
+    kurtjensen.mycalendar.settings:
+        tab: 'kurtjensen.mycalendar::lang.plugin.tab'
+        label: 'kurtjensen.mycalendar::lang.plugin.access_settings'

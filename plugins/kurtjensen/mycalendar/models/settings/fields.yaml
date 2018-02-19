@@ -1,0 +1,84 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:        
+    section_categories:
+        label: kurtjensen.mycalendar::lang.settings.section_categories_label
+        type: section
+        comment: kurtjensen.mycalendar::lang.settings.section_categories_comment
+    public_perm:
+        label: kurtjensen.mycalendar::lang.settings.public_perm_label
+        comment: kurtjensen.mycalendar::lang.settings.public_perm_comment
+        span: auto
+        type: dropdown
+        
+    deny_perm:
+        label: kurtjensen.mycalendar::lang.settings.deny_perm_label
+        span: auto
+        comment: kurtjensen.mycalendar::lang.settings.deny_perm_comment
+        type: dropdown
+        
+    default_perm:
+        label: kurtjensen.mycalendar::lang.settings.default_perm_label
+        span: auto
+        comment: kurtjensen.mycalendar::lang.settings.default_perm_comment
+        type: dropdown
+        
+    section_formats:
+        label: kurtjensen.mycalendar::lang.settings.section_formats_label
+        type: section
+        comment: kurtjensen.mycalendar::lang.settings.section_formats_comment
+    date_format:
+        label: kurtjensen.mycalendar::lang.settings.date_format_label
+        span: left
+        comment: kurtjensen.mycalendar::lang.settings.date_format_comment
+        default: F jS, Y
+        
+    time_format:
+        label: kurtjensen.mycalendar::lang.settings.time_format_label
+        span: right
+        comment: kurtjensen.mycalendar::lang.settings.time_format_comment
+        default: g:i a
+
+    section_times:
+        label: kurtjensen.mycalendar::lang.settings.section_times_label
+        type: section
+        comment: kurtjensen.mycalendar::lang.settings.section_times_comment
+    day_start:
+        label: kurtjensen.mycalendar::lang.settings.day_start_label
+        type: datepicker
+        span: left
+        mode: time
+        default: 00:00
+        comment: kurtjensen.mycalendar::lang.settings.day_start_comment
+    day_end:
+        label: kurtjensen.mycalendar::lang.settings.day_end_label
+        type: datepicker
+        span: right
+        mode: time
+        default: 23:59
+        comment: kurtjensen.mycalendar::lang.settings.day_end_comment
+    default_length:
+        label: kurtjensen.mycalendar::lang.settings.default_length_label
+        type: datepicker
+        span: left
+        mode: time
+        default: 01:00
+        comment: kurtjensen.mycalendar::lang.settings.default_length_comment
+    max_count:
+        label: kurtjensen.mycalendar::lang.settings.max_count_label
+        span: right
+        type: number
+        default: '365'
+        comment: kurtjensen.mycalendar::lang.settings.max_count_comment
+
+    section_cdn:
+        label: kurtjensen.mycalendar::lang.settings.section_cdn_label
+        type: section
+        comment: kurtjensen.mycalendar::lang.settings.section_cdn_comment
+    boostrap_cdn:
+        label: kurtjensen.mycalendar::lang.settings.boostrap_cdn_label
+        span: full
+        comment: kurtjensen.mycalendar::lang.settings.boostrap_cdn_comment
+        default: 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'

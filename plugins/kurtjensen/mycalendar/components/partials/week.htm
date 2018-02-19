@@ -1,0 +1,71 @@
+{% if __SELF__.data_request %}Hello{% endif %}
+
+{% set dayPointer = __SELF__.dayPointer %}
+{% set devents = __SELF__.monthEvents %}
+{% set dprops = __SELF__.monthProperties %}
+{% set trailDay = 0 %}
+<table class="mycal" 
+       data-request-data="month:'{{ __SELF__.monthNum }}'">
+    <thead>
+        <tr>
+            <th colspan="2" class="text-right">
+                {{ __SELF__.prevLink()|raw }}
+            </th>
+            <th colspan="3"  class="weekHead">
+                {{ __SELF__.monthTitle }} {{ __SELF__.year }}
+            </th>
+            <th colspan="2" class="text-left">
+                {{ __SELF__.nextLink()|raw }}
+            </th>
+        </tr>
+
+
+        <tr class="daysHead">
+{% for hding in  __SELF__.calHeadings %}
+            <th>{{ hding }}</th>
+{% endfor %}
+        </tr>
+     </thead>
+     <tbody>
+
+{% if dayPointer < __SELF__.days_in_month %}
+
+        <tr class="days">
+
+{% for x in range(0, 6) %}{#    ** START - walk through 7 days of week ** #}
+
+{#    ** Advance dayPointer ** #}
+{% set dayPointer = dayPointer + 1 %}
+
+
+{#    ** SHOW PREVIOUS MONTH DAYS ** If dayPointer indicates that current month has not started yet. #}
+{% if dayPointer <1 %}
+
+{% set prevDay = __SELF__.prevMonthStartDay + x %}
+{% partial '@day' Container=__SELF__ events= __SELF__.monthEvents(-1)[prevDay] dayProp = { class:'dis'} dayPointer=prevDay data_request=__SELF__.data_request %}
+
+{# 
+************ SHOW NEXT MONTH DAYS ************
+        If dayPointer indicates that current month has past.
+#}
+{% elseif dayPointer > __SELF__.days_in_month %}
+
+{% set trailDay = trailDay + 1 %}
+{% partial '@day' Container=__SELF__ events= __SELF__.monthEvents(1)[trailDay] dayProp = { class:'dis'} dayPointer=trailDay %}
+
+{# 
+************ SHOW CURRENT MONTH DAYS ************
+        If dayPointer indicates current
+        month. ( Not Past or Previous )
+#}
+{% else %}
+
+{% partial '@day' Container=__SELF__ events=devents[dayPointer] dayProp = dprops[dayPointer] dayPointer=dayPointer %}
+
+{% endif %}{# ** END - If dayPointer indicates that current month ** #}
+
+{% endfor %}{# ** END - walk through 7 days of week ** #}
+        </tr>
+{% endif %}
+    </tbody>
+</table>

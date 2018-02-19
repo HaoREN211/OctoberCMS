@@ -1,0 +1,135 @@
+<!-- Start RRule Widget -->
+<?php if ($this->previewMode): ?>
+    <div class="form-control"><?= $value ?></div>
+<?php else: ?>
+    <div class="row form-inline ">
+<!-- FREQ -->
+        <div class="col-md-6 form-group">
+            <?= Form::label('FREQ', $this->t('repeat')) ?>
+            <?= Form::select('FREQ', $this->getFreqOptions(), array_get($f, 'FREQ'), ['class' => 'form-control custom-select']) ?>
+        </div>
+
+        <div class="col-md-6<?= (array_get($f, 'FREQ') == 'NONE' ? ' hidden' : '') ?> r_all r_hourly r_daily r_weekly r_monthly r_yearly">
+            <?= Form::label('INTERVAL', $this->t('INTERVAL')) ?>
+            <?= Form::select('INTERVAL', $this->getIntervalOptions(), array_get($f, 'INTERVAL'), ['class' => 'form-control custom-select r_all r_hourly r_daily r_weekly r_monthly r_yearly']) ?>
+            <span class="inline-form-text<?= (array_get($f, 'FREQ') == 'HOURLY' ? '' : ' hidden') ?> r_all r_hourly"><strong><?= $this->t('freq_units.HOURLY') ?></strong></span>
+            <span class="inline-form-text<?= (array_get($f, 'FREQ') == 'DAILY' ? '' : ' hidden') ?> r_all r_daily"><strong><?= $this->t('freq_units.DAILY') ?></strong></span>
+            <span class="inline-form-text<?= (array_get($f, 'FREQ') == 'WEEKLY' ? '' : ' hidden') ?> r_all r_weekly"><strong><?= $this->t('freq_units.WEEKLY') ?></strong></span>
+            <span class="inline-form-text<?= (array_get($f, 'FREQ') == 'MONTHLY' ? '' : ' hidden') ?>  r_all r_monthly"><strong><?= $this->t('freq_units.MONTHLY') ?></strong></span>
+            <span class="inline-form-text<?= (array_get($f, 'FREQ') == 'YEARLY' ? '' : ' hidden') ?> r_all r_yearly"><strong><?= $this->t('freq_units.YEARLY') ?></strong></span>
+        </div>
+    </div>
+
+<!-- WBYDAY -->
+    <div class="row<?= (count(array_get($f, 'WBYDAY'))>0 ?'' :  ' hidden') ?> r_all r_weekly"><br>
+        <div class="col-md-8 form-group">
+            <label><?= $this->t('WBYDAY') ?></label>
+            <div class="btn-group" data-toggle="buttons"><?=
+        $this->getWByDay(array_get($f, 'WBYDAY'))
+        ?>
+            </div>
+        </div>
+    </div>
+
+<!-- INTERVALS -->
+    <div class="row<?= (array_get($f, 'FREQ') == 'SERIES' ? '' : ' hidden') ?> r_all r_series"><br>
+        <div class="col-md-12 form-group">
+            <?= Form::label('INTERVALS', $this->t('INTERVALS')) ?>
+            <?= Form::text('INTERVALS', array_get($f, 'INTERVALS')) ?>
+            <p><?= $this->t('INTERVALS_example') ?></p>
+        </div>
+    </div>
+
+
+<!-- month_on -->
+    <div class="row<?= (array_get($f, 'FREQ') == 'MONTHLY' ? '' : ' hidden') ?> r_all r_monthly  form-inline "><br>
+        <div class="col-md-8 form-group">
+            <fieldset class="btn-group" data-toggle="buttons">
+                <?= Form::label('month_on', '&nbsp;') ?>
+                <?= Form::select('month_on', ['on_day' => $this->t('on.on_day'), 'on_the' => $this->t('on.on_the')], array_get($f, 'month_on'), ['class' => 'form-control custom-select r_all r_monthly']) ?>
+
+<!-- MBYSETPOS -->
+                <span class="mo_all mo_on_the <?= (array_get($f, 'month_on') == 'on_the') ? '' : ' hidden'?>">
+                    <?= Form::label('MBYSETPOS', '&nbsp;') ?>
+                    <?= Form::select('MBYSETPOS', $this->getDayPosOptions(), array_get($f, 'MBYSETPOS'), ['class' => 'form-control custom-select mo_all mo_on_the'. ((array_get($f, 'month_on') == 'on_the') ? '' : ' hidden')]) ?>
+
+<!-- MBYDAY -->
+                   <?= Form::label('MBYDAY', '&nbsp;') ?>
+                   <?= Form::select('MBYDAY', $this->getByDayOptions(), array_get($f, 'MBYDAY'), ['class' => 'form-control custom-select mo_all mo_on_the'. ((array_get($f, 'month_on') == 'on_the') ? '' : ' hidden')]) ?>
+                </span>
+            </fieldset>
+        </div>
+    </div>
+
+
+<!-- Year On -->
+    <div class="row<?= (array_get($f, 'INTERVAL') == 'YEARLY' ? '' : ' hidden') ?> r_all r_yearly  form-inline"><br>
+        <div class="col-md-8 form-group">
+            <fieldset class="btn-group" data-toggle="buttons">
+                <?= Form::label('year_on', '&nbsp;') ?>
+                <?= Form::select('year_on', ['on_day' => $this->t('on.on_day'), 'on_the' => $this->t('on.on_the')], array_get($f, 'year_on'), ['class' => 'form-control custom-select r_all r_yearly']) ?>
+
+
+<!-- YBYSETPOS -->
+                <?= Form::label('YBYSETPOS', '&nbsp;') ?>
+                <?= Form::select('YBYSETPOS', $this->getDayPosOptions(), array_get($f, 'YBYSETPOS'), ['class' => 'form-control custom-select yr_all yr_on_the'. ((array_get($f, 'year_on') == 'on_the') ? '' : ' hidden')]) ?>
+
+
+<!-- YBYDAY -->
+                <?= Form::label('YBYDAY', '&nbsp;') ?>
+                <?= Form::select('YBYDAY', $this->getByDayOptions(), array_get($f, 'YBYDAY'), ['class' => 'form-control custom-select yr_all yr_on_the'. ((array_get($f, 'year_on') == 'on_the') ? '' : ' hidden')]) ?>
+
+<!-- YBYMONTH -->
+                <?= Form::label('YBYMONTH', $this->t('YBYMONTH')) ?>
+                <?= Form::select('YBYMONTH', $this->getMonthOptions(), array_get($f, 'YBYMONTH'), ['class' => 'form-control custom-select yr_all yr_on_the'. ((array_get($f, 'year_on') == 'on_the') ? '' : ' hidden')]) ?>
+            </fieldset>
+        </div>
+    </div>
+    <br>
+
+<!-- Ends -->
+    <div class="row<?= (array_get($f, 'FREQ', 'NONE') == 'NONE' ? ' hidden' : '') ?> r_all r_hourly r_daily r_weekdays r_weekends r_weekly r_monthly r_yearly r_series form-inline">
+        <div class="col-md-5 form-group">
+            <?= Form::label('Ends', 'Ends',['class'=>'control-label']) ?>
+            <?= Form::select('Ends', ['NEVER' => $this->t('Never').$this->maxCount().$this->t('Never_end'), 'AFTER' => $this->t('After'), 'DATE' => $this->t('On_date')], array_get($f, 'Ends'), ['class' => 'form-control custom-select  r_all r_hourly r_daily r_weekdays r_weekends r_weekly r_monthly r_yearly r_series', 'style'=>'width:80%;']) ?>
+        </div>
+
+
+        <div class="col-md-3<?= (array_get($f, 'Ends') == 'AFTER' ? '' : ' hidden') ?> e_all e_after form-group ">
+            <?= Form::label('COUNT', '&nbsp;') ?>
+            <?= Form::select('COUNT', $this->getOccuranceOptions(), array_get($f, 'COUNT'), ['class' => 'form-control custom-select']) ?>
+            <span class="inline-form-text"><strong>occurrence(s)</strong></span>
+        </div>
+
+
+        <div class="col-md-4<?= (array_get($f, 'Ends') == 'DATE' ? '' : ' hidden') ?> e_all e_date form-group">
+
+<!-- datepicker start-->
+            <div class="right-align input-group date">
+                <input 
+                    type="text" 
+                    id="DatePicker-form-input-ENDON" 
+                    name="ENDON" 
+                    class="form-control align-right" 
+                    value="<?= array_get($f, 'ENDON') ?>"
+                    autocomplete="off">
+                <label for="DatePicker-form-input-ENDON" class="input-group-addon">
+                            <?= $this->t('ENDON') ?> <i class="icon icon-calendar"></i>
+                </label>
+            </div>
+<?php $y = date("Y") ?>
+<script>
+    var picker = new Pikaday(
+    {
+        field: document.getElementById('DatePicker-form-input-ENDON'),
+        minDate: new Date(<?= $y-1 ?>, 1, 1),
+        maxDate: new Date(<?= $y+5 ?>, 12, 31),
+        yearRange: [<?= $y-1 ?>,<?= $y+5 ?>],
+      format: 'YYYY-MM-DD',
+    });
+</script>
+<!-- datepicker end-->
+        </div>
+    </div>
+<?php endif ?>
+<!-- End RRule Widget -->

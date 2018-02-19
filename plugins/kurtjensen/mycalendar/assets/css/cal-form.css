@@ -1,0 +1,14 @@
+.input-with-icon{position:relative}
+.input-with-icon > .icon{position:absolute;z-index:2;padding:13px;pointer-events:none;color:#bdbdbd;font-size:15px}
+.input-with-icon.right-align > .icon{right:0}
+.input-with-icon.right-align input{padding-right:32px !important}
+.input-with-icon.left-align > .icon{left:0}
+.input-with-icon.left-align input{padding-left:32px !important}
+
+.icon-clock-o:before{content:"\f017"}
+.modal-header{
+  border-radius: 6px;
+}
+.modal-header-success {
+  background-color: #dff0d8;
+}

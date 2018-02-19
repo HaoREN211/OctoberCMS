@@ -1,0 +1,3 @@
+<li{% if ev.class %} class="{{ ev.class }}"{% endif %} title="{% if ev.title %}{{ ev.title }}{% else %}{{ ev.text|striptags|slice(0,50) }}...{% endif %}">
+    {% if ev.link %}<a href="{{ ev.link|raw }}">{% endif %}{{ ev.name|raw }} {{ ev.time }}{% if ev.link %}</a>{% endif %}
+</li>
