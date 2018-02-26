@@ -1,5 +1,6 @@
 /bootstrap/compiled.php
 /vendor
+/plugins/hao/socialnetwork/synchronization/connection/*
 composer.phar
 .DS_Store
 .idea

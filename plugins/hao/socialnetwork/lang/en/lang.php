@@ -1,6 +1,10 @@
 <?php
 
 return [
+    'twitter' => [
+      "name" => "Twitter",
+    ],
+
     'form' =>[
       'save' => '保存',
     ],

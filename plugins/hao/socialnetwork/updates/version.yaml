@@ -2,3 +2,15 @@
 1.0.2:
     - creating the table meetic
     - create_meetics_table.php
+
+1.0.3:
+    - creating the table reference twitter
+    - create_twitter_profile_locations_table.php
+
+1.0.4:
+    - crreating the main taible twitter
+    - create_twitter_users_table.php
+
+1.0.5:
+    - creating hao_socialnetwork_twitter_user_statistics
+    - create_twitter_user_statistics_table.php

@@ -68,6 +68,11 @@ class Plugin extends PluginBase
                 'tab' => 'Socialnetwork',
                 'label' => 'Some permission'
             ],
+
+            'hao.socialnetwork.access_twitter' =>[
+                'tab' => 'Socialnetwork',
+                'label' => 'Twitter'
+            ],
         ];
     }
 
@@ -86,16 +91,25 @@ class Plugin extends PluginBase
                 'url'         => Backend::url('hao/socialnetwork/index/index'),
                 'icon'        => 'icon-commenting-o',
                 'permissions' => ['hao.socialnetwork.*'],
-                'order'       => 500,
+                'order'       => 100,
 
                 'sideMenu' => [
+
+                    'twitter' =>[
+                        'label' => Lang::get('hao.socialnetwork::lang.twitter.name'),
+                        'icon' => 'icon-twitter',
+                        'url' => Backend::url('hao/socialnetwork/twitter/index'),
+                        'permissions' => ['hao.socialnetwork.access_twitter'],
+                    ],
+
                     'meetics' => [
                         'label' => Lang::get('hao.socialnetwork::lang.plugin.menus.meetics'),
                         'icon' => 'icon-maxcdn',
-//                        'icon' => 'icon-facebook-official',
                         'url' => Backend::url('hao/socialnetwork/meetics'),
                         'permissions' => ['hao.socialnetwork.access_meetics'],
                     ],
+
+
                 ]
             ],
         ];
