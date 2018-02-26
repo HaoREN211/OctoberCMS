@@ -13,3 +13,7 @@
 1.0.3:
     - Create translation table
     - create_translations_table.php
+
+1.0.4:
+    - Add unique constraint of vocabulary for all language
+    - unique_vocabulary.php
