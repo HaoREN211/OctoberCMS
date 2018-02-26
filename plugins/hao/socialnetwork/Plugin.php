@@ -3,6 +3,12 @@
 use Backend;
 use System\Classes\PluginBase;
 use Illuminate\Support\Facades\Lang;
+use Backend\Facades\BackendMenu;
+
+use Backend\Models\User as BackendUserModel;
+use Backend\Controllers\Users as BackendUserController;
+use Illuminate\Support\Facades\Event;
+
 
 /**
  * Socialnetwork Plugin Information File
@@ -31,7 +37,7 @@ class Plugin extends PluginBase
      */
     public function register()
     {
-
+        BackendMenu::registerContextSidenavPartial('Hao.Socialnetwork', 'socialnetwork', '$/hao/socialnetwork/partials/_sidebar.htm');
     }
 
     /**
@@ -41,8 +47,50 @@ class Plugin extends PluginBase
      */
     public function boot()
     {
-
+        $this->extendModels();
+        $this->extendForms();
     }
+
+
+    /**
+     * Extend backend user models
+     */
+    protected function extendModels()
+    {
+        BackendUserModel::extend(function ($model) {
+            $model->hasOne['twitter'] = ['Hao\Socialnetwork\Models\TwitterUser',
+                'table' => 'hao_socialnetwork_twitter_users',
+                'key' => 'id',
+                'otherKey' => 'twitter_id'];
+        });
+    }
+
+
+    /**
+     * Extend backend user forms
+     */
+    protected function extendForms()
+    {
+        BackendUserController::extendFormFields(function($form, $model, $context){
+
+            if (!$model instanceof BackendUserModel)
+                return;
+
+            $form->addTabFields([
+                'twitter' => [
+                    'label'=> 'hao.socialnetwork::lang.twitter.name',
+                    'type'=>'relation',
+                    'nameFrom'=> 'name',
+                    'span' => 'auto',
+                    'tab' => 'hao.socialnetwork::lang.plugin.name'
+                ],
+            ]);
+
+        });
+    }
+
+
+
 
     /**
      * Registers any front-end components implemented in this plugin.
@@ -100,6 +148,8 @@ class Plugin extends PluginBase
                         'icon' => 'icon-twitter',
                         'url' => Backend::url('hao/socialnetwork/twitter/index'),
                         'permissions' => ['hao.socialnetwork.access_twitter'],
+                        'group' => 'Twitter',
+                        'description' => 'Twitter',
                     ],
 
                     'meetics' => [
@@ -107,6 +157,8 @@ class Plugin extends PluginBase
                         'icon' => 'icon-maxcdn',
                         'url' => Backend::url('hao/socialnetwork/meetics'),
                         'permissions' => ['hao.socialnetwork.access_meetics'],
+                        'group' => 'Twitter',
+                        'description' => 'Meetic',
                     ],
 
 

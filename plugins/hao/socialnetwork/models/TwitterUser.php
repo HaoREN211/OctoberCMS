@@ -12,6 +12,9 @@ class TwitterUser extends Model
      */
     public $table = 'hao_socialnetwork_twitter_users';
 
+
+
+
     /**
      * @var array Guarded fields
      */

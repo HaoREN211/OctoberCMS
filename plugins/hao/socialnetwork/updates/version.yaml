@@ -14,3 +14,7 @@
 1.0.5:
     - creating hao_socialnetwork_twitter_user_statistics
     - create_twitter_user_statistics_table.php
+
+1.0.6:
+    - add 'twitter id' in the backend user
+    - user_add_twitter_id_table.php
