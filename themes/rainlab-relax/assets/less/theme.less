@@ -1,0 +1,33 @@
+//
+// Boot variables and mixins
+//
+
+@import "theme/boot";
+
+//
+// Pages, Layouts and Controls
+//
+
+@import "pages/all";
+@import "layouts/all";
+@import "controls/all";
+
+.btn-default {
+    background-color: #f0f0f0;
+    border: 1px solid #9b9b9a;
+    color: @brand-primary;
+    font-weight: bold;
+}
+
+.title-breadcrumb {
+    ol.breadcrumb {
+        margin-bottom: 0;
+    }
+}
+
+.jumbotron {
+    background: transparent;
+    h1, h2, h3, h4 {
+        display: inline-block;
+    }
+}

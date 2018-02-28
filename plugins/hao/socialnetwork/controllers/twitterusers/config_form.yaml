@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: 'hao.socialnetwork::lang.twitter.description'
+
+# Model Form Field configuration
+form: $/hao/socialnetwork/models/twitteruser/fields.yaml
+
+# Model Class name
+modelClass: Hao\Socialnetwork\Models\TwitterUser
+
+# Default redirect location
+defaultRedirect: hao/socialnetwork/twitterusers
+
+# Create page
+create:
+    title: 'hao.socialnetwork::lang.field.create.twitter_user'
+    redirect: hao/socialnetwork/twitterusers/update/:id
+    redirectClose: hao/socialnetwork/twitterusers
+
+# Update page
+update:
+    title: 'hao.socialnetwork::lang.field.edit.twitter_user'
+    redirect: hao/socialnetwork/twitterusers
+    redirectClose: hao/socialnetwork/twitterusers
+
+# Preview page
+preview:
+    title: 'hao.socialnetwork::lang.field.preview.twitter_user'
