@@ -3,5 +3,6 @@
 # ===================================
 
 fields:
-    followers_count:
-        label: followers_count
+    id:
+        label: ID
+        disabled: true

@@ -3,50 +3,6 @@
 # ===================================
 
 columns:
-    followers_count:
-        label: 'hao.socialnetwork::lang.backend.twitter.user.followers_count'
-        type: number
-        searchable: false
-        sortable: false
-        clickable: false
-        width: "15%"
-
-    friends_count:
-        label: 'hao.socialnetwork::lang.backend.twitter.user.friends_count'
-        type: number
-        searchable: false
-        sortable: false
-        clickable: false
-        width: "15%"
-
-    listed_count:
-        label: 'hao.socialnetwork::lang.backend.twitter.user.listed_count'
-        type: number
-        searchable: false
-        sortable: false
-        clickable: false
-        width: "15%"
-
-    favourites_count:
-        label: 'hao.socialnetwork::lang.backend.twitter.user.favourites_count'
-        type: number
-        searchable: false
-        sortable: false
-        clickable: false
-        width: "15%"
-
-    statuses_count:
-        label: 'hao.socialnetwork::lang.backend.twitter.user.statuses_count'
-        type: number
-        searchable: false
-        sortable: false
-        clickable: false
-        width: "15%"
-
-    observation_date:
-        label: 'hao.socialnetwork::lang.backend.twitter.user.observation_date'
-        searchable: false
-        sortable: true
-        clickable: false
-        type: date
-        width: "25%"
+    id:
+        label: ID
+        searchable: true

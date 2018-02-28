@@ -51,13 +51,7 @@ class TwitterUser extends Model
      * @var array Relations
      */
     public $hasOne = [];
-    public $hasMany = [
-        'user_static' =>[
-            '\Hao\Socialnetwork\Models\TwitterUserStatistic',
-            'key'       => 'id',
-            'otherkey'  => 'id',
-        ]
-    ];
+    public $hasMany = [];
     public $belongsTo = [];
     public $belongsToMany = [];
     public $morphTo = [];

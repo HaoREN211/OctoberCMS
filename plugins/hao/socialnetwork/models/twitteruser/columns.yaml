@@ -3,35 +3,6 @@
 # ===================================
 
 columns:
-    profile_image_url:
-        label: 'hao.socialnetwork::lang.backend.twitter.user.profile_image_url'
-        searchable: false
-        sortable: false
-        type: partial
-        valueFrom: 'profile_image_url'
-        width: '10%'
-        path: 'profile_image_url'
-
-    name:
-        label: 'hao.socialnetwork::lang.backend.twitter.user.name'
+    id:
+        label: ID
         searchable: true
-        sortable: true
-        type: text
-        valueFrom: 'name'
-        width: '10%'
-
-    screen_name:
-        label: 'hao.socialnetwork::lang.backend.twitter.user.screen_name'
-        searchable: true
-        sortable: true
-        type: text
-        valueFrom: 'screen_name'
-        width: '10%'
-
-    location:
-        label: 'hao.socialnetwork::lang.backend.twitter.user.location'
-        searchable: false
-        sortable: true
-        type: text
-        valueFrom: 'location'
-        width: '10%'

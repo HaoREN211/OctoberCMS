@@ -37,10 +37,7 @@ class Plugin extends PluginBase
      */
     public function register()
     {
-        BackendMenu::registerContextSidenavPartial(
-            'Hao.Socialnetwork',
-            'socialnetwork',
-            '$/hao/socialnetwork/partials/_sidebar.htm');
+        BackendMenu::registerContextSidenavPartial('Hao.Socialnetwork', 'socialnetwork', '$/hao/socialnetwork/partials/_sidebar.htm');
     }
 
     /**
@@ -116,13 +113,13 @@ class Plugin extends PluginBase
     {
         return [
             'hao.socialnetwork.access_meetics' => [
-                'tab' => 'hao.socialnetwork::lang.plugin.menus.meetics',
-                'label' => 'hao.socialnetwork::lang.permissions.meetic.access_meetics',
+                'tab' => 'Socialnetwork',
+                'label' => 'Some permission'
             ],
 
             'hao.socialnetwork.access_twitter' =>[
-                'tab' => 'hao.socialnetwork::lang.twitter.group',
-                'label' => 'hao.socialnetwork::lang.permissions.twitter.access_twitter',
+                'tab' => 'Socialnetwork',
+                'label' => 'Twitter'
             ],
         ];
     }
@@ -134,6 +131,8 @@ class Plugin extends PluginBase
      */
     public function registerNavigation()
     {
+//        return [];
+
         return [
             'socialnetwork' => [
                 'label'       => Lang::get('hao.socialnetwork::lang.plugin.name'),
@@ -145,11 +144,12 @@ class Plugin extends PluginBase
                 'sideMenu' => [
 
                     'twitter' =>[
-                        'label' => Lang::get('hao.socialnetwork::lang.twitter.description'),
+                        'label' => Lang::get('hao.socialnetwork::lang.twitter.name'),
                         'icon' => 'icon-twitter',
-                        'url' => Backend::url('hao/socialnetwork/twitterusers'),
-                        'permissions'   => ['hao.socialnetwork.access_twitter'],
-                        'group'         => 'hao.socialnetwork::lang.twitter.group',
+                        'url' => Backend::url('hao/socialnetwork/twitter/index'),
+                        'permissions' => ['hao.socialnetwork.access_twitter'],
+                        'group' => 'Twitter',
+                        'description' => 'Twitter',
                     ],
 
                     'meetics' => [
@@ -157,7 +157,8 @@ class Plugin extends PluginBase
                         'icon' => 'icon-maxcdn',
                         'url' => Backend::url('hao/socialnetwork/meetics'),
                         'permissions' => ['hao.socialnetwork.access_meetics'],
-                        'group' => 'hao.socialnetwork::lang.plugin.menus.group',
+                        'group' => 'Twitter',
+                        'description' => 'Meetic',
                     ],
 
 
