@@ -1,0 +1,17 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+user_static:
+  label: hao.socialnetwork::lang.backend.dictionary.translation
+  emptyMessage: 'hao.dictionary::lang.list.no_records.translation'
+
+  view:
+    list: $/hao/socialnetwork/models/twitteruserstatistic/columns.yaml
+
+  manage:
+    list: $/hao/socialnetwork/models/twitteruserstatistic/columns.yaml
+    form: $/hao/socialnetwork/models/twitteruserstatistic/fields.yaml
+    showSearch: true
+    showSorting: true
+    recordsPerPage: 10

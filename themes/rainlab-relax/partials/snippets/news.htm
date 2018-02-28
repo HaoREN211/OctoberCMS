@@ -1,0 +1,30 @@
+description = "Displays a small feed of latest news"
+
+[viewBag]
+snippetCode = "news"
+snippetName = "Latest News"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = "10"
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+==
+<div class="news-container">
+    {% for post in blogPosts.posts.take(5) %}
+        <div class="module-news">
+            <div class="calendar">
+                <span class="month">{{ post.published_at|date('M') }}</span>
+                <span class="day">{{ post.published_at|date('d') }}</span>
+            </div>
+            <div class="news">
+                <a href="{{ 'blog/post'|page({ slug: post.slug }) }}">{{ post.title }}</a>.
+                <p>{{ post.excerpt }}</p>
+            </div>
+        </div>
+    {% else %}
+        <p>There are no posts to display. You know what they say, no news is good news!</p>
+    {% endfor %}
+</div>

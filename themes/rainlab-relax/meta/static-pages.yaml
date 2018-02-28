@@ -1,0 +1,15 @@
+static-pages:
+    index: {  }
+    about:
+        about-team: {  }
+        about-facilities: {  }
+    chairs:
+        chairs-sofas: {  }
+        chairs-high-chairs: {  }
+        chairs-rocking-chairs: {  }
+        chairs-wheelchairs: {  }
+        chairs-deck-chairs: {  }
+    clients:
+        clients-announcements: {  }
+        clients-newsletters: {  }
+        clients-gallery: {  }

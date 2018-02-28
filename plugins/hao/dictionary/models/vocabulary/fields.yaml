@@ -14,17 +14,35 @@ fields:
         hidden: true
         readOnly: true
 
-    name:
+    name@create:
         label: hao.dictionary::lang.backend.dictionary.name
         type: text
         span: left
         required: true
 
-    language:
+    name@update:
+        label: hao.dictionary::lang.backend.dictionary.name
+        type: partial
+        path: vocabulary
+        required: false
+        span: left
+        disable: true
+        readOnly: true
+
+    language@create:
         label: hao.dictionary::lang.backend.dictionary.language
         type: relation
         span: right
         required: true
+
+    language@update:
+        label: hao.dictionary::lang.backend.dictionary.language
+        type: partial
+        span: right
+        required: false
+        disable: true
+        readOnly: true
+        path: language
 
     translation@update:
         label: hao.dictionary::lang.backend.dictionary.translation
