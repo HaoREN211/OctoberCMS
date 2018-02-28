@@ -3,6 +3,11 @@
 # ===================================
 
 fields:
+    socialnetwork:
+        type: partial
+        path: socialnetwork_field
+        span: full
+
     profile_image_url:
         label: 'hao.socialnetwork::lang.backend.twitter.user.profile_image_url'
         type: partial
@@ -20,9 +25,47 @@ fields:
         required: false
         span: right
 
+    name:
+        label: 'hao.socialnetwork::lang.backend.twitter.user.name'
+        type: partial
+        path: name
+        valueFrom: 'name'
+        span: left
+        readOnly: true
+        disabled: true
+        required: false
+
+    screen_name:
+        label: 'hao.socialnetwork::lang.backend.twitter.user.screen_name'
+        type: partial
+        path: screen_name
+        valueFrom: 'screen_name'
+        span: right
+        readOnly: true
+        disabled: true
+        required: false
+
+    description:
+        label: 'hao.socialnetwork::lang.backend.twitter.user.user_description'
+        readOnly: true
+        disabled: true
+        required: false
+        span: left
+        type: partial
+        path: user_description
+
+    twitter_lien:
+        readOnly: true
+        disabled: true
+        required: false
+        span: right
+        type: partial
+        path: twitter_lien
+
 tabs:
     defaultTab: 'hao.socialnetwork::lang.backend.twitter.tab.basic'
     fields:
+
         location:
             label: 'hao.socialnetwork::lang.backend.twitter.user.location'
             commentAbove: 'hao.socialnetwork::lang.backend.twitter.user.location_description'

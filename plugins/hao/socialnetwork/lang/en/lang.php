@@ -92,8 +92,8 @@ return [
         ],
         'twitter' => [
             'user' =>[
-                'name'          =>  '推特注册名',
-                'screen_name'   =>  '推特用户名',
+                'name'          =>  '推特用户名',
+                'screen_name'   =>  '推特注册名',
                 'location'      => '地理位置',
                 'location_description'  => "推特用户地理位置",
                 'profile_image_url' => '用户头像',
@@ -106,6 +106,8 @@ return [
                 "favourites_count"  =>  "喜欢帖子",
                 "statuses_count"    =>  "帖子",
                 "observation_date"  =>  "观察时间",
+                "user_description"  =>  "用户描述",
+                "user_description_description"  =>  "用户自我描述"
             ],
 
             'tab' => [
