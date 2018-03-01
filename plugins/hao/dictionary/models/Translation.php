@@ -14,7 +14,6 @@ class Translation extends Model
      * @var array Validation rules
      */
     public $rules = [
-        'name'                  => 'required',
         'description'           => 'required',
         'grammaticalgender'     => 'required',
         'partofspeech'          => 'required',

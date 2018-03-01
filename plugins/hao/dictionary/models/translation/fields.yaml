@@ -27,7 +27,7 @@ fields:
         disabled: false
         type: text
         span: left
-        required: true
+        required: false
 
 
     grammaticalgender:

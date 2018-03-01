@@ -17,3 +17,7 @@
 1.0.4:
     - Add unique constraint of vocabulary for all language
     - unique_vocabulary.php
+
+1.0.5:
+    - Change the conjugaison of table translation nullable
+    - nullable_conjugaison.php
