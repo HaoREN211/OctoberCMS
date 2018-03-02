@@ -3,7 +3,7 @@
 use BackendMenu;
 use Backend\Classes\Controller;
 use Hao\Socialnetwork\Models\TwitterToken;
-use Hao\Socialnetwork\Classes\encoder;
+use Hao\Socialnetwork\Classes\Encoder;
 
 /**
  * Twitter Tokens Back-end Controller
