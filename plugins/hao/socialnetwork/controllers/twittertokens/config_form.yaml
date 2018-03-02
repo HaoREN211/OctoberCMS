@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: 'hao.socialnetwork::lang.list.manage.twitter_token'
+
+# Model Form Field configuration
+form: $/hao/socialnetwork/models/twittertoken/fields.yaml
+
+# Model Class name
+modelClass: Hao\Socialnetwork\Models\TwitterToken
+
+# Default redirect location
+defaultRedirect: hao/socialnetwork/twittertokens
+
+# Create page
+create:
+    title: 'hao.socialnetwork::lang.field.create.twitter_token'
+    redirect: hao/socialnetwork/twittertokens/update/:id
+    redirectClose: hao/socialnetwork/twittertokens
+
+# Update page
+update:
+    title: 'hao.socialnetwork::lang.field.edit.twitter_token'
+    redirect: hao/socialnetwork/twittertokens
+    redirectClose: hao/socialnetwork/twittertokens
+
+# Preview page
+preview:
+    title: Preview Twitter Token

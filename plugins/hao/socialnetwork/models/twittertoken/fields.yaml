@@ -1,0 +1,55 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: ID
+        disabled: true
+        hidden: true
+
+    consumer_key:
+        label: hao.socialnetwork::lang.twitter.token.consumer_key
+        type: text
+        required: true
+        span: left
+
+    consumer_secret:
+        label: hao.socialnetwork::lang.twitter.token.consumer_secret
+        type: text
+        required: true
+        span: right
+
+    access_token:
+        label: hao.socialnetwork::lang.twitter.token.access_token
+        type: text
+        required: true
+        span: left
+
+    access_token_secret:
+        label: hao.socialnetwork::lang.twitter.token.access_token_secret
+        type: text
+        required: true
+        span: right
+
+    user:
+        label: hao.socialnetwork::lang.twitter.description
+        type: relation
+        required: true
+        span: left
+
+    autre:
+        label: hao.socialnetwork::lang.twitter.autre
+        type: partial
+        span: left
+        path:  autre
+        disabled: true
+        readOnly: true
+
+    times:
+        label: hao.socialnetwork::lang.twitter.autre
+        type: partial
+        span: right
+        path:  times
+        disabled: true
+        readOnly: true

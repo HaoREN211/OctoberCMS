@@ -1,0 +1,21 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: false
+        width:  10%
+
+    consumer_key:
+        label: hao.socialnetwork::lang.twitter.token.consumer_key
+        searchable: true
+        width:  45%
+        type: text
+
+    consumer_secret:
+        label: hao.socialnetwork::lang.twitter.token.consumer_secret
+        searchable: true
+        width:  45%
+        type: text

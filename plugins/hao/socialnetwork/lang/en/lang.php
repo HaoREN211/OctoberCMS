@@ -5,6 +5,20 @@ return [
         "name"              => "Twitter",
         "group"             => '推特',
         "description"       => "推特用户资料",
+        "social_network"    =>  "社交网络",
+        "base64_encoded_token_credentials"  =>  "Base64 Token",
+        "autre"             =>  "",
+        'token' =>  [
+            "name"          =>  "Token",
+            'description'   =>  "管理推特token",
+            "consumer_key"  =>  "Twiter 用户秘钥",
+            "consumer_secret"   =>  "Twitter 秘钥密码",
+            "access_token"  =>  "Access Token",
+            "access_token_secret"  =>  "Access Token Secret",
+            "type"          =>  "Token 类型",
+            "created_at"    =>  "Token 创建时间",
+            "updated_at"    =>  "Token 更新时间",
+        ],
     ],
 
     'form' =>[
@@ -24,6 +38,14 @@ return [
     ],
 
     'backend' => [
+        "button"   =>  [
+                "save"  =>  "保存",
+                "saving"    =>  "保存中。。。",
+                "synchronization"   => "同步",
+                "synchronizationing"   => "同步中。。。",
+                "cancel"    =>  "离开",
+        ],
+
         'meetic' => [
            'id' => 'ID',
             'nationality' => '国籍',
@@ -121,7 +143,8 @@ return [
 
     'list' => [
         'manage' => [
-            "twitter_user" => "管理推特用户",
+            "twitter_user"  =>  "管理推特用户",
+            "twitter_token" =>  "管理推特 Twiter",
         ],
 
         'no_records' =>[
@@ -135,11 +158,13 @@ return [
 
     'field' => [
         'create'    => [
-            'twitter_user' => '新建推特用户',
+            'twitter_user'  =>  '新建推特用户',
+            'twitter_token' =>  "新建推特 Token"
         ] ,
 
         'edit'      => [
             'twitter_user' => '编辑推特用户',
+            "twitter_token" =>  "编辑推特 Token",
         ],
 
         'preview'   => [
@@ -154,6 +179,7 @@ return [
 
         'twitter'    => [
             'access_twitter'    => "推特查看权限",
+            'access_twitter_token'  =>  '管理推特token',
         ]
     ],
 ];

@@ -18,3 +18,11 @@
 1.0.6:
     - add 'twitter id' in the backend user
     - user_add_twitter_id_table.php
+
+1.0.7:
+    - add table for stock token of twitter
+    - create_twitter_tokens_table.php
+
+1.0.8:
+    - Add the file who init a data in the table twitter token
+    - twitter_init_token.php

@@ -115,6 +115,12 @@ class Plugin extends PluginBase
     public function registerPermissions()
     {
         return [
+
+            'hao.socialnetwork.access_twitter_token' => [
+                'tab' => 'hao.socialnetwork::lang.twitter.group',
+                'label' => 'hao.socialnetwork::lang.permissions.twitter.access_twitter_token',
+            ],
+
             'hao.socialnetwork.access_meetics' => [
                 'tab' => 'hao.socialnetwork::lang.plugin.menus.meetics',
                 'label' => 'hao.socialnetwork::lang.permissions.meetic.access_meetics',
@@ -144,7 +150,15 @@ class Plugin extends PluginBase
 
                 'sideMenu' => [
 
-                    'twitter' =>[
+                    'twitter_token' =>[
+                        'label' => Lang::get('hao.socialnetwork::lang.twitter.token.description'),
+                        'icon' => 'icon-database',
+                        'url' => Backend::url('hao/socialnetwork/twittertokens'),
+                        'permissions'   => ['hao.socialnetwork.access_twitter_token'],
+                        'group'         => 'hao.socialnetwork::lang.twitter.group',
+                    ],
+
+                    'twitter_user' =>[
                         'label' => Lang::get('hao.socialnetwork::lang.twitter.description'),
                         'icon' => 'icon-twitter',
                         'url' => Backend::url('hao/socialnetwork/twitterusers'),
