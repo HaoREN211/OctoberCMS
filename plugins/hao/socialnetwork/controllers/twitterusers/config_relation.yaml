@@ -22,11 +22,11 @@ followers:
 
   view:
     list: $/hao/socialnetwork/models/twitteruser/columns.yaml
-    form: $/hao/socialnetwork/models/twitteruser/FollowerFields.yaml
+    form: $/hao/socialnetwork/models/twitteruser/followerFields.yaml
 
   manage:
     list: $/hao/socialnetwork/models/twitteruser/columns.yaml
-    form: $/hao/socialnetwork/models/twitteruser/FollowerFields.yaml
+    form: $/hao/socialnetwork/models/twitteruser/followerFields.yaml
     showSearch: true
     showSorting: true
     recordsPerPage: 10
@@ -38,11 +38,11 @@ friends:
 
   view:
     list: $/hao/socialnetwork/models/twitteruser/columns.yaml
-    form: $/hao/socialnetwork/models/twitteruser/FollowerFields.yaml
+    form: $/hao/socialnetwork/models/twitteruser/followerFields.yaml
 
   manage:
     list: $/hao/socialnetwork/models/twitteruser/columns.yaml
-    form: $/hao/socialnetwork/models/twitteruser/FollowerFields.yaml
+    form: $/hao/socialnetwork/models/twitteruser/followerFields.yaml
     showSearch: true
     showSorting: true
     recordsPerPage: 10
