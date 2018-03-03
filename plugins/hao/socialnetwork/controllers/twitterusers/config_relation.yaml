@@ -15,3 +15,34 @@ user_static:
     showSearch: true
     showSorting: true
     recordsPerPage: 10
+
+followers:
+  label: 'hao.socialnetwork::lang.backend.twitter.user.follower_description'
+  emptyMessage: 'hao.socialnetwork::lang.list.no_records.twitter_follower'
+
+  view:
+    list: $/hao/socialnetwork/models/twitteruser/columns.yaml
+    form: $/hao/socialnetwork/models/twitteruser/FollowerFields.yaml
+
+  manage:
+    list: $/hao/socialnetwork/models/twitteruser/columns.yaml
+    form: $/hao/socialnetwork/models/twitteruser/FollowerFields.yaml
+    showSearch: true
+    showSorting: true
+    recordsPerPage: 10
+
+
+friends:
+  label: 'hao.socialnetwork::lang.backend.twitter.user.friend_description'
+  emptyMessage: 'hao.socialnetwork::lang.list.no_records.twitter_friend'
+
+  view:
+    list: $/hao/socialnetwork/models/twitteruser/columns.yaml
+    form: $/hao/socialnetwork/models/twitteruser/FollowerFields.yaml
+
+  manage:
+    list: $/hao/socialnetwork/models/twitteruser/columns.yaml
+    form: $/hao/socialnetwork/models/twitteruser/FollowerFields.yaml
+    showSearch: true
+    showSorting: true
+    recordsPerPage: 10

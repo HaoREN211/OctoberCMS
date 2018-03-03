@@ -26,3 +26,7 @@
 1.0.8:
     - Add the file who init a data in the table twitter token
     - twitter_init_token.php
+
+1.0.9:
+    - Add the twitter follower table
+    - create_twitter_followers_table.php

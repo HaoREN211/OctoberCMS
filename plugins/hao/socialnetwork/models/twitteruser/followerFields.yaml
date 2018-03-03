@@ -62,39 +62,13 @@ fields:
         type: partial
         path: twitter_lien
 
-tabs:
-    defaultTab: 'hao.socialnetwork::lang.backend.twitter.tab.basic'
-    fields:
 
-        location:
-            label: 'hao.socialnetwork::lang.backend.twitter.user.location'
-            commentAbove: 'hao.socialnetwork::lang.backend.twitter.user.location_description'
-            readOnly: true
-            disabled: true
-            required: false
-            span: left
-            type: partial
-            path: location
-
-
-
-        user_static:
-            label: 'hao.socialnetwork::lang.backend.twitter.user.static'
-            commentAbove: 'hao.socialnetwork::lang.backend.twitter.user.static_description'
-            type: partial
-            path: user_static
-            tab: 'hao.socialnetwork::lang.backend.twitter.tab.static'
-
-        followers:
-            label: 'hao.socialnetwork::lang.backend.twitter.user.follower'
-            commentAbove: 'hao.socialnetwork::lang.backend.twitter.user.follower_description'
-            type: partial
-            path: followers
-            tab: 'hao.socialnetwork::lang.backend.twitter.tab.follower'
-
-        friends:
-            label: 'hao.socialnetwork::lang.backend.twitter.user.friend'
-            commentAbove: 'hao.socialnetwork::lang.backend.twitter.user.friend_description'
-            type: partial
-            path: friends
-            tab: 'hao.socialnetwork::lang.backend.twitter.tab.friend'
+    location:
+        label: 'hao.socialnetwork::lang.backend.twitter.user.location'
+        commentAbove: 'hao.socialnetwork::lang.backend.twitter.user.location_description'
+        readOnly: true
+        disabled: true
+        required: false
+        span: left
+        type: partial
+        path: location

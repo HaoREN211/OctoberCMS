@@ -1,13 +1,12 @@
-<?php
-namespace Hao\Socialnetwork\Classes;
+<?php namespace Hao\Socialnetwork\Classes;
 /**
  * Created by PhpStorm.
  * User: Hao
- * Date: 2018/3/2
- * Time: 1:07
+ * Date: 2018/3/3
+ * Time: 0:17
  */
 
-class encoder
+class Base64encoder
 {
     /**
      * @param $key

@@ -3,6 +3,7 @@
 return [
     'twitter' => [
         "name"              => "Twitter",
+        "myAccount"         =>  "我的账号",
         "group"             => '推特',
         "description"       => "推特用户资料",
         "social_network"    =>  "社交网络",
@@ -23,6 +24,25 @@ return [
 
     'form' =>[
       'save' => '保存',
+        "twitter"   =>  [
+            "user"  =>  [
+                "confirm"   =>   "确定",
+                "confirming"    =>  "同步中。。。",
+                "getFollower"   =>  "同步关注我的账号列表",
+                "getFriend"     =>  "同步我关注的账号列表",
+            ],
+
+            "token" =>  [
+                "synchronization"   =>  "同步成功",
+            ],
+        ],
+
+        'synchronization'   =>  [
+            "twitter"   =>  [
+                'follower'  =>  '被关注已同步成功',
+                'friend'    =>  '关注已同步成功',
+            ]
+        ]
     ],
 
     'plugin' => [
@@ -122,6 +142,10 @@ return [
                 "id"                => "推特ID",
                 "static"            => "用户统计数据",
                 'static_description'  => "用户每天关注用户数目，被关注数目，帖子总数，喜欢帖子总数",
+                "follower"          =>  "关注我的用户",
+                "follower_description"  =>  "关注我的用户列表",
+                "friend"            =>  "我关注的用户",
+                "friend_description"    =>  "我关注的用户列表",
                 "followers_count"   =>  "被关注",
                 "friends_count"     =>  "关注",
                 "listed_count"      =>  "列表",
@@ -135,6 +159,8 @@ return [
             'tab' => [
                 "basic" => "基本信息",
                 "static"    =>  "统计信息",
+                "follower"  =>  "关注我的用户",
+                "friend"    =>  "我关注的用户",
                 ],
             'color' =>  "blue",
             "size"  =>  "3",
@@ -149,6 +175,8 @@ return [
 
         'no_records' =>[
             "twitter_user" => '木有推特用户',
+            "twitter_follower"  =>  "木有关注我的人，请同步",
+            "twitter_friend"    =>  "我木有关注任何人，请同步"
         ],
 
         'search_prompt' =>[

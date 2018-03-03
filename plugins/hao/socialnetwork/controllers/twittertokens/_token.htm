@@ -1,0 +1,29 @@
+<table>
+    <tr>
+        <td>
+            <?= e(trans('hao.socialnetwork::lang.twitter.token.name')) ?>:
+        </td>
+    </tr>
+    <tr>
+        <td>&nbsp;&nbsp;
+            <font size="<?= e(trans('hao.socialnetwork::lang.backend.twitter.size')) ?>"
+              color="<?= e(trans('hao.socialnetwork::lang.backend.twitter.color')) ?>">&nbsp;&nbsp;<?= $formModel->token ?></font>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            &nbsp;
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <?= e(trans('hao.socialnetwork::lang.twitter.base64_encoded_token_credentials')) ?>:
+        </td>
+    </tr>
+    <tr>
+        <td>&nbsp;&nbsp;
+            <font size="<?= e(trans('hao.socialnetwork::lang.backend.twitter.size')) ?>"
+              color="<?= e(trans('hao.socialnetwork::lang.backend.twitter.color')) ?>">&nbsp;&nbsp;<?= $formModel->base64_encoded_token_credentials ?></font>
+        </td>
+    </tr>
+</table>

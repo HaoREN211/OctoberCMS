@@ -3,36 +3,19 @@
 use Model;
 
 /**
- * TwitterProfileLocation Model
+ * TwitterFollower Model
  */
-class TwitterProfileLocation extends Model
+class TwitterFollower extends Model
 {
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'hao_socialnetwork_twitter_profile_locations';
+    public $table = 'hao_socialnetwork_twitter_followers';
 
     /**
      * @var array Guarded fields
      */
     protected $guarded = ['*'];
-
-    /**
-     * @var array Fillable fields
-     */
-    protected $fillable = [
-        'id',
-        'url',
-        'place_type',
-        'name',
-        'full_name',
-        'country_code',
-        'country',
-        'contained_within',
-        'bounding_box',
-        'attributes',
-        'API'
-    ];
 
     /**
      * @var string Models will assume that each table has a primary key column named id.
@@ -45,7 +28,8 @@ class TwitterProfileLocation extends Model
      * which means that by default the primary key will be cast to an integer automatically.
      * If you wish to use a non-incrementing or a non-numeric primary key you must set the public $incrementing property to false.
      */
-    public $incrementing = false;
+    public $incrementing = true;
+
 
     /**
      * @var bool By default, a model will expect created_at and updated_at columns to exist on your tables.
@@ -53,6 +37,14 @@ class TwitterProfileLocation extends Model
      * set the $timestamps property on your model to false:
      */
     public $timestamps = false;
+
+    /**
+     * @var array Fillable fields
+     */
+    protected $fillable = [
+        'user_id',
+        'follower_id'
+    ];
 
     /**
      * @var array Relations

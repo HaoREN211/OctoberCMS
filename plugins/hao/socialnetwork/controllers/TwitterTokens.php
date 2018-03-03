@@ -1,9 +1,12 @@
 <?php namespace Hao\Socialnetwork\Controllers;
 
 use BackendMenu;
+use Backend\Facades\Backend;
 use Backend\Classes\Controller;
 use Hao\Socialnetwork\Models\TwitterToken;
-use Hao\Socialnetwork\Classes\Encoder;
+use Hao\Socialnetwork\Classes\Base64encoder as Hao_base_64_encoder;
+use Hao\Socialnetwork\Classes\Twitter\Token as twitterApiToken;
+//twitterApiToken
 
 /**
  * Twitter Tokens Back-end Controller
@@ -23,21 +26,35 @@ class TwitterTokens extends Controller
         parent::__construct();
 
         BackendMenu::setContext('Hao.Socialnetwork', 'socialnetwork', 'twittertokens');
+
     }
 
     /**
      * @param null $id
      */
     public function onSynchronization($id = null){
+        /**
+         * Save the data of frontend
+         */
         $datas = post();
-        $consumer_key = $datas['TwitterToken']['consumer_key'];
-        $consumer_secret = $datas['TwitterToken']['consumer_secret'];
-        $access_token = $datas['TwitterToken']['access_token'];
-        $access_token_secret = $datas['TwitterToken']['access_token_secret'];
 
         $twitter_token = TwitterToken::find($id);
-        $base64_encoded_bearer_token = encoder::get_base64_encoded_bearer_token_credentials($consumer_key, $consumer_secret);
-        trace_log($base64_encoded_bearer_token);
-//        trace_log($twitter_token);
+        $twitter_token->consumer_key = $datas['TwitterToken']['consumer_key'];
+        $twitter_token->consumer_secret = $datas['TwitterToken']['consumer_secret'];
+        $twitter_token->access_token = $datas['TwitterToken']['access_token'];
+        $twitter_token->access_token_secret = $datas['TwitterToken']['access_token_secret'];
+        $twitter_token->twitter_id  = $datas['TwitterToken']['user'];
+        $twitter_token->save();
+
+
+        // Get the token
+        twitterApiToken::getToken($id);
+        $redirectUrl = "hao/socialnetwork/twittertokens/update/".$id;
+        return Backend::redirect($redirectUrl);
+    }
+
+
+    public function onQuite(){
+        return Backend::redirect("hao/socialnetwork/twittertokens");
     }
 }

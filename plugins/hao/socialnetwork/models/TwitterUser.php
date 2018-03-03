@@ -23,7 +23,49 @@ class TwitterUser extends Model
     /**
      * @var array Fillable fields
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'id',
+        'profile_location_id',
+        'name',
+        'screen_name',
+        'location',
+        'description',
+        'url',
+        'protected',
+        'followers_count',
+        'friends_count',
+        'listed_count',
+        'created_at',
+        'favourites_count',
+        'utc_offset',
+        'time_zone',
+        'geo_enabled',
+        'verified',
+        'statuses_count',
+        'lang',
+        'contributors_enabled',
+        'is_translator',
+        'is_translation_enabled',
+        'profile_background_color',
+        'profile_background_image_url',
+        'profile_background_image_url_https',
+        'profile_background_tile',
+        'profile_image_url',
+        'profile_image_url_https',
+        'profile_link_color',
+        'profile_sidebar_border_color',
+        'profile_sidebar_fill_color',
+        'profile_text_color',
+        'profile_use_background_image',
+        'has_extended_profile',
+        'default_profile',
+        'default_profile_image',
+        'following',
+        'follow_request_sent',
+        'notifications',
+        'translator_type',
+        'API'
+    ];
 
     /**
      * @var string Models will assume that each table has a primary key column named id.
@@ -58,8 +100,28 @@ class TwitterUser extends Model
             'otherkey'  => 'id',
         ]
     ];
-    public $belongsTo = [];
-    public $belongsToMany = [];
+    public $belongsTo = [
+        'profile_location' =>[
+            '\Hao\Socialnetwork\Models\TwitterProfileLocation',
+            'key'       => 'profile_location_id',
+            'otherkey'  => 'id',
+        ]
+    ];
+    public $belongsToMany = [
+        'followers' =>  [
+            'Hao\Socialnetwork\Models\TwitterUser',
+            'table' =>  'hao_socialnetwork_twitter_followers',
+            'key'   =>  'user_id',
+            'otherKey'  =>  'follower_id'
+        ],
+
+        'friends' =>  [
+            'Hao\Socialnetwork\Models\TwitterUser',
+            'table' =>  'hao_socialnetwork_twitter_followers',
+            'key'   =>  'follower_id',
+            'otherKey'  =>  'user_id'
+        ]
+    ];
     public $morphTo = [];
     public $morphOne = [];
     public $morphMany = [];

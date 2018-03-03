@@ -8,6 +8,7 @@ use Backend\Facades\BackendMenu;
 use Backend\Models\User as BackendUserModel;
 use Backend\Controllers\Users as BackendUserController;
 use Illuminate\Support\Facades\Event;
+use Backend\Facades\BackendAuth;
 
 
 /**
@@ -61,10 +62,10 @@ class Plugin extends PluginBase
     protected function extendModels()
     {
         BackendUserModel::extend(function ($model) {
-            $model->hasOne['twitter'] = ['Hao\Socialnetwork\Models\TwitterUser',
+            $model->belongsTo['twitter'] = ['Hao\Socialnetwork\Models\TwitterUser',
                 'table' => 'hao_socialnetwork_twitter_users',
-                'key' => 'id',
-                'otherKey' => 'twitter_id'];
+                'key' => 'twitter_id',
+                'otherKey' => 'id'];
         });
     }
 
@@ -140,6 +141,9 @@ class Plugin extends PluginBase
      */
     public function registerNavigation()
     {
+        $user = BackendAuth::getUser();
+        $twitterId = $user->twitter->id;
+
         return [
             'socialnetwork' => [
                 'label'       => Lang::get('hao.socialnetwork::lang.plugin.name'),
@@ -155,6 +159,14 @@ class Plugin extends PluginBase
                         'icon' => 'icon-database',
                         'url' => Backend::url('hao/socialnetwork/twittertokens'),
                         'permissions'   => ['hao.socialnetwork.access_twitter_token'],
+                        'group'         => 'hao.socialnetwork::lang.twitter.group',
+                    ],
+
+                    'my_twitter_user' =>[
+                        'label' => Lang::get('hao.socialnetwork::lang.twitter.myAccount'),
+                        'icon' => 'icon-twitter',
+                        'url' => Backend::url('hao/socialnetwork/twitterusers/update/'.$twitterId),
+                        'permissions'   => ['hao.socialnetwork.access_twitter'],
                         'group'         => 'hao.socialnetwork::lang.twitter.group',
                     ],
 

@@ -53,3 +53,11 @@ fields:
         path:  times
         disabled: true
         readOnly: true
+
+    token:
+        label: hao.socialnetwork::lang.twitter.autre
+        type: partial
+        span: full
+        path:  token
+        disabled: true
+        readOnly: true
