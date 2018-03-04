@@ -43,6 +43,14 @@
 
                 <button
                     type="button"
+                    data-request="onGetTweet"
+                    data-load-indicator="<?= e(trans('hao.socialnetwork::lang.form.twitter.user.confirming')) ?>"
+                    class="btn btn-info">
+                    <?= e(trans('hao.socialnetwork::lang.form.twitter.user.getTweet')) ?>
+                </button>
+
+                <button
+                    type="button"
                     data-request="onReturn"
                     class="btn btn-danger">
                     <?= e(trans('hao.socialnetwork::lang.backend.button.cancel')) ?>

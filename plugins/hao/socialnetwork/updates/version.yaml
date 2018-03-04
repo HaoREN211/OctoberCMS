@@ -30,3 +30,18 @@
 1.0.9:
     - Add the twitter follower table
     - create_twitter_followers_table.php
+
+1.0.10:
+    - Add the tweet table
+    - create_twitter_tweets_table.php
+    - create_hashtags_table.php
+
+1.0.11:
+    - Add the tweet media source
+    - create_twitter_media_table.php
+
+1.0.12:
+    - Add three association table tweet_media, tweet_mention and tweet_hashtag
+    - create_twitter_tweet_media_table.php
+    - create_twitter_tweet_mentions_table.php
+    - create_twitter_tweet_hashtags_table.php

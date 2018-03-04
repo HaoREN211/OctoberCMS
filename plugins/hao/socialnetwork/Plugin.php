@@ -170,9 +170,17 @@ class Plugin extends PluginBase
                         'group'         => 'hao.socialnetwork::lang.twitter.group',
                     ],
 
+                    'twitter_new_user' =>[
+                        'label' => Lang::get('hao.socialnetwork::lang.backend.twitter.user.new'),
+                        'icon' => 'icon-user-plus',
+                        'url' => Backend::url('hao/socialnetwork/twitterusers/new'),
+                        'permissions'   => ['hao.socialnetwork.access_twitter'],
+                        'group'         => 'hao.socialnetwork::lang.twitter.group',
+                    ],
+
                     'twitter_user' =>[
                         'label' => Lang::get('hao.socialnetwork::lang.twitter.description'),
-                        'icon' => 'icon-twitter',
+                        'icon' => 'icon-user',
                         'url' => Backend::url('hao/socialnetwork/twitterusers'),
                         'permissions'   => ['hao.socialnetwork.access_twitter'],
                         'group'         => 'hao.socialnetwork::lang.twitter.group',

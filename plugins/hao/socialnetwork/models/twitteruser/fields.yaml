@@ -45,26 +45,22 @@ fields:
         disabled: true
         required: false
 
-    description:
-        label: 'hao.socialnetwork::lang.backend.twitter.user.user_description'
+    fullstatic:
+        label: 'hao.socialnetwork::lang.backend.twitter.user.location'
+        commentAbove: 'hao.socialnetwork::lang.backend.twitter.user.location_description'
         readOnly: true
         disabled: true
         required: false
-        span: left
+        span: full
         type: partial
-        path: user_description
+        path: fullstatic
 
-    twitter_lien:
-        readOnly: true
-        disabled: true
-        required: false
-        span: right
-        type: partial
-        path: twitter_lien
+
 
 tabs:
     defaultTab: 'hao.socialnetwork::lang.backend.twitter.tab.basic'
     fields:
+
 
         location:
             label: 'hao.socialnetwork::lang.backend.twitter.user.location'
@@ -76,7 +72,22 @@ tabs:
             type: partial
             path: location
 
+        twitter_lien:
+            readOnly: true
+            disabled: true
+            required: false
+            span: right
+            type: partial
+            path: twitter_lien
 
+        description:
+            label: 'hao.socialnetwork::lang.backend.twitter.user.user_description'
+            readOnly: true
+            disabled: true
+            required: false
+            span: full
+            type: partial
+            path: user_description
 
         user_static:
             label: 'hao.socialnetwork::lang.backend.twitter.user.static'

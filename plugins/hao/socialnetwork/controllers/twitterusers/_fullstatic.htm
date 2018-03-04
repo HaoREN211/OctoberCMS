@@ -1,0 +1,31 @@
+<table width="100%">
+    <tr>
+        <th width="25%" align="center">
+            <?= e(trans('hao.socialnetwork::lang.backend.twitter.user.follower')) ?>
+        </th>
+        <th width="25%" align="center">
+            <?= e(trans('hao.socialnetwork::lang.backend.twitter.user.friend')) ?>
+        </th>
+        <th width="25%" align="center">
+            <?= e(trans('hao.socialnetwork::lang.backend.twitter.user.static')) ?>
+        </th>
+    </tr>
+    <tr>
+        <td align="left" width="25%">
+            <font color="<?= e(trans('hao.socialnetwork::lang.backend.twitter.color')) ?>">
+                <?= $model->followers->count() ?>
+            </font>
+        </td>
+        <td align="left" width="25%">
+            <font color="<?= e(trans('hao.socialnetwork::lang.backend.twitter.color')) ?>">
+                <?= $model->friends->count() ?>
+            </font>
+        </td>
+        <td align="left" width="25%">
+            <font color="<?= e(trans('hao.socialnetwork::lang.backend.twitter.color')) ?>">
+                <?= $model->user_static->count() ?>
+            </font>
+        </td>
+    </tr>
+</table>
+

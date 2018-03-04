@@ -6,6 +6,7 @@ use Hao\Socialnetwork\Classes\Twitter\Twitter as HaoTwitter;
 use Flash;
 use Lang;
 use Backend\Facades\Backend;
+use Hao\Socialnetwork\Models\Hashtag as HaoHashtag;
 
 /**
  * Twitter Users Back-end Controller
@@ -65,5 +66,45 @@ class TwitterUsers extends Controller
     }
 
 
+    /**
+     * @return mixed
+     */
+    public function onReturnMainPage(){
+        return Backend::redirect('hao/socialnetwork/index/index');
+    }
+
+    /**
+     *
+     */
+    public function new(){
+        ;
+    }
+
+
+    /**
+     * @return mixed
+     */
+    public function onSaveNewTwitterUser(){
+        $datas = post();
+        $url = $datas["userUrl"];
+        $screenName = HaoTwitter::getScreenNameFromUrl($url);
+        $resultat = (string)$this->twitter->createNewUser($screenName);
+        if($resultat ===(string)0)
+            Flash::error(Lang::get('hao.socialnetwork::lang.flash.error.createnewuser'));
+        else
+        {
+            Flash::success(Lang::get('hao.socialnetwork::lang.flash.success.createnewuser'));
+            $redirectUrl = "hao/socialnetwork/twitterusers/update/".$resultat;
+            return Backend::redirect($redirectUrl);
+        }
+    }
+
+
+
+    public function onGetTweet($id=null){
+        $this->twitter->synchronizationTweet($id);
+
+        Flash::success("teste");
+    }
 
 }

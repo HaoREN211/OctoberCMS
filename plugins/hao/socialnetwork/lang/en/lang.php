@@ -1,6 +1,22 @@
 <?php
 
 return [
+    'flash' =>  [
+        'error' =>  [
+            'createnewuser' =>  '用户并不存在, 创建失败！',
+        ],
+
+        'success'   =>  [
+            'createnewuser' =>  '创建成功！',
+        ],
+    ],
+
+    'hao'   =>  [
+        'link'  =>  [
+            'facebook'  =>  'https://www.facebook.com/hao.ren.79656',
+        ]
+    ],
+
     'twitter' => [
         "name"              => "Twitter",
         "myAccount"         =>  "我的账号",
@@ -30,6 +46,7 @@ return [
                 "confirming"    =>  "同步中。。。",
                 "getFollower"   =>  "同步关注我的账号列表",
                 "getFriend"     =>  "同步我关注的账号列表",
+                "getTweet"      =>  "同步我的帖子",
             ],
 
             "token" =>  [
@@ -153,7 +170,9 @@ return [
                 "statuses_count"    =>  "帖子",
                 "observation_date"  =>  "观察时间",
                 "user_description"  =>  "用户描述",
-                "user_description_description"  =>  "用户自我描述"
+                "user_description_description"  =>  "用户自我描述",
+                "new"   =>  "新增推特用户",
+                "new_description"   =>  "用户主页链接或者用户名:"
             ],
 
             'tab' => [
