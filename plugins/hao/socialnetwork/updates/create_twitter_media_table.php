@@ -10,7 +10,7 @@ class CreateTwitterMediaTable extends Migration
     {
         Schema::create('hao_socialnetwork_twitter_media', function(Blueprint $table) {
             $table->engine = 'InnoDB';
-            $table->bigIncrements('id');
+            $table->unsignedBigInteger('id');
             $table->string('media_url', 200)->nullable();
             $table->string('media_url_https', 200)->nullable();
             $table->string('url', 200)->nullable();
@@ -19,6 +19,8 @@ class CreateTwitterMediaTable extends Migration
             $table->string('type', 50)->nullable();
             $table->unsignedBigInteger('source_status_id')->nullable();
             $table->unsignedBigInteger('source_user_id')->nullable();
+
+            $table->primary('id', 'pk_twitter_media');
 
             $table->foreign('source_user_id')
                 ->references('id')

@@ -6,7 +6,7 @@ use Hao\Socialnetwork\Classes\Twitter\Twitter as HaoTwitter;
 use Flash;
 use Lang;
 use Backend\Facades\Backend;
-use Hao\Socialnetwork\Models\Hashtag as HaoHashtag;
+use Hao\Socialnetwork\Models\TwitterTweet as HaoTweet;
 
 /**
  * Twitter Users Back-end Controller
@@ -103,8 +103,9 @@ class TwitterUsers extends Controller
 
     public function onGetTweet($id=null){
         $this->twitter->synchronizationTweet($id);
-
-        Flash::success("teste");
+        Flash::success(Lang::get('hao.socialnetwork::lang.form.synchronization.twitter.tweet'));
+        $redirectUrl = "hao/socialnetwork/twitterusers/update/".$id;
+        return Backend::redirect($redirectUrl);
     }
 
 }

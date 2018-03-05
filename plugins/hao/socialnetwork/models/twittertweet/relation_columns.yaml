@@ -1,0 +1,20 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    text:
+        label: 'hao.socialnetwork::lang.backend.tweet.text'
+        searchable: true
+        clickable: false
+        sortable: false
+        type: text
+        width: 85%
+
+    created_at:
+        label: 'hao.socialnetwork::lang.backend.tweet.create_ad'
+        type: date
+        searchable: false
+        clickable: false
+        sortable: true
+        width: 15%

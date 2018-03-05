@@ -58,6 +58,7 @@ return [
             "twitter"   =>  [
                 'follower'  =>  '被关注已同步成功',
                 'friend'    =>  '关注已同步成功',
+                'tweet'    =>  '帖子已同步成功',
             ]
         ]
     ],
@@ -162,6 +163,8 @@ return [
                 "follower"          =>  "关注我的用户",
                 "follower_description"  =>  "关注我的用户列表",
                 "friend"            =>  "我关注的用户",
+                "tweet_static"      =>  "我的帖子总数",
+                "tweets"            =>  "我的帖子",
                 "friend_description"    =>  "我关注的用户列表",
                 "followers_count"   =>  "被关注",
                 "friends_count"     =>  "关注",
@@ -180,9 +183,14 @@ return [
                 "static"    =>  "统计信息",
                 "follower"  =>  "关注我的用户",
                 "friend"    =>  "我关注的用户",
+                "tweets"    =>  "我的帖子",
                 ],
             'color' =>  "blue",
             "size"  =>  "3",
+        ],
+        'tweet' =>[
+            'create_ad' =>  '创建时间',
+            'text'      =>  '推特',
         ],
     ],
 
@@ -195,7 +203,8 @@ return [
         'no_records' =>[
             "twitter_user" => '木有推特用户',
             "twitter_follower"  =>  "木有关注我的人，请同步",
-            "twitter_friend"    =>  "我木有关注任何人，请同步"
+            "twitter_friend"    =>  "我木有关注任何人，请同步",
+            'tweets'            =>  "木有推特，请同步",
         ],
 
         'search_prompt' =>[

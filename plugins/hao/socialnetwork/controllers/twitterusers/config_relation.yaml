@@ -8,6 +8,8 @@ user_static:
 
   view:
     list: $/hao/socialnetwork/models/twitteruserstatistic/columns.yaml
+    showSearch: true
+    recordsPerPage: 10
 
   manage:
     list: $/hao/socialnetwork/models/twitteruserstatistic/columns.yaml
@@ -23,6 +25,8 @@ followers:
   view:
     list: $/hao/socialnetwork/models/twitteruser/columns.yaml
     form: $/hao/socialnetwork/models/twitteruser/followerFields.yaml
+    showSearch: true
+    recordsPerPage: 10
 
   manage:
     list: $/hao/socialnetwork/models/twitteruser/columns.yaml
@@ -39,10 +43,27 @@ friends:
   view:
     list: $/hao/socialnetwork/models/twitteruser/columns.yaml
     form: $/hao/socialnetwork/models/twitteruser/followerFields.yaml
+    recordsPerPage: 10
+    showSearch: true
 
   manage:
     list: $/hao/socialnetwork/models/twitteruser/columns.yaml
     form: $/hao/socialnetwork/models/twitteruser/followerFields.yaml
     showSearch: true
     showSorting: true
+    recordsPerPage: 10
+
+tweets:
+  label: 'hao.socialnetwork::lang.backend.twitter.user.tweets'
+  emptyMessage: 'hao.socialnetwork::lang.list.no_records.tweets'
+
+  view:
+    list: $/hao/socialnetwork/models/twittertweet/relation_columns.yaml
+    recordsPerPage: 10
+    showSearch: true
+
+  manage:
+    list: $/hao/socialnetwork/models/twittertweet/relation_columns.yaml
+    showSearch: true
+    showSorting: false
     recordsPerPage: 10

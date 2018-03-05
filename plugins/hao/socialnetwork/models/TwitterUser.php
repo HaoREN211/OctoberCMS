@@ -98,6 +98,12 @@ class TwitterUser extends Model
             '\Hao\Socialnetwork\Models\TwitterUserStatistic',
             'key'       => 'id',
             'otherkey'  => 'id',
+        ],
+
+        'tweets'    =>[
+            '\Hao\Socialnetwork\Models\TwitterTweet',
+            'key'       => 'use_id',
+            'otherkey'  => 'id',
         ]
     ];
     public $belongsTo = [

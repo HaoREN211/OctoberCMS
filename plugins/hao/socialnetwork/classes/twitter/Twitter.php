@@ -52,7 +52,10 @@ class Twitter
 
 
     /**
-     * synchronization the list of friend
+     * Synchronization of all of the friends of the user whose id is $id
+     * First all of we check if we has already the information about the friend
+     * If yes we add a record in the relation table
+     * If no we add the friend information before add the record in the relation table
      * @param $id
      */
     public function synchronizationFriend($id){
@@ -92,6 +95,10 @@ class Twitter
     }
 
     /**
+     * Synchronization of all of the follower of the user whose id is $id
+     * First all of we check if we has already the information about the follower
+     * If yes we add a record in the relation table
+     * If no we add the follower information before add the record in the relation table
      * Synchronization of followers
      * @param $id
      */
@@ -111,10 +118,25 @@ class Twitter
     }
 
 
+    /**
+     * Synchronizaion of all of the tweet of user whose id is $id.
+     * First of all check if the BD has already the tweet of user.
+     * If yes we retrieve all the tweet whose id is greater than which in the DB.
+     * If no we retrieve all the tweet of the user.
+     * We alse retrieve all of users which are mentioned,
+     *     users to which the tweet respond
+     *     tweet to which the tweet respond
+     * @param $id
+     */
     public function synchronizationTweet($id){
-        $response =  $this->apiStatusesUserTimeline($id);
         $iteration = (boolean)true;
+        $maxIdTweet = HaoTweet::where('use_id', $id)->max('id');
+        if($maxIdTweet == null)
+            $maxIdTweet = 0;
+        $minIdTweet = null;
         while($iteration){
+            $response =  $this->apiStatusesUserTimeline($id, $maxIdTweet, $minIdTweet);
+
             if((int)count($response)<(int)200){
                 $iteration = (boolean)false;
             };
@@ -122,11 +144,21 @@ class Twitter
             foreach ($response as $tweet){
                 $this->saveTweet($tweet);
             }
+
+            $minIdTweet = HaoTweet::where('use_id', $id)
+                ->where('id', '>', $maxIdTweet)->min('id');
+            if ($maxIdTweet == null)
+                break;
         }
     }
 
+    /**
+     * Save the tweet in giving the json
+     * who contains all information of the tweet
+     * @param $tweet
+     * @return null
+     */
     private function saveTweet($tweet){
-        trace_log($tweet->id_str);
         if(is_object($tweet) && property_exists($tweet, 'id_str')) {
             $tweet_count = (int)HaoTweet::where('id', $tweet->id_str)->count();
             if($tweet_count === (int)0) {
@@ -153,8 +185,12 @@ class Twitter
                         $medias = $tweet->entities->media;
                         if (is_array($medias) && count($medias) > 0) {
                             foreach ($medias as $media) {
-                                $mediaId = $this->saveMedia($media);
-                                array_push($list_media, $mediaId);
+                                $id = $media->id_str;
+                                $count = (int)HaoMedia::where('id', $id)->count();
+                                if($count === (int)0) {
+                                    $mediaId = $this->saveMedia($media);
+                                    array_push($list_media, $mediaId);
+                                }
                             }
                         }
                     }
@@ -196,65 +232,78 @@ class Twitter
                     && property_exists($tweet->place, 'id')){
                     $place = $tweet->place->id;
                 }
-                HaoTweet::create([
-                    'id' => $tweet->id_str,
-                    'created_at' => $created_at,
-                    'text' => $tweet->text,
-                    'truncated' => $tweet->truncated,
-                    'source' => $tweet->source,
-                    'in_reply_to_status_id' => $in_reply_to_status_id,
-                    'in_reply_to_user_id' => $in_reply_to_user_id,
-                    'use_id' => $tweet_user_id,
-                    'geo' => $geo,
-                    'place' => $place,
-                    'contributors' => $tweet->contributors,
-                    'is_quote_status' => $tweet->truncated,
-                    'retweet_count' => $tweet->retweet_count,
-                    'favorite_count' => $tweet->favorite_count,
-                    'favorited' => $tweet->favorited,
-                    'retweeted' => $tweet->retweeted,
-                    'possibly_sensitive' => $possibly_sensitive,
-                    'lang' => $tweet->lang
-                ]);
+
+
+                $tweet_count = (int)HaoTweet::where('id', $tweet->id_str)->count();
+                if($tweet_count === (int)0) {
+                    HaoTweet::create([
+                        'id' => $tweet->id_str,
+                        'created_at' => $created_at,
+                        'text' => $tweet->text,
+                        'truncated' => $tweet->truncated,
+                        'source' => $tweet->source,
+                        'in_reply_to_status_id' => $in_reply_to_status_id,
+                        'in_reply_to_user_id' => $in_reply_to_user_id,
+                        'use_id' => $tweet_user_id,
+                        'geo' => $geo,
+                        'place' => $place,
+                        'contributors' => $tweet->contributors,
+                        'is_quote_status' => $tweet->truncated,
+                        'retweet_count' => $tweet->retweet_count,
+                        'favorite_count' => $tweet->favorite_count,
+                        'favorited' => $tweet->favorited,
+                        'retweeted' => $tweet->retweeted,
+                        'possibly_sensitive' => $possibly_sensitive,
+                        'lang' => $tweet->lang
+                    ]);
+                }
 
                 $id_tweet = $tweet->id_str;
 
-                foreach ($list_hashtag as $id_hashtag){
-                    $count = (int)HaoTweetHashtag::where('hashtag_id', $id_hashtag)
-                        ->where('tweet_id', $id_tweet)
-                        ->count();
-                    if($count === (int)0){
-                        HaoTweetHashtag::create([
-                            'hashtag_id'    =>  $id_hashtag,
-                            'tweet_id'      =>  $id_tweet
-                        ]);
+                $tweet_count = (int)HaoTweet::where('id', $tweet->id_str)->count();
+                if($tweet_count === (int)1) {
+                    foreach ($list_hashtag as $id_hashtag) {
+                        $count = (int)HaoTweetHashtag::where('hashtag_id', $id_hashtag)
+                            ->where('tweet_id', $id_tweet)
+                            ->count();
+                        $countHash = (int)HaoHashtag::where('id', $id_tweet)->count();
+                        if ($count === (int)0
+                            && $countHash===(int)1) {
+                            HaoTweetHashtag::create([
+                                'hashtag_id' => $id_hashtag,
+                                'tweet_id' => $id_tweet
+                            ]);
+                        }
+                    }
+
+                    foreach ($list_media as $id_media) {
+                        $count = (int)HaoTweetMedia::where('media_id', $id_media)
+                            ->where('tweet_id', $id_tweet)
+                            ->count();
+                        $countMedia = (int)HaoMedia::where('id', $id_media)->count();
+                        if ($count === (int)0
+                            && $countMedia===(int)1) {
+                            HaoTweetMedia::create([
+                                'media_id' => $id_media,
+                                'tweet_id' => $id_tweet
+                            ]);
+                        }
+                    }
+
+                    foreach ($list_user_mentions as $id_user) {
+                        $count = (int)HaoTweetMention::where('user_id', $id_user)
+                            ->where('tweet_id', $id_tweet)
+                            ->count();
+                        $countUser = (int)HaoTwitterUser::where('id', $id_user)->count();
+                        if ($count === (int)0
+                            && $countUser ===(int)1) {
+                            HaoTweetMention::create([
+                                'user_id' => $id_user,
+                                'tweet_id' => $id_tweet
+                            ]);
+                        }
                     }
                 }
-
-                foreach ($list_media as $id_media){
-                    $count = (int)HaoTweetMedia::where('media_id', $id_media)
-                        ->where('tweet_id', $id_tweet)
-                        ->count();
-                    if($count === (int)0){
-                        HaoTweetMedia::create([
-                            'media_id'    =>  $id_media,
-                            'tweet_id'      =>  $id_tweet
-                        ]);
-                    }
-                }
-
-                foreach ($list_user_mentions as $id_user){
-                    $count = (int)HaoTweetMention::where('user_id', $id_user)
-                        ->where('tweet_id', $id_tweet)
-                        ->count();
-                    if($count === (int)0){
-                        HaoTweetMention::create([
-                            'user_id'    =>  $id_user,
-                            'tweet_id'      =>  $id_tweet
-                        ]);
-                    }
-                }
-
             }
 
             return $tweet->id_str;
@@ -272,8 +321,7 @@ class Twitter
      */
     private function saveMedia($media){
         $id = $media->id_str;
-        $count = (int)HaoMedia::where('id', (string)$id)->count();
-        trace_log($id." - ".$count);
+        $count = (int)HaoMedia::where('id', $id)->count();
         if($count === (int)0){
             $source_user_id = null;
             $source_status_id = null;
@@ -285,17 +333,21 @@ class Twitter
                 $source_status_id = $this->saveTweetById((string)$media->source_status_id_str);
             }
 
-            HaoMedia::firstOrCreate([
-                'id'    =>  (string)$id,
-                'media_url' =>  (string)$media->media_url,
-                'media_url_https' =>  (string)$media->media_url_https,
-                'url' =>  (string)$media->url,
-                'display_url' =>  (string)$media->display_url,
-                'expanded_url' =>  (string)$media->expanded_url,
-                'type' =>  (string)$media->type,
-                'source_status_id' =>  $source_status_id,
-                'source_user_id' =>  $source_user_id,
-            ]);
+
+            $count = (int)HaoMedia::where('id', $id)->count();
+            if($count === (int)0) {
+                HaoMedia::create([
+                    'id' => $id,
+                    'media_url' => (string)$media->media_url,
+                    'media_url_https' => (string)$media->media_url_https,
+                    'url' => (string)$media->url,
+                    'display_url' => (string)$media->display_url,
+                    'expanded_url' => (string)$media->expanded_url,
+                    'type' => (string)$media->type,
+                    'source_status_id' => $source_status_id,
+                    'source_user_id' => $source_user_id,
+                ]);
+            }
         }
         return (string)$id;
     }
@@ -312,7 +364,12 @@ class Twitter
             if ($count === (int)0) {
                 $user = $this->apiUserShow($id);
                 if (is_object($user) && property_exists($user, 'id_str')) {
-                    return $id;
+                    $this->saveUserShow($user);
+                    $count = (int)HaoTwitterUser::where('id', $user->id_str)->count();
+                    if($count === (int)1)
+                        return $id;
+                    else
+                        return null;
                 } else
                     return null;
             } else {
@@ -335,7 +392,11 @@ class Twitter
                 $tweet = $this->apiTweetShow($id);
                 if (is_object($tweet) && property_exists($tweet, 'id_str')) {
                     $this->saveTweet($tweet);
-                    return $id;
+                    $count = (int)HaoTweet::where('id', $tweet->id_str)->count();
+                    if($count === (int)1)
+                        return $id;
+                    else
+                        return null;
                 } else
                     return null;
             } else
@@ -542,11 +603,21 @@ class Twitter
 
     /**
      * @param $id
+     * @param null $maxId
+     * @param null $minId
      * @return mixed|string
      */
-    private function apiStatusesUserTimeline($id){
+    private function apiStatusesUserTimeline($id, $maxId=null, $minId=null){
         // Initiation of URL and Header
         $url = $this::urlApiStatusesUserTimeline.$id;
+
+        if($maxId != null){
+            $url = $url."&since_id=".$maxId;
+        }
+
+        if($minId != null){
+            $url = $url."&max_id=".$minId;
+        }
 
         // Get the response pf API.
         $reponse = HaoHttpRequest::httpGetResultat($url, $this->header);

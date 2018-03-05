@@ -9,6 +9,9 @@
         <th width="25%" align="center">
             <?= e(trans('hao.socialnetwork::lang.backend.twitter.user.static')) ?>
         </th>
+        <th width="25%" align="center">
+            <?= e(trans('hao.socialnetwork::lang.backend.twitter.user.tweet_static')) ?>
+        </th>
     </tr>
     <tr>
         <td align="left" width="25%">
@@ -24,6 +27,11 @@
         <td align="left" width="25%">
             <font color="<?= e(trans('hao.socialnetwork::lang.backend.twitter.color')) ?>">
                 <?= $model->user_static->count() ?>
+            </font>
+        </td>
+        <td align="left" width="25%">
+            <font color="<?= e(trans('hao.socialnetwork::lang.backend.twitter.color')) ?>">
+                <?= $model->tweets->count() ?>
             </font>
         </td>
     </tr>

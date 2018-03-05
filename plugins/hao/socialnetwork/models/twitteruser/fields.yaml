@@ -90,22 +90,29 @@ tabs:
             path: user_description
 
         user_static:
-            label: 'hao.socialnetwork::lang.backend.twitter.user.static'
-            commentAbove: 'hao.socialnetwork::lang.backend.twitter.user.static_description'
+            label:
+            commentAbove:
             type: partial
             path: user_static
             tab: 'hao.socialnetwork::lang.backend.twitter.tab.static'
 
         followers:
-            label: 'hao.socialnetwork::lang.backend.twitter.user.follower'
-            commentAbove: 'hao.socialnetwork::lang.backend.twitter.user.follower_description'
+            label:
+            commentAbove:
             type: partial
             path: followers
             tab: 'hao.socialnetwork::lang.backend.twitter.tab.follower'
 
         friends:
-            label: 'hao.socialnetwork::lang.backend.twitter.user.friend'
-            commentAbove: 'hao.socialnetwork::lang.backend.twitter.user.friend_description'
+            label:
+            commentAbove:
             type: partial
             path: friends
             tab: 'hao.socialnetwork::lang.backend.twitter.tab.friend'
+
+        tweets:
+            label:
+            commentAbove:
+            type: partial
+            path: tweets
+            tab: 'hao.socialnetwork::lang.backend.twitter.tab.tweets'
