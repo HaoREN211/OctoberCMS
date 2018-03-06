@@ -17,6 +17,10 @@ return [
         ]
     ],
 
+    'instagram' =>[
+        'group' =>  'Instagram',
+    ],
+
     'twitter' => [
         "name"              => "Twitter",
         "myAccount"         =>  "我的账号",
@@ -150,6 +154,13 @@ return [
                 'interest'      => '爱好',
             ]
         ],
+
+        'instagram' =>[
+            'user'  =>[
+                'new'   => "新建 Instagram 用户",
+            ],
+        ],
+
         'twitter' => [
             'user' =>[
                 'name'          =>  '推特用户名',
@@ -236,6 +247,10 @@ return [
         'twitter'    => [
             'access_twitter'    => "推特查看权限",
             'access_twitter_token'  =>  '管理推特token',
-        ]
+        ],
+
+        'instagram'=>[
+            'access_instagram'  =>'Instagram 查看权限',
+        ],
     ],
 ];

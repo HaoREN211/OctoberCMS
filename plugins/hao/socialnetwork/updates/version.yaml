@@ -45,3 +45,7 @@
     - create_twitter_tweet_media_table.php
     - create_twitter_tweet_mentions_table.php
     - create_twitter_tweet_hashtags_table.php
+
+1.1.1:
+    - Add starting the part of Instagram
+    - create_instagram_users_table.php

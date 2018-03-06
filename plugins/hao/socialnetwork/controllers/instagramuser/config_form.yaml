@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Instagram User
+
+# Model Form Field configuration
+form: $/hao/socialnetwork/models/instagramuser/fields.yaml
+
+# Model Class name
+modelClass: Hao\Socialnetwork\Models\InstagramUser
+
+# Default redirect location
+defaultRedirect: hao/socialnetwork/instagramuser
+
+# Create page
+create:
+    title: Create Instagram User
+    redirect: hao/socialnetwork/instagramuser/update/:id
+    redirectClose: hao/socialnetwork/instagramuser
+
+# Update page
+update:
+    title: Edit Instagram User
+    redirect: hao/socialnetwork/instagramuser
+    redirectClose: hao/socialnetwork/instagramuser
+
+# Preview page
+preview:
+    title: Preview Instagram User

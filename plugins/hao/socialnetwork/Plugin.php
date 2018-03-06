@@ -131,6 +131,11 @@ class Plugin extends PluginBase
                 'tab' => 'hao.socialnetwork::lang.twitter.group',
                 'label' => 'hao.socialnetwork::lang.permissions.twitter.access_twitter',
             ],
+
+            'access_instagram'  =>[
+                'tab' => 'hao.socialnetwork::lang.instagram.group',
+                'label' => 'hao.socialnetwork::lang.permissions.instagram.access_instagram',
+            ]
         ];
     }
 
@@ -184,6 +189,14 @@ class Plugin extends PluginBase
                         'url' => Backend::url('hao/socialnetwork/twitterusers'),
                         'permissions'   => ['hao.socialnetwork.access_twitter'],
                         'group'         => 'hao.socialnetwork::lang.twitter.group',
+                    ],
+
+                    'instagram_new_user' =>[
+                        'label' => Lang::get('hao.socialnetwork::lang.backend.instagram.user.new'),
+                        'icon' => 'icon-user-plus',
+                        'url' => Backend::url('hao/socialnetwork/instagramuser/new'),
+                        'permissions'   => ['hao.socialnetwork.access_instagram'],
+                        'group'         => 'hao.socialnetwork::lang.instagram.group',
                     ],
 
                     'meetics' => [
