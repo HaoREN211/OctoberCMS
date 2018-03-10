@@ -3,6 +3,54 @@
 # ===================================
 
 fields:
-    id:
-        label: ID
-        disabled: true
+    socialnetwork_field:
+        type: partial
+        path: socialnetwork_field
+
+    full_name:
+        type: partial
+        valueForm: full_name
+        commentAbove: 'hao.socialnetwork::lang.instagram.backend.full_name_description'
+        label: 	'hao.socialnetwork::lang.instagram.backend.full_name'
+        span: left
+        path: fullName
+
+    username:
+        type: partial
+        valueForm: username
+        commentAbove: 'hao.socialnetwork::lang.instagram.backend.username_description'
+        label: 	'hao.socialnetwork::lang.instagram.backend.username'
+        span: right
+        path: username
+
+    biography:
+        type: partial
+        valueForm: biography
+        commentAbove: 'hao.socialnetwork::lang.instagram.backend.biography_description'
+        label: 	'hao.socialnetwork::lang.instagram.backend.biography'
+        span: full
+        path: biography
+
+    followed_by:
+        type: text
+        valueForm: followed_by
+        commentAbove: 'hao.socialnetwork::lang.instagram.backend.followed_by_description'
+        label: 	'hao.socialnetwork::lang.instagram.backend.followed_by'
+        span: left
+
+    follows:
+        type: text
+        valueForm: follows
+        commentAbove: 'hao.socialnetwork::lang.instagram.backend.follows_description'
+        label: 	'hao.socialnetwork::lang.instagram.backend.follows'
+        span: right
+
+
+
+
+secondaryTabs:
+    fields:
+        profile_pic_url_hd:
+            type: partial
+            valueForm: profile_pic_url_hd
+            label: 	' '

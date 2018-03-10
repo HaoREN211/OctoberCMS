@@ -199,6 +199,14 @@ class Plugin extends PluginBase
                         'group'         => 'hao.socialnetwork::lang.instagram.group',
                     ],
 
+                    'instagram_user' =>[
+                        'label' => Lang::get('hao.socialnetwork::lang.backend.instagram.user.list'),
+                        'icon' => 'icon-user',
+                        'url' => Backend::url('hao/socialnetwork/instagramuser'),
+                        'permissions'   => ['hao.socialnetwork.access_instagram'],
+                        'group'         => 'hao.socialnetwork::lang.instagram.group',
+                    ],
+
                     'meetics' => [
                         'label' => Lang::get('hao.socialnetwork::lang.plugin.menus.meetics'),
                         'icon' => 'icon-maxcdn',

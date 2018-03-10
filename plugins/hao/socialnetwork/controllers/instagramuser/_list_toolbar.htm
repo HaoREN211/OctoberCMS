@@ -1,21 +1,52 @@
 <div data-control="toolbar">
-    <a
-        href="<?= Backend::url('hao/socialnetwork/instagramuser/create') ?>"
-        class="btn btn-primary oc-icon-plus">
-        New Instagram User
-    </a>
 
-    <button
-        class="btn btn-danger oc-icon-trash-o"
-        disabled="disabled"
-        onclick="$(this).data('request-data', { checked: $('.control-list').listWidget('getChecked') })"
-        data-request="onDelete"
-        data-request-confirm="Are you sure you want to delete the selected Instagram Users?"
-        data-trigger-action="enable"
-        data-trigger=".control-list input[type=checkbox]"
-        data-trigger-condition="checked"
-        data-request-success="$(this).prop('disabled', 'disabled')"
-        data-stripe-load-indicator>
-        Delete selected
-    </button>
+
+    <button class="oc-icon-facebook-official btn-icon pull-left"
+            type="button"
+            onclick="window.open('https://www.facebook.com/hao.ren.79656')"></button>
+
+    <button class="oc-icon-twitter-square btn-icon pull-left"
+            type="button"
+            onclick="window.open('https://twitter.com/Hao_Jules')"></button>
+
+    <button class="oc-icon-linkedin-square btn-icon pull-left"
+            type="button"
+            onclick="window.open('https://www.linkedin.com/in/hao-ren-19910211/')"></button>
+
+    <button class="oc-icon-instagram btn-icon pull-left"
+            type="button"
+            onclick="window.open('https://www.instagram.com/jules_hao/')"></button>
+
+    <button class="oc-icon-github btn-icon pull-left"
+            type="button"
+            onclick="window.open('https://github.com/HaoREN211/')"></button>
+
+    <button class="oc-icon-gitlab btn-icon pull-left"
+            type="button"
+            onclick="window.open('https://gitlab.com/HaoREN/')"></button>
+
+    <button class="oc-icon-qq btn-icon pull-left"
+            type="button"
+            onclick="window.open('https://user.qzone.qq.com/309785743/')"></button>
+
+    <button class="oc-icon-weixin btn-icon pull-left"
+            type="button"
+            onclick="alert('微信账号: Jules_Hao')")></button>
+
+    <button class="oc-icon-whatsapp btn-icon pull-left"
+            type="button"
+            onclick="alert('Whatsapp 电话: +330634296124')")></button>
+
+    <button class="oc-icon-skype btn-icon pull-left"
+            type="button"
+            onclick="alert('Skype 账号: q309785743')")></button>
+
+    <button class="oc-icon-slack btn-icon pull-left"
+            type="button"
+            onclick="alert('Slack 账号: q309785743')")></button>
+
+    <button class="oc-icon-steam-square btn-icon pull-left"
+            type="button"
+            onclick="alert('Steam 账号: renhaojules@163.com')")></button>
+
 </div>

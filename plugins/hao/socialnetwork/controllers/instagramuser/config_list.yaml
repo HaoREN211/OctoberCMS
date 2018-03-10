@@ -9,13 +9,13 @@ list: $/hao/socialnetwork/models/instagramuser/columns.yaml
 modelClass: Hao\Socialnetwork\Models\InstagramUser
 
 # List Title
-title: Manage Instagram Users
+title: 'hao.socialnetwork::lang.instagram.backend.list.title'
 
 # Link URL for each record
 recordUrl: hao/socialnetwork/instagramuser/update/:id
 
 # Message to display if the list is empty
-noRecordsMessage: backend::lang.list.no_records
+noRecordsMessage: 'hao.socialnetwork::lang.instagram.backend.list.no_records'
 
 # Records to display per page
 recordsPerPage: 20
@@ -24,7 +24,7 @@ recordsPerPage: 20
 showPageNumbers: true
 
 # Displays the list column set up button
-showSetup: true
+showSetup: false
 
 # Displays the sorting link on each column
 showSorting: true
@@ -35,7 +35,7 @@ showSorting: true
 #     direction: desc
 
 # Display checkboxes next to each record
-showCheckboxes: true
+showCheckboxes: false
 
 # Toolbar widget configuration
 toolbar:

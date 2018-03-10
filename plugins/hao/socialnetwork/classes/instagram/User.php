@@ -48,7 +48,6 @@ class User extends InstagramGenarate
                 $followed_by = HaoChaine::extractObjectAtrribut($followed_by, 'count');
                 $follows = HaoChaine::extractObjectAtrribut($follows, 'count');
 
-
                 HaoUser::create([
                     'biography' =>  HaoChaine::extractObjectAtrribut($user, 'biography'),
                     'blocked_by_viewer' =>  HaoChaine::extractObjectAtrribut($user, 'blocked_by_viewer'),

@@ -3,6 +3,24 @@
 # ===================================
 
 columns:
-    id:
-        label: ID
+    profile_pic_url:
+        label: ' '
+        searchable: false
+        sortable: false
+        width: 20%
+        type: partial
+        path: profilePicUrl
+
+    full_name:
+        label: 	'hao.socialnetwork::lang.instagram.backend.full_name'
         searchable: true
+        sortable:   true
+        width:  40%
+        type: text
+
+    username:
+        label: 	'hao.socialnetwork::lang.instagram.backend.username'
+        searchable: true
+        sortable:   true
+        width:  40%
+        type: text

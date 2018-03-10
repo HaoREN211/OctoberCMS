@@ -19,7 +19,36 @@ return [
 
     'instagram' =>[
         'group' =>  'Instagram',
+        'updatedSuccess'   =>  '更新成功',
+        'updatedError'      =>  '更新出错',
+        'backend'   =>  [
+            'list'  =>  [
+                'title' =>  '管理 Instagram 账号',
+                'no_records'    =>  '没有 Instagram 账号',
+            ],
+
+            'form'  =>  [
+                'title' =>  '编辑用户',
+                'create'    =>  '新建用户',
+                'update'    =>  '编辑用户',
+                'preview'   =>  '预览用户',
+                'confirming'    =>  '返回中',
+            ],
+
+            'full_name' =>  '用户名',
+            'full_name_description' =>  '用户显示名字',
+            'username'  =>  '注册名',
+            'username_description'  => '用户注册名',
+            'followed_by'   =>  '关注我的人',
+            'followed_by_description'   =>  '关注我的账号人数',
+            'follows'   =>  '我关注的人',
+            'follows_description'   =>  '我关注的账号人数',
+
+            'biography' =>  '用户自我介绍',
+            'biography_description' => '用户自我介绍',
+        ],
     ],
+
 
     'twitter' => [
         "name"              => "Twitter",
@@ -158,6 +187,7 @@ return [
         'instagram' =>[
             'user'  =>[
                 'new'   => "新建 Instagram 用户",
+                'list'  =>  'Instagram 用户资料',
             ],
         ],
 

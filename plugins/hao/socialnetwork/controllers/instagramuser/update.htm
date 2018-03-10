@@ -7,46 +7,85 @@
 
 <?php if (!$this->fatalError): ?>
 
-    <?= Form::open(['class' => 'layout']) ?>
+    <!-- Sidebar (secondary tabs fields) -->
+    <?php Block::put('form-sidebar') ?>
+        <div class="hide-tabs"><?= $this->formRender(['preview' => false, 'section' => 'secondary']) ?></div>
+    <?php Block::endPut() ?>
 
-        <div class="layout-row">
-            <?= $this->formRender() ?>
+<?php Block::put('form-contents') ?>
+<div class="layout">
+    <form>
+        <input
+            type="text"
+            hidden="hidden"
+            value="<?= $formModel->username ?>"
+            id="username"
+            name="username">
+    </form>
+
+    <!-- Outside fields -->
+    <div class="layout-row min-size">
+        <?= $this->formRender(['preview' => true, 'section' => 'outside']) ?>
+    </div>
+
+    <!-- Primary tabs fields -->
+    <div class="layout-row">
+        <?= $this->formRender(['preview' => false, 'section' => 'primary']) ?>
+    </div>
+
+    <div class="form-buttons">
+        <div class="loading-indicator-container">
+            <button
+                type="button"
+                data-request="onQuite"
+                data-request-data="close:1"
+                data-load-indicator="<?= e(trans('hao.socialnetwork::lang.instagram.backend.form.confirming')) ?>"
+                class="btn btn-primary">
+                <?= e(trans('hao.socialnetwork::lang.form.twitter.user.confirm')) ?>
+            </button>
+
+
+            <button
+                type="button"
+                data-request="onGetFollower"
+                data-load-indicator="<?= e(trans('hao.socialnetwork::lang.form.twitter.user.confirming')) ?>"
+                class="btn btn-success">
+                <?= e(trans('hao.socialnetwork::lang.form.twitter.user.getFollower')) ?>
+            </button>
+
+            <button
+                type="button"
+                data-request="onGetFriend"
+                data-load-indicator="<?= e(trans('hao.socialnetwork::lang.form.twitter.user.confirming')) ?>"
+                class="btn btn-warning">
+                <?= e(trans('hao.socialnetwork::lang.form.twitter.user.getFriend')) ?>
+            </button>
+
+            <button
+                type="button"
+                data-request="onGetTweet"
+                data-load-indicator="<?= e(trans('hao.socialnetwork::lang.form.twitter.user.confirming')) ?>"
+                class="btn btn-info">
+                <?= e(trans('hao.socialnetwork::lang.form.twitter.user.getTweet')) ?>
+            </button>
+
+            <button
+                type="button"
+                data-request="onReturn"
+                class="btn btn-danger">
+                <?= e(trans('hao.socialnetwork::lang.backend.button.cancel')) ?>
+            </button>
+
         </div>
+    </div>
+</div>
+<?php Block::endPut() ?>
 
-        <div class="form-buttons">
-            <div class="loading-indicator-container">
-                <button
-                    type="submit"
-                    data-request="onSave"
-                    data-request-data="redirect:0"
-                    data-hotkey="ctrl+s, cmd+s"
-                    data-load-indicator="Saving InstagramUser..."
-                    class="btn btn-primary">
-                    <u>S</u>ave
-                </button>
-                <button
-                    type="button"
-                    data-request="onSave"
-                    data-request-data="close:1"
-                    data-hotkey="ctrl+enter, cmd+enter"
-                    data-load-indicator="Saving InstagramUser..."
-                    class="btn btn-default">
-                    Save and Close
-                </button>
-                <button
-                    type="button"
-                    class="oc-icon-trash-o btn-icon danger pull-right"
-                    data-request="onDelete"
-                    data-load-indicator="Deleting InstagramUser..."
-                    data-request-confirm="Delete this instagramuser?">
-                </button>
-                <span class="btn-text">
-                    or <a href="<?= Backend::url('hao/socialnetwork/instagramuser') ?>">Cancel</a>
-                </span>
-            </div>
-        </div>
-
-    <?= Form::close() ?>
+<!-- Sidebar body -->
+<?php Block::put('body') ?>
+<?= Form::open(['class'=>'layout stretch']) ?>
+<?= $this->makeLayout('form-with-sidebar') ?>
+<?= Form::close() ?>
 
 <?php else: ?>
 

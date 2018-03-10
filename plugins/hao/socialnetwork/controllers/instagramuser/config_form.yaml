@@ -3,7 +3,7 @@
 # ===================================
 
 # Record name
-name: Instagram User
+name: 'hao.socialnetwork::lang.instagram.backend.form.title'
 
 # Model Form Field configuration
 form: $/hao/socialnetwork/models/instagramuser/fields.yaml
@@ -16,16 +16,16 @@ defaultRedirect: hao/socialnetwork/instagramuser
 
 # Create page
 create:
-    title: Create Instagram User
+    title: 'hao.socialnetwork::lang.instagram.backend.form.create'
     redirect: hao/socialnetwork/instagramuser/update/:id
     redirectClose: hao/socialnetwork/instagramuser
 
 # Update page
 update:
-    title: Edit Instagram User
+    title: 'hao.socialnetwork::lang.instagram.backend.form.update'
     redirect: hao/socialnetwork/instagramuser
     redirectClose: hao/socialnetwork/instagramuser
 
 # Preview page
 preview:
-    title: Preview Instagram User
+    title: 'hao.socialnetwork::lang.instagram.backend.form.preview'
