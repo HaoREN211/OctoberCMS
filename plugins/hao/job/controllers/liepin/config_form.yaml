@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Liepin
+
+# Model Form Field configuration
+form: $/hao/job/models/liepin/fields.yaml
+
+# Model Class name
+modelClass: Hao\Job\Models\Liepin
+
+# Default redirect location
+defaultRedirect: hao/job/liepin
+
+# Create page
+create:
+    title: Create Liepin
+    redirect: hao/job/liepin/update/:id
+    redirectClose: hao/job/liepin
+
+# Update page
+update:
+    title: Edit Liepin
+    redirect: hao/job/liepin
+    redirectClose: hao/job/liepin
+
+# Preview page
+preview:
+    title: Preview Liepin

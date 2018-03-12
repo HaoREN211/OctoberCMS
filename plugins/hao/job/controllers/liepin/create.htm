@@ -1,0 +1,122 @@
+<?php Block::put('breadcrumb') ?>
+    <ul>
+        <li><a href="<?= Backend::url('hao/job/liepin') ?>">
+            <?= e(trans('hao.job::lang.liepin.menu.create')) ?>
+        </a></li>
+        <li><?= e($this->pageTitle) ?></li>
+    </ul>
+<?php Block::endPut() ?>
+
+<?php if (!$this->fatalError): ?>
+
+    <?= Form::open(['class' => 'layout']) ?>
+
+        <div class="layout-row">
+            <form method="POST" accept-charset="UTF-8" class="layout">
+                <div style="position: relative; top: 40%; margin-top: 10%">
+                    <table align="center">
+                        <tr>
+                            <td colspan="2">
+                                <button class="oc-icon-facebook-official btn-icon pull-left"
+                                        type="button"
+                                        onclick="window.open('https://www.facebook.com/hao.ren.79656')"></button>
+
+                                <button class="oc-icon-twitter-square btn-icon pull-left"
+                                        type="button"
+                                        onclick="window.open('https://twitter.com/Hao_Jules')"></button>
+
+                                <button class="oc-icon-linkedin-square btn-icon pull-left"
+                                        type="button"
+                                        onclick="window.open('https://www.linkedin.com/in/hao-ren-19910211/')"></button>
+
+                                <button class="oc-icon-instagram btn-icon pull-left"
+                                        type="button"
+                                        onclick="window.open('https://www.instagram.com/jules_hao/')"></button>
+
+                                <button class="oc-icon-github btn-icon pull-left"
+                                        type="button"
+                                        onclick="window.open('https://github.com/HaoREN211/')"></button>
+
+                                <button class="oc-icon-gitlab btn-icon pull-left"
+                                        type="button"
+                                        onclick="window.open('https://gitlab.com/HaoREN/')"></button>
+
+                                <button class="oc-icon-qq btn-icon pull-left"
+                                        type="button"
+                                        onclick="window.open('https://user.qzone.qq.com/309785743/')"></button>
+
+                                <button class="oc-icon-weixin btn-icon pull-left"
+                                        type="button"
+                                        onclick="alert('微信账号: Jules_Hao')")></button>
+
+                                <button class="oc-icon-whatsapp btn-icon pull-left"
+                                        type="button"
+                                        onclick="alert('Whatsapp 电话: +330634296124')")></button>
+
+                                <button class="oc-icon-skype btn-icon pull-left"
+                                        type="button"
+                                        onclick="alert('Skype 账号: q309785743')")></button>
+
+                                <button class="oc-icon-slack btn-icon pull-left"
+                                        type="button"
+                                        onclick="alert('Slack 账号: q309785743')")></button>
+
+                                <button class="oc-icon-steam-square btn-icon pull-left"
+                                        type="button"
+                                        onclick="alert('Steam 账号: renhaojules@163.com')")></button>
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="20%">
+                                <font size="4" color="black">
+                                    <?= e(trans('hao.job::lang.backend.job.new')) ?>
+                                </font>
+                            </td>
+                            <td>
+                                &nbsp;
+                                <input type="text"
+                                       id="userUrl"
+                                       name="userUrl"
+                                       width="80%"
+                                       class="form-control"
+                                       maxlength="100"
+                                       autocomplete="off">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <button
+                                    type="button"
+                                    class="btn btn-primary oc-icon-user-plus"
+                                    data-load-indicator="<?= e(trans('hao.job::lang.form.offer.creating')) ?>"
+                                    data-request="onSaveOffer">
+                                    <?= e(trans('hao.socialnetwork::lang.backend.button.save')) ?>
+                                </button>
+                                &nbsp;&nbsp;
+                                <button type="button"
+                                        class="btn btn-danger oc-icon-trash"
+                                        data-request="onReturnMainPage">
+                                    <?= e(trans('hao.socialnetwork::lang.backend.button.cancel')) ?>
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </form>
+        </div>
+
+    <?= Form::close() ?>
+
+<?php else: ?>
+
+    <p class="flash-message static error"><?= e($this->fatalError) ?></p>
+    <p><a href="<?= Backend::url('hao/job/liepin') ?>" class="btn btn-default">Return to liepin list</a></p>
+
+<?php endif ?>
