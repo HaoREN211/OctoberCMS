@@ -101,6 +101,7 @@ return [
       'menus' => [
           'meetics' => 'Meetic',
           "group" => "teste",
+          'videos' =>  'Videos',
       ],
         'meetics'=>[
             'update'    => '编辑Meetic会员',
@@ -109,6 +110,19 @@ return [
     ],
 
     'backend' => [
+        'video' => [
+            'url'   =>  '视频地址',
+            'url_comment'   => '完整的视频地址',
+            'type'          =>  '视频种类',
+            'type_comment'  =>  '视频种类',
+            'name_comment'  =>  '视频名字',
+            'name'  =>  '视频名字',
+            'is_watched'    =>  '观看',
+            'is_watched_comment'    =>  '是否观看过该视频',
+            'is_liked'      =>  '喜欢',
+            'is_liked_comment'      =>  '是否喜欢该视频',
+        ],
+
         "button"   =>  [
                 "save"  =>  "保存",
                 "saving"    =>  "保存中。。。",

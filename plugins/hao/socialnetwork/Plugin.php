@@ -135,7 +135,12 @@ class Plugin extends PluginBase
             'access_instagram'  =>[
                 'tab' => 'hao.socialnetwork::lang.instagram.group',
                 'label' => 'hao.socialnetwork::lang.permissions.instagram.access_instagram',
-            ]
+            ],
+
+            'access_videos'  =>[
+                'tab' => 'hao.socialnetwork::lang.plugin.menus.videos',
+                'label' => 'hao.socialnetwork::lang.plugin.menus.videos',
+            ],
         ];
     }
 
@@ -147,7 +152,7 @@ class Plugin extends PluginBase
     public function registerNavigation()
     {
         $user = BackendAuth::getUser();
-        $twitterId = $user->twitter->id;
+        $twitterId = '743220584427978752';
 
         return [
             'socialnetwork' => [
@@ -215,6 +220,13 @@ class Plugin extends PluginBase
                         'group' => 'hao.socialnetwork::lang.plugin.menus.group',
                     ],
 
+                    'videos' => [
+                        'label' => Lang::get('hao.socialnetwork::lang.plugin.menus.videos'),
+                        'icon' => 'icon-maxcdn',
+                        'url' => Backend::url('hao/socialnetwork/videos'),
+                        'permissions' => ['hao.socialnetwork.access_videos'],
+                        'group' => 'hao.socialnetwork::lang.plugin.menus.videos',
+                    ],
 
                 ]
             ],

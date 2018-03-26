@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Video
+
+# Model Form Field configuration
+form: $/hao/socialnetwork/models/video/fields.yaml
+
+# Model Class name
+modelClass: Hao\Socialnetwork\Models\Video
+
+# Default redirect location
+defaultRedirect: hao/socialnetwork/videos
+
+# Create page
+create:
+    title: Create Video
+    redirect: hao/socialnetwork/videos/update/:id
+    redirectClose: hao/socialnetwork/videos
+
+# Update page
+update:
+    title: Edit Video
+    redirect: hao/socialnetwork/videos
+    redirectClose: hao/socialnetwork/videos
+
+# Preview page
+preview:
+    title: Preview Video
