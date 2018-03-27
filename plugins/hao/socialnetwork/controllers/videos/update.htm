@@ -20,29 +20,27 @@
                     data-request="onSave"
                     data-request-data="redirect:0"
                     data-hotkey="ctrl+s, cmd+s"
-                    data-load-indicator="Saving Video..."
+                    data-load-indicator="<?= e(trans('hao.socialnetwork::lang.form.video.saving')) ?>"
                     class="btn btn-primary">
-                    <u>S</u>ave
+                    <?= e(trans('hao.socialnetwork::lang.form.video.save')) ?>
                 </button>
                 <button
                     type="button"
                     data-request="onSave"
                     data-request-data="close:1"
                     data-hotkey="ctrl+enter, cmd+enter"
-                    data-load-indicator="Saving Video..."
+                    data-load-indicator="<?= e(trans('hao.socialnetwork::lang.form.video.saving')) ?>"
                     class="btn btn-default">
-                    Save and Close
+                    <?= e(trans('hao.socialnetwork::lang.form.video.save_quite')) ?>
                 </button>
+
                 <button
                     type="button"
-                    class="oc-icon-trash-o btn-icon danger pull-right"
-                    data-request="onDelete"
-                    data-load-indicator="Deleting Video..."
-                    data-request-confirm="Delete this video?">
+                    data-request="onQuite"
+                    data-load-indicator="<?= e(trans('hao.socialnetwork::lang.form.video.canceling')) ?>"
+                    class="btn btn-danger">
+                    <?= e(trans('hao.socialnetwork::lang.form.video.cancel')) ?>
                 </button>
-                <span class="btn-text">
-                    or <a href="<?= Backend::url('hao/socialnetwork/videos') ?>">Cancel</a>
-                </span>
             </div>
         </div>
 

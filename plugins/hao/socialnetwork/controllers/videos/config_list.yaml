@@ -9,13 +9,13 @@ list: $/hao/socialnetwork/models/video/columns.yaml
 modelClass: Hao\Socialnetwork\Models\Video
 
 # List Title
-title: Manage Videos
+title: 'hao.socialnetwork::lang.form.video.manage'
 
 # Link URL for each record
 recordUrl: hao/socialnetwork/videos/update/:id
 
 # Message to display if the list is empty
-noRecordsMessage: backend::lang.list.no_records
+noRecordsMessage: 'hao.socialnetwork::lang.form.video.no_record'
 
 # Records to display per page
 recordsPerPage: 20
@@ -24,7 +24,7 @@ recordsPerPage: 20
 showPageNumbers: true
 
 # Displays the list column set up button
-showSetup: true
+showSetup: false
 
 # Displays the sorting link on each column
 showSorting: true
@@ -35,7 +35,7 @@ showSorting: true
 #     direction: desc
 
 # Display checkboxes next to each record
-showCheckboxes: true
+showCheckboxes: false
 
 # Toolbar widget configuration
 toolbar:

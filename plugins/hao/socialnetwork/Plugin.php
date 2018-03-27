@@ -222,7 +222,7 @@ class Plugin extends PluginBase
 
                     'videos' => [
                         'label' => Lang::get('hao.socialnetwork::lang.plugin.menus.videos'),
-                        'icon' => 'icon-maxcdn',
+                        'icon' => 'icon-video-camera',
                         'url' => Backend::url('hao/socialnetwork/videos'),
                         'permissions' => ['hao.socialnetwork.access_videos'],
                         'group' => 'hao.socialnetwork::lang.plugin.menus.videos',

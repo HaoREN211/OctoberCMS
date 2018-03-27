@@ -3,6 +3,28 @@
 # ===================================
 
 columns:
-    id:
-        label: ID
+    video_type[name]:
+        label: hao.socialnetwork::lang.backend.video.type
+        searchable: false
+        width: 10%
+        sortable: true
+
+    name:
+        label: hao.socialnetwork::lang.backend.video.name
         searchable: true
+        width: 80%
+        sortable: true
+
+    is_watched:
+        type: switch
+        label: hao.socialnetwork::lang.backend.video.is_watched
+        searchable: false
+        width: 5%
+        sortable: true
+
+    is_liked:
+        type: switch
+        label: hao.socialnetwork::lang.backend.video.is_liked
+        searchable: false
+        width: 5%
+        sortable: true

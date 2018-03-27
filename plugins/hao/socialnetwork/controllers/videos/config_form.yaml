@@ -3,7 +3,7 @@
 # ===================================
 
 # Record name
-name: Video
+name: 'hao.socialnetwork::lang.form.video.name'
 
 # Model Form Field configuration
 form: $/hao/socialnetwork/models/video/fields.yaml
@@ -16,16 +16,16 @@ defaultRedirect: hao/socialnetwork/videos
 
 # Create page
 create:
-    title: Create Video
+    title: 'hao.socialnetwork::lang.form.video.create'
     redirect: hao/socialnetwork/videos/update/:id
     redirectClose: hao/socialnetwork/videos
 
 # Update page
 update:
-    title: Edit Video
+    title: 'hao.socialnetwork::lang.form.video.manage'
     redirect: hao/socialnetwork/videos
     redirectClose: hao/socialnetwork/videos
 
 # Preview page
 preview:
-    title: Preview Video
+    title: 'hao.socialnetwork::lang.form.video.preview'

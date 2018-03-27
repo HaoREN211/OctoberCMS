@@ -72,6 +72,21 @@ return [
     ],
 
     'form' =>[
+        'video' =>  [
+            'create'    =>  '新建视频',
+            'manage'    =>  '编辑视频',
+            'no_record' =>  '木有视频',
+            'name'      =>  '视频',
+            'preview'   =>  '预览视频',
+            'create_quite'  =>  '保存并退出',
+            'cancel'    =>  '取消',
+            'canceling' =>  '取消中',
+            'creating'  =>  '新建中',
+            'save'      =>  '保存',
+            'saving'    =>  '保存中',
+            'save_quite'    =>  '保存并退出',
+        ],
+
       'save' => '保存',
         "twitter"   =>  [
             "user"  =>  [

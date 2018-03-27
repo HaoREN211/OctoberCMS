@@ -17,24 +17,21 @@
             <div class="loading-indicator-container">
                 <button
                     type="submit"
-                    data-request="onSave"
+                    data-request="onCreate"
                     data-hotkey="ctrl+s, cmd+s"
-                    data-load-indicator="Creating Video..."
+                    data-load-indicator="<?= e(trans('hao.socialnetwork::lang.form.video.creating')) ?>"
                     class="btn btn-primary">
-                    Create
+                    <?= e(trans('hao.socialnetwork::lang.form.video.create')) ?>
                 </button>
+
                 <button
                     type="button"
-                    data-request="onSave"
-                    data-request-data="close:1"
-                    data-hotkey="ctrl+enter, cmd+enter"
-                    data-load-indicator="Creating Video..."
-                    class="btn btn-default">
-                    Create and Close
+                    data-request="onQuite"
+                    data-load-indicator="<?= e(trans('hao.socialnetwork::lang.form.video.canceling')) ?>"
+                    class="btn btn-danger">
+                    <?= e(trans('hao.socialnetwork::lang.form.video.cancel')) ?>
                 </button>
-                <span class="btn-text">
-                    or <a href="<?= Backend::url('hao/socialnetwork/videos') ?>">Cancel</a>
-                </span>
+
             </div>
         </div>
 
