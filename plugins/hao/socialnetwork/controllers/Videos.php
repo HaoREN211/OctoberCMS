@@ -50,4 +50,14 @@ class Videos extends Controller
         $video->saveVideo();
         return $video->redirectVideo();
     }
+
+
+    /**
+     * @param null $id
+     * @return null
+     */
+    public function onSynchronize($id=null){
+        $video = new HaoVideo();
+        return $video->synchronize($id);
+    }
 }

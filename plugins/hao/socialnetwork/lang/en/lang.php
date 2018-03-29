@@ -85,6 +85,8 @@ return [
             'save'      =>  '保存',
             'saving'    =>  '保存中',
             'save_quite'    =>  '保存并退出',
+            'synchronize'   =>  '更新',
+            'synchronizing' =>  '更新中',
         ],
 
       'save' => '保存',

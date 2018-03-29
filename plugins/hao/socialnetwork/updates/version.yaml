@@ -58,3 +58,7 @@
     - Add video
     - create_videos_table.php
     - init_video_types.php
+
+1.1.4:
+    - Add page source of video
+    - videos_add_url_table.php

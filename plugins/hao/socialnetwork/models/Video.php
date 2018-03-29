@@ -24,6 +24,7 @@ class Video extends Model
         'type',
         'name',
         'is_liked',
+        'source',
         'is_watched'];
 
     /**

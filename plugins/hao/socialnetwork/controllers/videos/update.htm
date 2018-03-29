@@ -30,8 +30,16 @@
                     data-request-data="close:1"
                     data-hotkey="ctrl+enter, cmd+enter"
                     data-load-indicator="<?= e(trans('hao.socialnetwork::lang.form.video.saving')) ?>"
-                    class="btn btn-default">
+                    class="btn btn-warning">
                     <?= e(trans('hao.socialnetwork::lang.form.video.save_quite')) ?>
+                </button>
+
+                <button
+                    type="button"
+                    data-request="onSynchronize"
+                    data-load-indicator="<?= e(trans('hao.socialnetwork::lang.form.video.synchronizing')) ?>"
+                    class="btn btn-success">
+                    <?= e(trans('hao.socialnetwork::lang.form.video.synchronize')) ?>
                 </button>
 
                 <button

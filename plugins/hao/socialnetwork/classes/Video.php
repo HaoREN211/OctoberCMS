@@ -77,6 +77,7 @@ class Video
                     'url' =>    $this->videoUrl,
                     'type' =>   $this->videoType,
                     'name'  =>  $this->name,
+                    'source' => $this->url,
                     'is_liked'  =>  false,
                     'is_watched'    => false,
                 ]);
@@ -99,5 +100,39 @@ class Video
         }
         else
             return null;
+    }
+
+
+    /**
+     *
+     * @param $id
+     * @return null
+     */
+    public function synchronize($id){
+        $this->setId($id);
+        $this->getSource();
+        $this->getVideoUrlXvideo();
+        $video = HaoVideo::find($id);
+        $video->url = $this->videoUrl;
+        $video->save();
+        return $this->redirectVideo();
+    }
+
+    /**
+     * @param $id
+     */
+    private function setId($id){
+        $this->id = $id;
+    }
+
+
+    /**
+     * get source of page
+     */
+    private function getSource(){
+        if($this->id != null && strlen($this->id)>0){
+            $video = HaoVideo::find($this->id);
+            $this->url = $video->source;
+        }
     }
 }
