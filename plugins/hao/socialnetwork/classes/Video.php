@@ -72,7 +72,6 @@ class Video
     public function saveVideo(){
         if($this->videoUrl != null && strlen( $this->videoUrl)>0){
             $count = (int)HaoVideo::where('name', $this->name)->count();
-            traceLog($count);
             if($count == (int)0){
                 $video = HaoVideo::create([
                     'url' =>    $this->videoUrl,
