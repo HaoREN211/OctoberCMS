@@ -59,7 +59,7 @@ class Video
         $header = array();
         $reponse = HaoHttp::httpGetResultat($this->url, $header);
         $videoUrl = new HaoRegPre($reponse);
-        $url = $videoUrl->getInformation('/setVideoUrlHigh\(\'([^)]+)\'\)/');
+        $url = $videoUrl->getInformation('/setVideoHLS\(\'([^)]+)\'\)/');
         $title = $videoUrl->getInformation('/<title>(.*)<\/title>/');
         $this->videoUrl = $url;
         $this->name = $title;
