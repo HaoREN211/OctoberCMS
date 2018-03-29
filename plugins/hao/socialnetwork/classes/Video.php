@@ -10,6 +10,7 @@ namespace Hao\Socialnetwork\Classes;
 use Hao\Socialnetwork\Models\Video as HaoVideo;
 use Hao\Socialnetwork\Classes\HttpRequest as HaoHttp;
 use Hao\Job\Classes\Regularexpression as HaoRegPre;
+use Backend;
 
 /**
  * Class Video
@@ -20,9 +21,7 @@ class Video
     private $url =   null;
     private $videoType = null;
     private $name = null;
-    private $is_watched = null;
-    private $is_liked = null;
-
+    private $id = null;
 
     /**
      * URL who saves the video.
@@ -34,21 +33,12 @@ class Video
      * Video constructor.
      * @param null $url
      * @param null $videoType
-     * @param null $name
-     * @param null $is_watched
-     * @param null $is_liked
      */
     public function __construct($url =null,
-                                $videoType=null,
-                                $name = null,
-                                $is_watched = null,
-                                $is_liked=null)
+                                $videoType=null)
     {
         $this->url = $url;
         $this->videoType = $videoType;
-        $this->name = $name;
-        $this->is_watched = $is_watched;
-        $this->is_liked = $is_liked;
     }
 
 
@@ -70,6 +60,45 @@ class Video
         $reponse = HaoHttp::httpGetResultat($this->url, $header);
         $videoUrl = new HaoRegPre($reponse);
         $url = $videoUrl->getInformation('/setVideoUrlHigh\(\'([^)]+)\'\)/');
+        $title = $videoUrl->getInformation('/<title>(.*)<\/title>/');
         $this->videoUrl = $url;
+        $this->name = $title;
+    }
+
+
+    /**
+     *
+     */
+    public function saveVideo(){
+        if($this->videoUrl != null && strlen( $this->videoUrl)>0){
+            $count = (int)HaoVideo::where('name', $this->name)->count();
+            traceLog($count);
+            if($count == (int)0){
+                $video = HaoVideo::create([
+                    'url' =>    $this->videoUrl,
+                    'type' =>   $this->videoType,
+                    'name'  =>  $this->name,
+                    'is_liked'  =>  false,
+                    'is_watched'    => false,
+                ]);
+                $this->id = $video->id;
+            }
+            else{
+                $video = HaoVideo::where('name', $this->name)->first();
+                $this->id = $video->id;
+            }
+        }
+    }
+
+
+    /**
+     * @return null
+     */
+    public function redirectVideo(){
+        if($this->id != null){
+            return Backend::redirect('hao/socialnetwork/videos/update/'.$this->id);
+        }
+        else
+            return null;
     }
 }

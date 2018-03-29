@@ -39,15 +39,15 @@ class Videos extends Controller
     }
 
 
-
+    /**
+     * @return null
+     */
     public function onCreate(){
         $datas = post();
         $video = new HaoVideo($datas['Video']['url'],
-            $datas['Video']['video_type'],
-            $datas['Video']['name'],
-            $datas['Video']['is_watched'],
-            $datas['Video']['is_liked']);
+            $datas['Video']['video_type']);
         $video->getVideoUrl();
-//        traceLog($video);
+        $video->saveVideo();
+        return $video->redirectVideo();
     }
 }

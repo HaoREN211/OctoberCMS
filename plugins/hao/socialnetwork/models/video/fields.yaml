@@ -22,20 +22,15 @@ fields:
         required: true
         nameFrom: name
 
-    name@create:
-        type: text
-        label: 'hao.socialnetwork::lang.backend.video.name'
-        commentAbove: 'hao.socialnetwork::lang.backend.video.name_comment'
-        span: right
-        required: true
 
-    is_watched:
+
+    is_watched@update:
         type: switch
         label: 'hao.socialnetwork::lang.backend.video.is_watched'
         commentAbove: 'hao.socialnetwork::lang.backend.video.is_watched_comment'
         span: left
 
-    is_liked:
+    is_liked@update:
         type: switch
         label: 'hao.socialnetwork::lang.backend.video.is_liked'
         commentAbove: 'hao.socialnetwork::lang.backend.video.is_liked_comment'
