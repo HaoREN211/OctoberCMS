@@ -108,6 +108,7 @@ class Photo
             $uuid = uniqid();
             $url_complet = Backend::url($uuid);
             $url_complet = str_replace('backend/'.$uuid, '', $url_complet);
+            $url_complet = str_replace('index.php/', '', $url_complet);
             $url_complet = $url_complet.(string)'storage/app/media/photo/'
                 .(string)$this->UUID
                 .(string)'.'
