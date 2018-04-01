@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: 'hao.photo::lang.plugin.name'
+
+# Model Form Field configuration
+form: $/hao/photo/models/photo/fields.yaml
+
+# Model Class name
+modelClass: Hao\Photo\Models\Photo
+
+# Default redirect location
+defaultRedirect: hao/photo/photo
+
+# Create page
+create:
+    title: 'hao.photo::lang.form.photo.create'
+    redirect: hao/photo/photo/update/:id
+    redirectClose: hao/photo/photo
+
+# Update page
+update:
+    title: 'hao.photo::lang.form.photo.update'
+    redirect: hao/photo/photo
+    redirectClose: hao/photo/photo
+
+# Preview page
+preview:
+    title: 'hao.photo::lang.form.photo.preview'

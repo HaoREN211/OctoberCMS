@@ -1,0 +1,28 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    url@create:
+        type: text
+        label: 'hao.photo::lang.backend.photo.url'
+        span: full
+        commentAbove: 'hao.photo::lang.backend.photo.url_comment'
+        required: true
+
+    path@update:
+        type: partial
+        path: photopath
+
+
+secondaryTabs:
+    fields:
+        is_watched@update:
+            type: switch
+            span: full
+            label: 'hao.photo::lang.backend.photo.is_watched'
+
+        is_liked@update:
+            type: switch
+            span: full
+            label: 'hao.photo::lang.backend.photo.is_liked'

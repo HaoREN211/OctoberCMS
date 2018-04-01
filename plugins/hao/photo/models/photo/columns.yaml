@@ -1,0 +1,38 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: false
+
+    UUID:
+        label: UUID
+        type: text
+        searchable: false
+        sortable: false
+
+    is_watched:
+        type: switch
+        label: 'hao.photo::lang.backend.photo.is_watched'
+        sortable: true
+        searchable: true
+
+    is_liked:
+        type: switch
+        label: 'hao.photo::lang.backend.photo.is_liked'
+        sortable: true
+        searchable: true
+
+    created_at:
+        type: datetime
+        label: 'hao.photo::lang.backend.photo.create_at'
+        sortable: true
+        searchable: true
+
+    updated_at:
+        type: datetime
+        label: 'hao.photo::lang.backend.photo.updated_at'
+        sortable: true
+        searchable: true

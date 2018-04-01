@@ -1,0 +1,56 @@
+<?php Block::put('breadcrumb') ?>
+    <ul>
+        <li><a href="<?= Backend::url('hao/photo/photo') ?>">
+            <?= e(trans('hao.photo::lang.plugin.name')) ?>
+        </a></li>
+        <li><?= e($this->pageTitle) ?></li>
+    </ul>
+<?php Block::endPut() ?>
+
+<?php if (!$this->fatalError): ?>
+
+    <?= Form::open(['class' => 'layout']) ?>
+
+        <div class="layout-row">
+            <?= $this->formRender() ?>
+        </div>
+
+        <div class="form-buttons">
+            <div class="loading-indicator-container">
+                <button
+                    type="submit"
+                    data-request="onCreate"
+                    data-hotkey="ctrl+s, cmd+s"
+                    data-load-indicator="<?= e(trans('hao.photo::lang.form.photo.creating')) ?>"
+                    class="btn btn-primary">
+                    <?= e(trans('hao.photo::lang.form.photo.create')) ?>
+                </button>
+
+                <button
+                    type="button"
+                    data-request="onCreate"
+                    data-request-data="close:1"
+                    data-hotkey="ctrl+enter, cmd+enter"
+                    data-load-indicator="<?= e(trans('hao.photo::lang.form.photo.creating')) ?>"
+                    class="btn btn-success">
+                    <?= e(trans('hao.photo::lang.form.photo.create_quite')) ?>
+                </button>
+
+                <button
+                    type="button"
+                    data-request="onCancel"
+                    data-load-indicator="<?= e(trans('hao.photo::lang.form.canceling')) ?>"
+                    class="btn btn-danger">
+                    <?= e(trans('hao.photo::lang.form.cancel')) ?>
+                </button>
+            </div>
+        </div>
+
+    <?= Form::close() ?>
+
+<?php else: ?>
+
+    <p class="flash-message static error"><?= e($this->fatalError) ?></p>
+    <p><a href="<?= Backend::url('hao/photo/photo') ?>" class="btn btn-default">Return to photo list</a></p>
+
+<?php endif ?>
