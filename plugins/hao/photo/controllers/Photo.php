@@ -52,4 +52,14 @@ class Photo extends Controller
             }
         }
     }
+
+
+    /**
+     * Change a photo
+     * @return mixed
+     */
+    public function onChange(){
+        $photo = new HaoPhoto('no url');
+        return $photo->getRandomPhoto();
+    }
 }

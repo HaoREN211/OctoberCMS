@@ -132,6 +132,14 @@ class Photo
 
 
     /**
+     * Set Id property
+     * @param $id
+     */
+    public function setId($id){
+        $this->id = $id;
+    }
+
+    /**
      * verify if the url is not saved in the BDD
      * @return bool
      */
@@ -194,5 +202,58 @@ class Photo
             return Backend::redirect('hao/photo/photo/update/'.$photo->id);
 
         return null;
+    }
+
+
+    /**
+     * @return mixed
+     */
+    public function getRandomPhoto(){
+        $id = $this->getPhotoRandomExistId();
+        return Backend::redirect('hao/photo/photo/update/'.$id);
+    }
+
+
+    /**
+     * 返回最大ID值
+     * @return mixed
+     */
+    private function getPhotoMaxId(){
+        return (int)HaoPhoto::all()->max('id');
+    }
+
+
+    /**
+     * @param int $id_min
+     * @param int $id_max
+     * @return int
+     */
+    private function getPhotoRandomId(int $id_min, int $id_max){
+        return (int)rand($id_min, $id_max);
+    }
+
+
+    /**
+     * @return int
+     */
+    private function getPhotoRandomExistId(){
+        $find_exist = (boolean)false;
+        $max_id = (int)$this->getPhotoMaxId();
+        while (!$find_exist){
+            $id = $this->getPhotoRandomId(0, (int)$max_id);
+            $count = (int)HaoPhoto::where('id', $id)->count();
+            if($count > (int)0){
+                return $id;
+            }
+        }
+    }
+
+
+    /**
+     * @return mixed
+     */
+    public function getUrl(){
+        $photo = HaoPhoto::find($this->id);
+        return $photo->path;
     }
 }
