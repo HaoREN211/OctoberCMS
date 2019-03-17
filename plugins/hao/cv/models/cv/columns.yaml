@@ -1,0 +1,23 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    name:
+        label: hao.cv::lang.models.cv.name
+        searchable: true
+        invisible: false
+        sortable: true
+        width: 60%
+    created_at:
+        label: hao.cv::lang.models.cv.created_at
+        searchable: false
+        invisible: false
+        sortable: true
+        width: 20%
+    updated_at:
+        label: hao.cv::lang.models.cv.updated_at
+        searchable: false
+        invisible: false
+        sortable: true
+        width: 20%

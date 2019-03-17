@@ -1,0 +1,33 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+formation:
+  label: hao.cv::lang.models.formation.name
+  emptyMessage: 'hao.cv::lang.models.formation.no_records'
+
+  view:
+    list: $/hao/cv/models/formation/columns.yaml
+    toolbarPartial: formation_toolbar
+
+  manage:
+    list: $/hao/cv/models/formation/columns.yaml
+    form: $/hao/cv/models/formation/fields.yaml
+    showSearch: true
+    showSorting: true
+    recordsPerPage: 10
+
+experience:
+  label: hao.cv::lang.models.experience.name
+  emptyMessage: 'hao.cv::lang.models.experience.no_records'
+
+  view:
+    list: $/hao/cv/models/experience/columns.yaml
+    toolbarPartial: experience_toolbar
+
+  manage:
+    list: $/hao/cv/models/experience/columns.yaml
+    form: $/hao/cv/models/experience/fields.yaml
+    showSearch: true
+    showSorting: true
+    recordsPerPage: 10

@@ -1,0 +1,32 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: hao.cv::lang.models.cv.name
+        searchable: true
+        invisible: false
+        sortable: true
+        clickable: true
+        required: true
+    user_id@create:
+        label: hao.cv::lang.models.cv.user_id
+        searchable: true
+        invisible: true
+        readOnly: true
+        sortable: true
+        clickable: true
+        required: true
+
+    formation@update:
+        label: hao.cv::lang.models.formation.name
+        type: partial
+        span: full
+        path: formation_field
+
+    experience@update:
+        label: hao.cv::lang.models.experience.name
+        type: partial
+        span: full
+        path: experience_field

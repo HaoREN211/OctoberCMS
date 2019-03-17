@@ -1,0 +1,12 @@
+1.0.1:
+    - Initialisation of the CV model.
+1.0.2:
+    - Initialisation of the CV model.
+    - create_cvs_table.php
+1.0.3:
+    - Initialisation of the formation models.
+    - create_formations_table.php
+1.0.4:
+    - Initialisation of the experience models.
+    - create_experiences_table.php
+    - create_descriptions_table.php

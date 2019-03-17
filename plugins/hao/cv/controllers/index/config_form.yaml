@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Index
+
+# Model Form Field configuration
+form: $/hao/cv/models/cv/fields.yaml
+
+# Model Class name
+modelClass: Hao\Cv\Models\Cv
+
+# Default redirect location
+defaultRedirect: hao/cv/index
+
+# Create page
+create:
+    title: hao.cv::lang.plugin.cv.create
+    redirect: hao/cv/index/update/:id
+    redirectClose: hao/cv/index
+
+# Update page
+update:
+    title: hao.cv::lang.plugin.cv.update
+    redirect: hao/cv/index
+    redirectClose: hao/cv/index
+
+# Preview page
+preview:
+    title: Preview Index

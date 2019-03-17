@@ -1,0 +1,57 @@
+<?php Block::put('breadcrumb') ?>
+    <ul>
+        <li><a href="<?= Backend::url('hao/cv/index') ?>"><?= e(trans('hao.cv::lang.plugin.cv.name')) ?></a></li>
+        <li><?= e($this->pageTitle) ?></li>
+    </ul>
+<?php Block::endPut() ?>
+
+<?php if (!$this->fatalError): ?>
+
+    <?= Form::open(['class' => 'layout']) ?>
+
+        <div class="layout-row">
+            <?= $this->formRender() ?>
+        </div>
+
+        <div class="form-buttons">
+            <div class="loading-indicator-container">
+                <button
+                    type="submit"
+                    data-request="onSave"
+                    data-request-data="redirect:0"
+                    data-hotkey="ctrl+s, cmd+s"
+                    data-load-indicator="<?= e(trans('hao.cv::lang.plugin.cv.saving')) ?>"
+                    class="btn btn-primary">
+                    <?= e(trans('hao.cv::lang.plugin.cv.update')) ?>
+                </button>
+                <button
+                    type="button"
+                    data-request="onSave"
+                    data-request-data="close:1"
+                    data-hotkey="ctrl+enter, cmd+enter"
+                    data-load-indicator="<?= e(trans('hao.cv::lang.plugin.cv.saving')) ?>"
+                    class="btn btn-success oc-icon-shopping">
+                    <?= e(trans('hao.cv::lang.plugin.cv.update_and_close')) ?>
+                </button>
+                <button
+                    type="button"
+                    class="oc-icon-trash-o btn-icon danger pull-right"
+                    data-request="onDelete"
+                    data-load-indicator="Deleting Index..."
+                    data-request-confirm="<?= e(trans('hao.cv::lang.plugin.cv.delete_confirm')) ?>">
+                </button>
+                <a href="<?= Backend::url('hao/cv/index') ?>"
+                   class="btn btn-danger oc-icon-trash">
+                    <?= e(trans('hao.cv::lang.plugin.cv.cancel')) ?>
+                </a>
+            </div>
+        </div>
+
+    <?= Form::close() ?>
+
+<?php else: ?>
+
+    <p class="flash-message static error"><?= e($this->fatalError) ?></p>
+    <p><a href="<?= Backend::url('hao/cv/index') ?>" class="btn btn-default">Return to index list</a></p>
+
+<?php endif ?>

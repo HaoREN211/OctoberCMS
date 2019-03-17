@@ -1,0 +1,29 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    start_date:
+        label: hao.cv::lang.models.cv.start_date
+        type: datepicker
+        mode: date
+        invisible: false
+        required: true
+        span: left
+    end_time:
+        label: hao.cv::lang.models.cv.end_date
+        type: datepicker
+        mode: date
+        invisible: false
+        required: true
+        span: right
+    enterprise:
+        label: hao.cv::lang.models.experience.enterprise
+        invisible: false
+        required: true
+        span: left
+    position:
+        label: hao.cv::lang.models.experience.position
+        invisible: false
+        required: true
+        span: right

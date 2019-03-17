@@ -1,0 +1,29 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    start_date:
+        label: hao.cv::lang.models.cv.start_date
+        searchable: false
+        invisible: false
+        sortable: true
+        width: 20%
+    end_time:
+        label: hao.cv::lang.models.cv.end_date
+        searchable: false
+        invisible: false
+        sortable: true
+        width: 20%
+    enterprise:
+        label: hao.cv::lang.models.experience.enterprise
+        searchable: false
+        invisible: false
+        sortable: true
+        width: 30%
+    position:
+        label: hao.cv::lang.models.experience.position
+        searchable: false
+        invisible: false
+        sortable: true
+        width: 30%
