@@ -1,0 +1,20 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    user_id:
+        label: hao.cv::lang.models.cv.user_id
+        searchable: true
+        invisible: true
+        sortable: true
+        readOnly: true
+        clickable: true
+        required: true
+    date_journal:
+        type: datepicker
+        mode: date
+        label: hao.journal::lang.models.journal.date_journal
+    content:
+        type: Textarea
+        label: hao.journal::lang.models.journal.content

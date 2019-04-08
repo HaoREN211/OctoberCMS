@@ -1,0 +1,5 @@
+1.0.1: First version of Journal
+
+1.0.2:
+  - Create main table journal
+  - create_journals_table.php

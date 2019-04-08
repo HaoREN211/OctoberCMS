@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Journal
+
+# Model Form Field configuration
+form: $/hao/journal/models/journal/fields.yaml
+
+# Model Class name
+modelClass: Hao\Journal\Models\Journal
+
+# Default redirect location
+defaultRedirect: hao/journal/journal
+
+# Create page
+create:
+    title: Create Journal
+    redirect: hao/journal/journal/update/:id
+    redirectClose: hao/journal/journal
+
+# Update page
+update:
+    title: Edit Journal
+    redirect: hao/journal/journal
+    redirectClose: hao/journal/journal
+
+# Preview page
+preview:
+    title: Preview Journal
